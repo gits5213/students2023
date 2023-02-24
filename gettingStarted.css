@@ -1,0 +1,13 @@
+
+.header1 {
+    color: royalblue;
+    text-align: center; 
+}
+.header2 {
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+#header3{
+    font-family: 'Courier New', Courier, monospace;
+}
