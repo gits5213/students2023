@@ -1,0 +1,30 @@
+.header1 {
+
+    color: brown;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+h4 {
+    color: brown;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+h5{
+    color: rgb(123, 161, 35);
+    text-align: right;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: large;
+}
+
+h5{
+    color: rgb(40, 26, 170);
+    text-align: right;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: xx-large;
+}
