@@ -23,8 +23,8 @@ public class DataTypes {
 
         char a = 'A';
         String b= "abzaman";
-        float c = 5.66f;
-        double d = 55.33;
+        //float c = 5.66f;
+        //double d = 55.33;
 
 
 
