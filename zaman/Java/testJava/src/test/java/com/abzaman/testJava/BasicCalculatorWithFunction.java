@@ -1,6 +1,5 @@
 package com.abzaman.testJava;
 import java.util.Scanner;
-import java.math.BigInteger;
 import java.text.DecimalFormat;
 
 public class BasicCalculatorWithFunction {
@@ -79,129 +78,144 @@ public class BasicCalculatorWithFunction {
 
            //Input validation for choice
 
-            while (true) {
-                System.out.print("Enter choice(1/2/3/4/5):");
-                
-                if (input.hasNextLine()) {
-                    choice = input.nextLine();
-
-                    if(Character.isDigit(choice.charAt(0))){
-                        choice1 = Integer.parseInt(choice.substring(0,1));
-                        
-                        if (choice1 >= 1 && choice1 <= 5){
-                            break;
-                    }
-                    
-
-                        
-                    }
-                
-                    else {
-                    
-                    System.out.println("Invalid input. Please enter an integer between 1 to 5.");
-                    input.nextLine(); // consume the invalid input
-                        
-                        
-                    } 
-                    
-                    
-                }
-                
-            }
-
-            System.out.println("");
-            
-            double num1, num2;
-            
-            //Input validation for first number
-
-            while (true) {
-                System.out.print("Enter first number: ");
-                
-                if (input.hasNextInt()) {
-                    num1 = input.nextInt();
+           do {
+            System.out.print("Enter choice(1/2/3/4):");
+            choice = input.nextLine();
+            try {
+                choice1 = Integer.parseInt(choice);
+                if (choice1 >= 1 && choice1 <= 5) {
                     break;
-                       
                 } else {
-                    System.out.println("Invalid input!! Please enter an integer or float");
-                    input.nextLine(); // consume the invalid input
+                    System.out.println("\nInvalid input!! Please enter a choice between 1 to 5 you FREAK !!!. \n");
                 }
-                
+            } catch (NumberFormatException e) {
+                System.out.println("\nInvalid input. Please enter a choice between 1 to 5 you FREAK !!! \n");
             }
+        } while (true);
+    
 
-            System.out.println(" ");
-            
-            // validation for second number
-            while (true) {
-                System.out.print("Enter second number: ");
+        System.out.println("");
+        
+        double num1, num2;
+        
+        //Input validation for first number
+
+        do {
+            System.out.print("Enter first number:");
+            choice = input.nextLine();
+            try {
+                num1 = Integer.parseInt(choice);
+                break;
                 
-                if (input.hasNextInt()) {
-                    num2 = input.nextInt();
-                    break;
-                          
-                } else {
-                    System.out.println("Invalid input!! Please enter an integer or float");
-                    input.nextLine(); // consume the invalid input
-                }
+            } catch (NumberFormatException e) {
+                System.out.println("\n Invalid input!! Please enter value between an integer and double you NUMB !!! \n");
+            }
+        } while (true);
                 
+
+
+        System.out.println(" ");
+        
+        // validation for second number
+        
+        do {
+            System.out.print("Enter second number:");
+            choice = input.nextLine();
+            try {
+                num2 = Integer.parseInt(choice);
+                break;
+                
+            } catch (NumberFormatException e) {
+                System.out.println("\n Invalid input!! Please enter value between an integer and double \n");
             }
-            
-            System.out.println(" ");
+        } while (true);
+        
+        System.out.println(" ");
 
-            switch(choice1){
-            
-                case 1:
-                System.out.println("\n" + num1 + " + " + num2 + " = " + add(num1, num2) + "\n");
-                break;
-            
-                case 2:
-                System.out.println("\n" + num1 + " - " + num2 + " = " + sub(num1, num2) + "\n");
-                break;
-            
-                case 3:
-                System.out.println("\n" + num1 + " x " + num2 + " = " + multi(num1, num2) + "\n");
-                break;
-            
-                case 4:
-                if(num2!= 0){
+        switch(choice1){
+        
+            case 1:
+            System.out.println("\n" + num1 + " + " + num2 + " = " + add(num1, num2) + "\n");
+            break;
+        
+            case 2:
+            System.out.println("\n" + num1 + " - " + num2 + " = " + sub(num1, num2) + "\n");
+            break;
+        
+            case 3:
+            System.out.println("\n" + num1 + " x " + num2 + " = " + multi(num1, num2) + "\n");
+            break;
+        
+            case 4:
+            if(num2!= 0){
 
-                    System.out.println("\n" + num1 + " / " + num2 + " = " + divide(num1, num2) + "\n");
-                }
-                else{
-                    System.out.println("Syntax Error");
-                }
-                break;
-            
-                case 5:
-                System.out.println("\n" + num1 + " % " + num2 + " = " + rem(num1, num2) + "\n");
-                break;
-            
-                default:
-                System.out.println("Wrong input");
-            
+                System.out.println("\n" + num1 + " / " + num2 + " = " + divide(num1, num2) + "\n");
             }
-            
-            System.out.print("Do you wish to continue? Y/N ");
-            a = input.next().charAt(0);
-            
-
+            else{
+                System.out.println("Syntax Error");
+            }
+            break;
+        
+            case 5:
+            System.out.println("\n" + num1 + " % " + num2 + " = " + rem(num1, num2) + "\n");
+            break;
+        
+            default:
+            System.out.println("Wrong input");
+        
         }
 
-
-
-
+        do {
+            System.out.print("Do you wish to continue? Y/N ");
+            choice = input.nextLine();
             
+            if(choice.length() == 1){
+                a = choice.charAt(0);
+                
+                if( a == 'Y' || a == 'y'){
+                    break;
 
-            
+                }
+                else if (a == 'N' || a == 'n'){
+                    System.out.println("\nYou choose to quit..!! What a DUMBASS!! \n");
+                    break;
+                }
+
+            } else {
+                System.out.println("\nWrong choice!! \n");
+            }
+
+
+        } while (true);
+
+
+        //a = input.next().charAt(0);
         
+
     }
-            
+
+
+
+
+
+        
+
+        
+    
+}
+        
 }
 
 
 
-                
-                
+            
+            
+            
+
                 
 
                     
+                    
+            
+                
+
