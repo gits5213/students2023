@@ -1,5 +1,6 @@
 package com.abzaman.testJava;
 import java.util.Scanner;
+import java.math.BigInteger;
 import java.text.DecimalFormat;
 
 public class BasicCalculatorWithFunction {
@@ -63,7 +64,8 @@ public class BasicCalculatorWithFunction {
     public static void main(String[] args) {
         
         Scanner input = new Scanner(System.in);
-        int choice ;
+        String choice ;
+        int choice1;
         char a = 'y';
 
         while (Character.toLowerCase(a) == 'y') {
@@ -80,18 +82,29 @@ public class BasicCalculatorWithFunction {
             while (true) {
                 System.out.print("Enter choice(1/2/3/4/5):");
                 
-                if (input.hasNextInt()) {
-                    choice = input.nextInt();
-                    
-                    if (choice >= 1 && choice <= 5){
-                        
-                        break;
-                } 
+                if (input.hasNextLine()) {
+                    choice = input.nextLine();
 
+                    if(Character.isDigit(choice.charAt(0))){
+                        choice1 = Integer.parseInt(choice.substring(0,1));
+                        
+                        if (choice1 >= 1 && choice1 <= 5){
+                            break;
+                    }
                     
-                } else {
+
+                        
+                    }
+                
+                    else {
+                    
                     System.out.println("Invalid input. Please enter an integer between 1 to 5.");
                     input.nextLine(); // consume the invalid input
+                        
+                        
+                    } 
+                    
+                    
                 }
                 
             }
@@ -135,7 +148,7 @@ public class BasicCalculatorWithFunction {
             
             System.out.println(" ");
 
-            switch(choice){
+            switch(choice1){
             
                 case 1:
                 System.out.println("\n" + num1 + " + " + num2 + " = " + add(num1, num2) + "\n");
@@ -190,3 +203,5 @@ public class BasicCalculatorWithFunction {
                 
                 
                 
+
+                    
