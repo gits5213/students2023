@@ -44,7 +44,7 @@ a = 'y'
 
 while(a.toLowerCase() == 'y'){
 
-    const choice = parseInt(prompt("Enter your choice: "))
+    const choice = parseInt(prompt("Enter choice(1/2/3/4):"))
     // const num1 = parseFloat(prompt("Enter first number: "))
     // const num2 = parseFloat(prompt("Enter second number: "))
 
