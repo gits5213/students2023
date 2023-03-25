@@ -24,9 +24,9 @@ public class Variable {
         int number = 2; //Local variable (let)
     }
     public static void main(String[] args) {
-        int first_number = 10;
-        int second_number = 15;
-        int total_number = first_number + second_number;
-        System.out.println(total_number);
+        int firstNumber = 10;
+        int secondNumber = 15;
+        int totalNumber = firstNumber + secondNumber;
+        System.out.println(totalNumber);
     }
 }
