@@ -1,4 +1,4 @@
-const prompt = require("prompt-sync")({sigint:true})
+const prompt = require("prompt-sync")({ sigint: true });
 
 /*
 const prompt = require("prompt-sync")({sigint:true})
@@ -12,96 +12,77 @@ Together, this line of code sets up a prompt for the user to input values in the
 */
 
 function add(x, y) {
-    const z = x + y;
-    return z.toFixed(2);
+  const z = x + y;
+  return z.toFixed(2);
 }
 function multi(x, y) {
-    const z = x * y;
-    return z.toFixed(2);
+  const z = x * y;
+  return z.toFixed(2);
 }
 function sub(x, y) {
-    const z = x - y;
-    return z.toFixed(2);
+  const z = x - y;
+  return z.toFixed(2);
 }
 function div(x, y) {
-    const z = x / y;
-    return z.toFixed(2);
+  const z = x / y;
+  return z.toFixed(2);
 }
 function rem(x, y) {
-    const z = x % y;
-    return z.toFixed(2);
+  const z = x % y;
+  return z.toFixed(2);
 }
 
+console.log("\nSelect operation.");
+console.log("1.Add");
+console.log("2.Subtract");
+console.log("3.Multiply");
+console.log("4.Divide");
+console.log("5.Remainder \n");
 
-console.log("\nSelect operation.")
-console.log('1.Add')
-console.log("2.Subtract")
-console.log("3.Multiply")
-console.log("4.Divide")
-console.log("5.Remainder \n")
+a = "y";
 
-a = 'y'
+while (a.toLowerCase() == "y") {
+  const choice = parseInt(prompt("Enter choice(1/2/3/4/5):"));
 
-while(a.toLowerCase() == 'y'){
+  switch (choice) {
+    case 1:
+      const num1 = parseFloat(prompt("Enter first number: "));
+      const num2 = parseFloat(prompt("Enter second number: "));
+      console.log("\n", num1, "+", num2, "= ", add(num1, num2), "\n");
+      break;
 
-    const choice = parseInt(prompt("Enter choice(1/2/3/4):"))
-    // const num1 = parseFloat(prompt("Enter first number: "))
-    // const num2 = parseFloat(prompt("Enter second number: "))
+    case 2:
+      const num3 = parseFloat(prompt("Enter first number: "));
+      const num4 = parseFloat(prompt("Enter second number: "));
 
-    switch(choice){
+      console.log("\n", num1, "-", num2, "= ", sub(num1, num2), "\n");
+      break;
 
-        case 1:
-            const num1 = parseFloat(prompt("Enter first number: "))
-            const num2 = parseFloat(prompt("Enter second number: "))
-            console.log("\n",num1,"+",num2,"= ", add(num1,num2),"\n")
-            break;
-        
-        case 2:
-            const num3 = parseFloat(prompt("Enter first number: "))
-            const num4 = parseFloat(prompt("Enter second number: "))
-            console.log("\n",num1,"-",num2,"= ", sub(num1,num2),"\n")
-            break;
-        
-        case 3:
-            const num5 = parseFloat(prompt("Enter first number: "))
-            const num6 = parseFloat(prompt("Enter second number: "))
-            console.log("\n",num1,"x",num2,"= ", multi(num1,num2),"\n")
-            break;
-        
-        case 4:
-            
-            const num7 = parseFloat(prompt("Enter first number: "))
-            const num8 = parseFloat(prompt("Enter second number: "))
-            
-            if(num8 !=0){
-                console.log("\n",num1,"/",num2,"= ", div(num1,num2),"\n")
-            }
-            else{
-                console.log("\nSyntax error\n")
-            }
-            break;
-        
-        case 5:
-            const num9 = parseFloat(prompt("Enter first number: "))
-            const num10 = parseFloat(prompt("Enter second number: "))
-            console.log("\n",num1,"%",num2,"= ", rem(num1,num2),"\n")
-            break;
+    case 3:
+      const num5 = parseFloat(prompt("Enter first number: "));
+      const num6 = parseFloat(prompt("Enter second number: "));
+      console.log("\n", num1, "x", num2, "= ", multi(num1, num2), "\n");
+      break;
 
-        default:
-           console.log("wrong input \n")
-        
+    case 4:
+      const num7 = parseFloat(prompt("Enter first number: "));
+      const num8 = parseFloat(prompt("Enter second number: "));
 
+      if (num8 != 0) {
+        console.log("\n", num1, "/", num2, "= ", div(num1, num2), "\n");
+      } else {
+        console.log("\nSyntax error\n");
+      }
+      break;
 
+    case 5:
+      const num9 = parseFloat(prompt("Enter first number: "));
+      const num10 = parseFloat(prompt("Enter second number: "));
+      console.log("\n", num1, "%", num2, "= ", rem(num1, num2), "\n");
+      break;
 
-    }
-    a = prompt("Do you wish to continue? Y/N: ");
-
-    
-
-
-
-
-
+    default:
+      console.log("wrong input \n");
+  }
+  a = prompt("Do you wish to continue? Y/N: ");
 }
-
-
