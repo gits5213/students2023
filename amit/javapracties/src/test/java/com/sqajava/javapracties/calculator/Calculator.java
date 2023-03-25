@@ -10,7 +10,7 @@ public class Calculator {
 
                 Scanner input = new Scanner(System.in); // Called object of Scanner class
 
-                System.out.println("Choose an operator: +, -, *, or /");
+                System.out.println("Choose an operator: +, -, *, / or %");
                 operator = input.next().charAt(0);
 
                 System.out.println("Enter first number");
@@ -42,6 +42,11 @@ public class Calculator {
                     case '/':
                         result = number1 / number2;
                         System.out.println(number1 + " / " + number2 + " = " + result);
+                        break;
+
+                    case '%':
+                        result = number1 / number2;
+                        System.out.println(number1 + " % " + number2 + " = " + result);
                         break;
 
                     default:
