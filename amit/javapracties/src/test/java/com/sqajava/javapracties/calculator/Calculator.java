@@ -9,7 +9,7 @@ public class Calculator {
         char choice;
 
         do {
-            System.out.print("Enter an integer between 1 and 5: ");
+            System.out.print("Enter an arithmetic operations(+/-/*/'/'/ %) between integer 1 and 5: ");
             int num = input.nextInt();
 
             double firstNum, secondNum, result;
@@ -23,23 +23,23 @@ public class Calculator {
             switch(num) {
                 case 1:
                     result = firstNum + secondNum;
-                    System.out.printf("%.1f + %.1f = %.1f\n", firstNum, secondNum, result);
+                    System.out.printf("%.2f + %.2f = %.2f\n", firstNum, secondNum, result);
                     break;
                 case 2:
                     result = firstNum - secondNum;
-                    System.out.printf("%.1f - %.1f = %.1f\n", firstNum, secondNum, result);
+                    System.out.printf("%.2f - %.2f = %.2f\n", firstNum, secondNum, result);
                     break;
                 case 3:
                     result = firstNum * secondNum;
-                    System.out.printf("%.1f * %.1f = %.1f\n", firstNum, secondNum, result);
+                    System.out.printf("%.2f * %.2f = %.2f\n", firstNum, secondNum, result);
                     break;
                 case 4:
                     result = firstNum / secondNum;
-                    System.out.printf("%.1f / %.1f = %.1f\n", firstNum, secondNum, result);
+                    System.out.printf("%.2f / %.2f = %.2f\n", firstNum, secondNum, result);
                     break;
                 case 5:
                     result = firstNum % secondNum;
-                    System.out.printf("%.1f %% %.1f = %.1f\n", firstNum, secondNum, result);
+                    System.out.printf("%.2f %% %.2f = %.2f\n", firstNum, secondNum, result);
                     break;
                 default:
                     System.out.println("Invalid choice!");
