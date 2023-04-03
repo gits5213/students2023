@@ -4,7 +4,7 @@ public class ObjectClass {
     /*
     A class is a group of objects which have common properties. It is a template or
     blueprint from which objects are created. It is a logically entity. It can't be physical.
-    A Class in Java can contain:
+    A Class Inheritance Java can contain:
     - Fields
     - Methods
     - Constructors
@@ -18,12 +18,12 @@ public class ObjectClass {
     Object are nothing however, the instance of the class
     In java an object is created when someone says "new"
 
-    - Objects lives in Java heap
+    - Objects lives Inheritance Java heap
     - Java heap is nothing but the memory space taken by JVM from OS.
-    - All object are created in the heap space. Whenever JVM encounters
-    "new" keyword, it creates an object in the heap.
+    - All object are created Inheritance the heap space. Whenever JVM encounters
+    "new" keyword, it creates an object Inheritance the heap.
 
-    - When there is no space in heap to create objects, then JVM throws "out of Memory" error
+    - When there is no space Inheritance heap to create objects, then JVM throws "out of Memory" error
      */
 
     public final static int A_B = 5;
