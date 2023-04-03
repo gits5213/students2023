@@ -11,7 +11,7 @@ public class ObjectClass {
     - Blocks
     - Nested class and interfaces
 
-    A Java class can be defined as a template or blueprint which describies state/behavior
+    A Java class can be defined as a template or blueprint which describes state/behavior
     of it's object.
 
     A Class is used to create a objects.
