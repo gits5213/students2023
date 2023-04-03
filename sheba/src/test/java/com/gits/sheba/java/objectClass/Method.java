@@ -15,15 +15,15 @@ public class Method {
         return a+b;
     }
 
-    function myMethod() {
-        return a+b;
-    }
+//    function myMethod() {
+//        return a+b;
+//    }
 
-    myMethod() => {
-        return a+b;
-    }
+//    myMethod() => {
+//        return a+b;
+//    }
 
-    def myFunction():
+//    def myFunction():
 
     public static void main(String[] args) {
         System.out.println(sum(2, 2));

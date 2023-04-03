@@ -5,11 +5,11 @@ public class Variable {
         A variable is a container which holds the value while the
         java program is executed
 
-        Variable is a name of memory location. there are three types of variable in java
+        Variable is a name of memory location. there are three types of variable Inheritance java
         1. Local
         2. Instance
         3. Static
-        A variable is the name of a reserved area allocated in memory.
+        A variable is the name of a reserved area allocated Inheritance memory.
          */
     //Method - //return type, name, parentheses(), open curly brace and closing curly brace
     static int m = 2; // Static
