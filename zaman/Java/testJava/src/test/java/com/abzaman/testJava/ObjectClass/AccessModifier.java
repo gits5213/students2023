@@ -18,7 +18,9 @@ public class AccessModifier {
      * constructor is a block of code similar to the method. it is call when an instance of the class is created.
      */
 
-     static int k = 6;
+
+    private int id;
+    private String name;
 
      //method of sum
      int sum(int a, int b){
@@ -28,24 +30,26 @@ public class AccessModifier {
 
      //constructor (doesn't have a return type and cant be assigned with public and private or variable)
      //2 types of constructor, by default and parameterized constructor. 
-     AccessModifier(int id, String name){
+     public AccessModifier (int id, String name){
 
         System.out.println("constructor is created");
         this.id = id;
         this.name = name;
         
-        void display(){
-            System.out.println(id + name);
-            
-        }
+    }
+    
+
+    public void display(){
+       System.out.println();
         
+    }
 
     public static void main(String[] args) {
         
         //this.k = k;
 
         //to create a default constructor
-        AccessModifier AM = new AccessModifier(2,);
+        AccessModifier AM = new AccessModifier(id, name);
 
 
     }
