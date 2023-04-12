@@ -46,6 +46,7 @@ public class calculatorExercise {
 
         System.out.println(calculator1+" "+operator+" "+calculator2+"="+result);
 
+
         calc.close();
 
     }
