@@ -8,12 +8,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class FormAuthentication {
 
     /*
-    1. navigate to the url: https://the-internet.herokuapp.com/
-    2. click on the form authentication link
-    3. enter username
-    4. enter password
-    5. click on the login button
-    6. validate successful message.
+    1. Navigate and validate the URL: https://the-internet.herokuapp.com/
+    2. Click on the form authentication link
+    3. Enter the username
+    4. Enter the password
+    5. Click on the login button
+    6. Validate the successful message.
+    7. Click Logout
+    8. Validate the Logout message.
      */
 
     public static void main(String[] args) {
