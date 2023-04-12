@@ -40,7 +40,7 @@ public class AccessModifier {
     
 
     public void display(){
-       System.out.println();
+       System.out.println(id + name);
         
     }
 
@@ -49,7 +49,8 @@ public class AccessModifier {
         //this.k = k;
 
         //to create a default constructor
-        AccessModifier AM = new AccessModifier(id, name);
+        AccessModifier AM1 = new AccessModifier(25, "ZAMAN");
+        AM1.display();
 
 
     }
