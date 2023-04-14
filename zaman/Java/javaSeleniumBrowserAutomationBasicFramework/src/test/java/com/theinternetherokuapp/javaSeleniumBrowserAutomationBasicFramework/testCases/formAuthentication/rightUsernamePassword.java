@@ -1,15 +1,13 @@
-package com.theinternetherokuapp.javaSeleniumBrowserAutomationBasicFramework;
+package com.theinternetherokuapp.javaSeleniumBrowserAutomationBasicFramework.testCases.formAuthentication;
 
+import com.theinternetherokuapp.javaSeleniumBrowserAutomationBasicFramework.utilities.data;
+import com.theinternetherokuapp.javaSeleniumBrowserAutomationBasicFramework.utilities.driverManager;
+import com.theinternetherokuapp.javaSeleniumBrowserAutomationBasicFramework.utilities.locators;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import com.theinternetherokuapp.javaSeleniumBrowserAutomationBasicFramework.utilities.driverManager;
 
-import com.theinternetherokuapp.javaSeleniumBrowserAutomationBasicFramework.utilities.data;
-import com.theinternetherokuapp.javaSeleniumBrowserAutomationBasicFramework.utilities.locators;
-
-
-public class FormAuthentication {
+public class rightUsernamePassword {
 
     /*
     1. Navigate and validate the URL: https://the-internet.herokuapp.com/
@@ -55,7 +53,7 @@ public class FormAuthentication {
         driver.findElement(By.cssSelector(locators.locatorFormAuthentication)).click();
 
         //Ads a sleep time
-       Thread.sleep(2000);
+        Thread.sleep(2000);
 
         driver.findElement(By.cssSelector(locators.locatorUserID)).sendKeys(data.userName);
 
@@ -100,4 +98,6 @@ public class FormAuthentication {
 
 
     }
+
+
 }
