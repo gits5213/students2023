@@ -1,4 +1,5 @@
 package com.gits.herokuapp.java;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,7 +8,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class InvalidPassword {
-
     String expectedLoginErrorMessage = "Your password is invalid!\n" +
             "×";
 
@@ -32,13 +32,13 @@ public class InvalidPassword {
         Thread.sleep(1000);
 
         // Enter invalid password
-        WebElement invalidpassword = driver.findElement(By.cssSelector("#password"));
-        invalidpassword.sendKeys("tomsmith");
+        WebElement password = driver.findElement(By.cssSelector("#password"));
+        password.sendKeys("tomsmith");
         Thread.sleep(1000);
 
         // Click on login button
-        WebElement loginbuttonclick = driver.findElement(By.cssSelector("#login > button"));
-        loginbuttonclick.click();
+        WebElement loginButton = driver.findElement(By.cssSelector("#login > button > i"));
+        loginButton.click();
         Thread.sleep(1000);
 
         // Validate login error message
@@ -51,6 +51,5 @@ public class InvalidPassword {
 
         // WebDriver close
         driver.quit();
-
     }
 }

@@ -8,53 +8,48 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class InvalidUsernamePassword {
-    String expectedLoginErrorMessage = "Your password is invalid!\n" +
-            "×";
+    String expectedloginErrorMassageText = "Your username is invalid!\n"+"×";
 
     @Test
-    public void InvalidUsernamePassword () throws InterruptedException {
+    public void invalidUserNamePassword() throws InterruptedException {
 
-        // Precondition - Chrome browser open
+        //Precondition -Chrome browser open
         WebDriver driver = new ChromeDriver();
 
-        // Navigate to the URL https://the-internet.herokuapp.com/
-        driver.get("https://the-internet.herokuapp.com");
+        //navigate the url
+        driver.get("https://the-internet.herokuapp.com/");
+        Thread.sleep(1000);
 
-        // Click on Form authentication link
-        WebElement formAuthentication = driver.findElement(By.cssSelector("li:nth-of-type(21) > a"));
+        //click on form authentication link
+        WebElement formAuthentication = driver.findElement(By.cssSelector("#content > ul > li:nth-child(21) > a"));
         formAuthentication.click();
         Thread.sleep(1000);
 
-        // Enter invalid username
-        WebElement username = driver.findElement(By.cssSelector("#username"));
-        username.sendKeys("SuperSecretPassword!");
+        //Enter invalid Username
+        WebElement userName = driver.findElement(By.cssSelector("#username"));
+        userName.sendKeys("SuperSecretPassword!");
         Thread.sleep(1000);
 
-        // Enter invalid password
-        WebElement invalidpassword = driver.findElement(By.cssSelector("#password"));
-        invalidpassword.sendKeys("tomsmith");
+        //Enter invalid password
+        WebElement password = driver.findElement(By.cssSelector("#password"));
+        password.sendKeys("tomsmith");
         Thread.sleep(1000);
 
-        // Click on login button
-        WebElement loginbuttonclick = driver.findElement(By.cssSelector("#login > button"));
-        loginbuttonclick.click();
+        //click on login button
+        WebElement loginButton = driver.findElement(By.cssSelector("#login > button > i"));
+        loginButton.click();
         Thread.sleep(1000);
 
-        // Validate login error message
-        WebElement errorMessage = driver.findElement(By.cssSelector("#flash"));
-        String actualErrorMessageText = errorMessage.getText();
-        Assert.assertEquals(actualErrorMessageText, expectedLoginErrorMessage);
+        //validate login error massage
+        WebElement errorMassage = driver.findElement(By.cssSelector("#flash"));
+        String actualloginErrorMassageText = errorMassage.getText();
+        Assert.assertEquals(actualloginErrorMassageText ,expectedloginErrorMassageText);
 
-        // browser closes
+        //browser close
         driver.close();
 
-        // WebDriver close
+        //webDriver close
         driver.quit();
-
     }
-
-
-
-
 
 }
