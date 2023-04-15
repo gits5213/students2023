@@ -1,4 +1,4 @@
-package com.theinternetherokuapp.javaSeleniumBrowserAutomationBasicFramework.utilities;
+package com.theinternetherokuapp.javaSelenium.utilities;
 
 public class locators {
 
@@ -8,6 +8,7 @@ public class locators {
     public static String locatorPassword = "#password";
     public static String locatorLoginButton = "#login > button";
     public static String locatorLoginMessage = "#flash";
+    public static String locatorInvalidUsernamePasswordMessage = "div#flash";
     public static String locatorLogoutButton = ".button.radius.secondary";
     public static String locatorLogoutMessage = "#flash";
 }

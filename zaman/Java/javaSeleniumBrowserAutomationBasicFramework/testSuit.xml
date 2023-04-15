@@ -2,7 +2,10 @@
 <suite name="My Test Suite">
     <test name="My Test">
         <classes>
-            <class name="com.theinternetherokuapp.javaSeleniumBrowserAutomationBasicFramework.testCases.formAuthentication.rightUsernamePassword"/>
+            <class name="com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestValidUsernamePassword"/>
+            <class name="com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestInvalidUsernamePassword"/>
+            <class name="com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestInvalidUsernameValidPassword"/>
+            <class name="com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestValidUsernameInvalidPassword"/>
         </classes>
     </test>
 </suite>

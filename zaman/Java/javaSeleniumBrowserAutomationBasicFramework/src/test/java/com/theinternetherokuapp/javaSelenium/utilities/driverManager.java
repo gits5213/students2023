@@ -1,4 +1,4 @@
-package com.theinternetherokuapp.javaSeleniumBrowserAutomationBasicFramework.utilities;
+package com.theinternetherokuapp.javaSelenium.utilities;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

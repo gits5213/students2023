@@ -1,4 +1,4 @@
-package com.theinternetherokuapp.javaSeleniumBrowserAutomationBasicFramework;
+package com.theinternetherokuapp.javaSelenium;
 
 /**
  * Hello world!

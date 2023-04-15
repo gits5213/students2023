@@ -1,14 +1,16 @@
-package com.theinternetherokuapp.javaSeleniumBrowserAutomationBasicFramework.testCases.formAuthentication;
+package com.theinternetherokuapp.javaSelenium.testCases.formAuthentication;
 
-import com.theinternetherokuapp.javaSeleniumBrowserAutomationBasicFramework.utilities.data;
-import com.theinternetherokuapp.javaSeleniumBrowserAutomationBasicFramework.utilities.driverManager;
-import com.theinternetherokuapp.javaSeleniumBrowserAutomationBasicFramework.utilities.locators;
+import com.theinternetherokuapp.javaSelenium.utilities.data;
+import com.theinternetherokuapp.javaSelenium.utilities.driverManager;
+import com.theinternetherokuapp.javaSelenium.utilities.locators;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TestRightUsernamePassword {
+
+public class TestValidUsernamePassword {
 
     /*
     1. Navigate and validate the URL: https://the-internet.herokuapp.com/
@@ -22,9 +24,7 @@ public class TestRightUsernamePassword {
      */
 
     @Test
-    public  void testRightUsernamePassword() throws InterruptedException {
-
-        //System.out.println("Im up and running");
+    public  void ValidUsernamePassword() throws InterruptedException {
 
 
         //Driver initialization
@@ -32,7 +32,7 @@ public class TestRightUsernamePassword {
 
 
         // Navigate to the URL method 1
-        driver.get(data.baseUrl);
+        //driver.get(data.baseUrl);
 
         // Navigate to the URL method 2
         driver.navigate().to(data.baseUrl);
@@ -41,20 +41,15 @@ public class TestRightUsernamePassword {
         String currentUrl = driver.getCurrentUrl();
 
         // Validating the URL
-        if (currentUrl.equals(data.baseUrl)) {
-            System.out.println("The url is valid");
-        }
-        else{
-            System.out.println("The URL is invalid");
-        }
+        Assert.assertEquals(data.baseUrl,currentUrl);
 
         //Ads a sleep time
         Thread.sleep(2000);
 
-        // Finds the locator of Form authentication and clicks on  it
+        // Finds the locator of Form authentication and clicks on it
         driver.findElement(By.cssSelector(locators.locatorFormAuthentication)).click();
 
-        //Ads a sleep time
+        //Adds a sleep time
         Thread.sleep(2000);
 
         driver.findElement(By.cssSelector(locators.locatorUserID)).sendKeys(data.userName);
@@ -64,34 +59,26 @@ public class TestRightUsernamePassword {
         driver.findElement(By.cssSelector(locators.locatorLoginButton)).click();
 
         WebElement element = driver.findElement(By.cssSelector(locators.locatorLoginMessage));
-        String actualMessage = element.getText();
+        String actualLoginMessage = element.getText();
 
-        if (data.loginMessage.equals(actualMessage)) {
-            System.out.println(actualMessage);
-            System.out.println("Successful message is valid");
-        }
-        else{
-            System.out.println("Successful message is invalid!!");
-        }
+        System.out.println(actualLoginMessage);
 
-        //Ads a sleep time
+        Assert.assertEquals(data.loginMessage,actualLoginMessage);
+
+        //Adds a sleep time
         Thread.sleep(2000);
 
         driver.findElement(By.cssSelector(locators.locatorLogoutButton)).click();
 
         WebElement element1 = driver.findElement(By.cssSelector(locators.locatorLogoutMessage));
-        String actualMessage1 = element1.getText();
+        String actualLogoutMessage = element1.getText();
+
+        System.out.println(actualLogoutMessage);
 
         // Validating the successful message for logout
-        if (data.logoutMessage.equals(actualMessage1)) {
-            System.out.println(actualMessage1);
-            System.out.println("Successful message is valid");
-        }
-        else{
-            System.out.println("Successful message is invalid!!");
-        }
+        Assert.assertEquals(data.logoutMessage,actualLogoutMessage);
 
-        //Ads a sleep time
+        //Adds a sleep time
         Thread.sleep(2000);
 
 
