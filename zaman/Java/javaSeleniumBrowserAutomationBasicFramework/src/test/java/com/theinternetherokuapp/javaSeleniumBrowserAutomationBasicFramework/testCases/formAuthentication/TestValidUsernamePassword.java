@@ -6,8 +6,9 @@ import com.theinternetherokuapp.javaSeleniumBrowserAutomationBasicFramework.util
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
 
-public class rightUsernamePassword {
+public class TestRightUsernamePassword {
 
     /*
     1. Navigate and validate the URL: https://the-internet.herokuapp.com/
@@ -20,7 +21,8 @@ public class rightUsernamePassword {
     8. Validate the Logout message.
      */
 
-    public static void main(String[] args) throws InterruptedException {
+    @Test
+    public  void testRightUsernamePassword() throws InterruptedException {
 
         //System.out.println("Im up and running");
 

@@ -1,4 +1,4 @@
 package com.theinternetherokuapp.javaSeleniumBrowserAutomationBasicFramework.testCases.formAuthentication;
 
-public class wrongUsernamePassword {
+public class WrongUsernameRightPassword {
 }
