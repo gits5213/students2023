@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27b990f1-65ef-4573-8cad-31d3bb5a398a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/pranrfl/getwell/BaseClass/ConditionStatement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/pranrfl/getwell/BaseClass/JavaDataType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/pranrfl/getwell/BaseClass/JavaVariable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/pranrfl/getwell/BaseClass/calculatorExercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/pranrfl/getwell/BaseClass/calculatorExercise.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +26,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "H:/github/newdirectory/students2023/subroto/getwell",
+    "last_opened_file_path": "F:/Github/students2023/bishojit/GlobalIT/src/test/java/com/gits/Herokuapp",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
