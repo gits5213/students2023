@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-My_Test_Suite" class="navigator-link">
-              <span class="suite-name border-failed">My Test Suite</span>
+              <span class="suite-name border-passed">My Test Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,31 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 3 failed,   1 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-My_Test_Suite" class="hide-methods failed suite-My_Test_Suite"> (hide)</a> <!-- hide-methods failed suite-My_Test_Suite -->
-                      <a href="#" panel-name="suite-My_Test_Suite" class="show-methods failed suite-My_Test_Suite"> (show)</a> <!-- show-methods failed suite-My_Test_Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-My_Test_Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-My_Test_Suite" title="com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestInvalidUsernamePassword" class="method navigator-link" hash-for-method="invalidUsernamePassword">invalidUsernamePassword</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-My_Test_Suite" title="com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestInvalidUsernameValidPassword" class="method navigator-link" hash-for-method="invalidUsernameValidPassword">invalidUsernameValidPassword</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-My_Test_Suite" title="com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestValidUsernameInvalidPassword" class="method navigator-link" hash-for-method="invalidUsernameValidPassword">invalidUsernameValidPassword</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-My_Test_Suite -->
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -128,6 +104,21 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-My_Test_Suite" title="com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestValidUsernamePassword" class="method navigator-link" hash-for-method="ValidUsernamePassword">ValidUsernamePassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-My_Test_Suite" title="com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestInvalidUsernamePassword" class="method navigator-link" hash-for-method="invalidUsernamePassword">invalidUsernamePassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-My_Test_Suite" title="com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestValidUsernameInvalidPassword" class="method navigator-link" hash-for-method="invalidUsernameValidPassword">invalidUsernameValidPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-My_Test_Suite" title="com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestInvalidUsernameValidPassword" class="method navigator-link" hash-for-method="invalidUsernameValidPassword">invalidUsernameValidPassword</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-My_Test_Suite -->
@@ -142,9 +133,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-My_Test_Suite" class="panel My_Test_Suite">
-          <div class="suite-My_Test_Suite-class-failed">
+          <div class="suite-My_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestValidUsernameInvalidPassword</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -153,55 +144,13 @@
                   <a name="invalidUsernameValidPassword">
                   </a> <!-- invalidUsernameValidPassword -->
                   <span class="method-name">invalidUsernameValidPassword</span>
-                  <div class="stack-trace">org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
-Build info: version: &apos;4.8.3&apos;, revision: &apos;e5e76298c3&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [8779691819fba79a614a3ac8b501f493, get {url=https://the-internet.herokuapp.com/}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.86, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\abzam\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55966}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55966/devtoo..., se:cdpVersion: 112.0.5615.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8779691819fba79a614a3ac8b501f493
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:297)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:982)
-	at com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestValidUsernameInvalidPassword.invalidUsernameValidPassword(TestValidUsernameInvalidPassword.java:27)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-Caused by: java.io.UncheckedIOException: java.net.SocketException: Connection reset
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	... 35 more
-Caused by: java.net.SocketException: Connection reset
-	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
-	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
-	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 31 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-My_Test_Suite-class-failed -->
-          <div class="suite-My_Test_Suite-class-failed">
+          </div> <!-- suite-My_Test_Suite-class-passed -->
+          <div class="suite-My_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestInvalidUsernamePassword</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -210,91 +159,10 @@ Caused by: java.net.SocketException: Connection reset
                   <a name="invalidUsernamePassword">
                   </a> <!-- invalidUsernamePassword -->
                   <span class="method-name">invalidUsernamePassword</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=112.0.5615.86)
-Build info: version: &apos;4.8.3&apos;, revision: &apos;e5e76298c3&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [c18039a2af9cea153b6d6bf214b38dd0, findElement {using=css selector, value=#username}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.86, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\abzam\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55833}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55833/devtoo..., se:cdpVersion: 112.0.5615.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: c18039a2af9cea153b6d6bf214b38dd0
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestInvalidUsernamePassword.invalidUsernamePassword(TestInvalidUsernamePassword.java:45)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 36 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-My_Test_Suite-class-failed -->
-          <div class="suite-My_Test_Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestInvalidUsernameValidPassword</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="invalidUsernameValidPassword">
-                  </a> <!-- invalidUsernameValidPassword -->
-                  <span class="method-name">invalidUsernameValidPassword</span>
-                  <div class="stack-trace">org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
-Build info: version: &apos;4.8.3&apos;, revision: &apos;e5e76298c3&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a7efe430b4a6cce33e777c904653b233, get {url=https://the-internet.herokuapp.com/}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.86, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\abzam\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55920}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55920/devtoo..., se:cdpVersion: 112.0.5615.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a7efe430b4a6cce33e777c904653b233
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:297)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:982)
-	at com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestInvalidUsernameValidPassword.invalidUsernameValidPassword(TestInvalidUsernameValidPassword.java:27)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-Caused by: java.io.UncheckedIOException: java.net.SocketException: Connection reset
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	... 35 more
-Caused by: java.net.SocketException: Connection reset
-	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
-	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
-	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 31 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-My_Test_Suite-class-failed -->
+          </div> <!-- suite-My_Test_Suite-class-passed -->
           <div class="suite-My_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -310,6 +178,21 @@ Caused by: java.net.SocketException: Connection reset
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-My_Test_Suite-class-passed -->
+          <div class="suite-My_Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestInvalidUsernameValidPassword</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="invalidUsernameValidPassword">
+                  </a> <!-- invalidUsernameValidPassword -->
+                  <span class="method-name">invalidUsernameValidPassword</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-My_Test_Suite-class-passed -->
         </div> <!-- panel My_Test_Suite -->
         <div panel-name="test-xml-My_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -319,8 +202,8 @@ Caused by: java.net.SocketException: Connection reset
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;My Test Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;My Test&quot; verbose=&quot;0&quot;&gt;
+&lt;suite thread-count=&quot;4&quot; parallel=&quot;classes&quot; name=&quot;My Test Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;4&quot; parallel=&quot;classes&quot; name=&quot;My Test&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestValidUsernamePassword&quot;/&gt;
       &lt;class name=&quot;com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestInvalidUsernamePassword&quot;/&gt;
@@ -369,24 +252,24 @@ data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'ValidUsernamePassword')
 data.setCell(0, 2, 'com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestValidUsernamePassword')
-data.setCell(0, 3, 15313);
+data.setCell(0, 3, 15071);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'invalidUsernamePassword')
-data.setCell(1, 2, 'com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestInvalidUsernamePassword')
-data.setCell(1, 3, 9197);
+data.setCell(1, 1, 'invalidUsernameValidPassword')
+data.setCell(1, 2, 'com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestInvalidUsernameValidPassword')
+data.setCell(1, 3, 13036);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'invalidUsernameValidPassword')
-data.setCell(2, 2, 'com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestInvalidUsernameValidPassword')
-data.setCell(2, 3, 4050);
+data.setCell(2, 1, 'invalidUsernamePassword')
+data.setCell(2, 2, 'com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestInvalidUsernamePassword')
+data.setCell(2, 3, 12804);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'invalidUsernameValidPassword')
 data.setCell(3, 2, 'com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestValidUsernameInvalidPassword')
-data.setCell(3, 3, 3526);
+data.setCell(3, 3, 12424);
 window.suiteTableData['My_Test_Suite']= { tableData: data, tableDiv: 'times-div-My_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 32 seconds</span>
+              <span class="suite-total-time">Total running time: 53 seconds</span>
               <div id="times-div-My_Test_Suite">
               </div> <!-- times-div-My_Test_Suite -->
             </div> <!-- times-div -->
@@ -412,6 +295,20 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
+              <div class="chronological-class-name">com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestValidUsernameInvalidPassword</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">invalidUsernameValidPassword</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestInvalidUsernameValidPassword</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">invalidUsernameValidPassword</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
               <div class="chronological-class-name">com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestValidUsernamePassword</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">ValidUsernamePassword</span>
@@ -421,28 +318,8 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestInvalidUsernamePassword</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">invalidUsernamePassword</span>
-                <span class="method-start">15315 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestInvalidUsernameValidPassword</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">invalidUsernameValidPassword</span>
-                <span class="method-start">24516 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestValidUsernameInvalidPassword</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">invalidUsernameValidPassword</span>
-                <span class="method-start">28567 ms</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
