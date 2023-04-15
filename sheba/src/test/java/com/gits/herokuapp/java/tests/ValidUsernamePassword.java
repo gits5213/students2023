@@ -6,9 +6,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class ValidUsernamePassword {
 
-    // Precondition - Chrome browser open
-    // Navigate to the URL https://the-internet.herokuapp.com/
-
 
     // Click on Form authentication link
     // Enter valid username
@@ -17,7 +14,5 @@ public class ValidUsernamePassword {
     // Validate login successful message
 
 
-    // browser close
-    // WebDriver close
 
 }

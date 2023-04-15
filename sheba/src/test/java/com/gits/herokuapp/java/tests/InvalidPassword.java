@@ -1,5 +1,7 @@
 package com.gits.herokuapp.java.tests;
 
+import com.gits.herokuapp.java.pom.LandingPage;
+import com.gits.herokuapp.java.pom.LoginPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class InvalidPassword {
+public class InvalidPassword extends BaseTest{
 
     String expectedLoginErrorMessage = "Your password is invalid!\n" +
             "×";
@@ -15,12 +17,21 @@ public class InvalidPassword {
     @Test
     public void invalidPassword() throws InterruptedException {
 
-        //Precondition - Chrome browser open
-        WebDriver driver = new ChromeDriver();
+        LandingPage landingPage = new LandingPage(driver);
+        LoginPage loginPage = new LoginPage(driver);
 
-        //Navigate to the URL https://the-internet.herokuapp.com/
-        driver.get("https://the-internet.herokuapp.com");
-        Thread.sleep(500);
+
+
+        landingPage.getFormAuthentication().click();
+
+        loginPage.getUsername().sendKeys("dfasdfafdsaf");
+        loginPage.getPassword().sendKeys("fdadsfasdfa");
+        loginPage.getLoginBtn().click();
+
+
+
+
+
 
         //Click on Form authentication link
         WebElement formAuthentication = driver.findElement(By.cssSelector("li:nth-of-type(21) > a"));
@@ -47,11 +58,6 @@ public class InvalidPassword {
         String actualErrorMessageText = errorMessage.getText();
         Assert.assertEquals(actualErrorMessageText, expectedLoginErrorMessage);
 
-        // browser close
-        driver.close();
-
-        // WebDriver close
-        driver.quit();
 
     }
 }
