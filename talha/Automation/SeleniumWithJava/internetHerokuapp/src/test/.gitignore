@@ -1,0 +1,12 @@
+
+
+# Intellij
+.idea/
+*.iml
+*.iws
+
+#Allure
+.allure-result/
+# Maven
+log/
+target/
