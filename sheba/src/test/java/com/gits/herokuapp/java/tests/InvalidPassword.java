@@ -20,38 +20,41 @@ public class InvalidPassword extends BaseTest{
         LandingPage landingPage = new LandingPage(driver);
         LoginPage loginPage = new LoginPage(driver);
 
+        //=====Page Object with page factory Automation==================
+        //landingPage.getFormAuthentication().click();
+        //loginPage.getUsername().sendKeys("dfasdfafdsaf");
+        //loginPage.getPassword().sendKeys("fdadsfasdfa");
+        //loginPage.getLoginBtn().click();
+
+        //======Keyword Driven and DataDriven======
+        clickOnElement(landingPage.getFormAuthentication());
+        typeText(loginPage.getUsername(), "tomsmith");
+        typeText(loginPage.getPassword(), "sfasdfasdfas");
+        clickOnElement(loginPage.getLoginBtn());
 
 
-        landingPage.getFormAuthentication().click();
 
-        loginPage.getUsername().sendKeys("dfasdfafdsaf");
-        loginPage.getPassword().sendKeys("fdadsfasdfa");
-        loginPage.getLoginBtn().click();
-
-
-
-
-
+        //=====Basic Automation==================
 
         //Click on Form authentication link
-        WebElement formAuthentication = driver.findElement(By.cssSelector("li:nth-of-type(21) > a"));
-        formAuthentication.click();
-        Thread.sleep(500);
+//        WebElement formAuthentication = driver.findElement(By.cssSelector("li:nth-of-type(21) > a"));
+//        formAuthentication.click();
+//        Thread.sleep(500);
 
         //Enter valid username
-        WebElement username = driver.findElement(By.cssSelector("input#username"));
-        username.sendKeys("tomsmith");
-        Thread.sleep(500);
+//        WebElement username = driver.findElement(By.cssSelector("input#username"));
+//        username.sendKeys("tomsmith");
+//        Thread.sleep(500);
 
         // Enter invalid password
-        WebElement password = driver.findElement(By.cssSelector("input#password"));
-        password.sendKeys("tomsmith");
-        Thread.sleep(500);
+//        WebElement password = driver.findElement(By.cssSelector("input#password"));
+//        password.sendKeys("tomsmith");
+//        Thread.sleep(500);
 
         // Click on login button
-        WebElement loginBtn = driver.findElement(By.cssSelector(".fa.fa-2x.fa-sign-in"));
-        loginBtn.click();
-        Thread.sleep(5000);
+//        WebElement loginBtn = driver.findElement(By.cssSelector(".fa.fa-2x.fa-sign-in"));
+//        loginBtn.click();
+//        Thread.sleep(5000);
 
         // Validate login error message
         WebElement errorMessage = driver.findElement(By.cssSelector("div#flash"));

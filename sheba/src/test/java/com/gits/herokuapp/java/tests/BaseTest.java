@@ -1,6 +1,8 @@
 package com.gits.herokuapp.java.tests;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -22,7 +24,7 @@ public class BaseTest {
 
     @BeforeMethod
     public void beforeMethod() throws InterruptedException {
-        driver.get("https://the-internet.herokuapp.com");
+        navigateTo("https://the-internet.herokuapp.com");
         sleepTime(500);
     }
 
@@ -40,8 +42,18 @@ public class BaseTest {
     public static void sleepTime(long sleeptime){
         try{Thread.sleep(sleeptime);
         }catch (Exception e){
-
         }
+    }
+
+    public void navigateTo(String Url) {
+        driver.get(Url);
+    }
+
+    public void typeText(WebElement element, String text){
+        element.sendKeys(text);
+    }
+    public void clickOnElement(WebElement element){
+        element.click();
     }
 
 
