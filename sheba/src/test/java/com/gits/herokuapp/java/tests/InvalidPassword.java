@@ -18,8 +18,8 @@ public class InvalidPassword extends BaseTest{
     String expectedLoginErrorMessage = "Your password is invalid!\n" +
             "×";
 
+    @Story("gits-5214-Invalid-Password")
     @Description ("Invalid Password")
-        @Story("gits-5214")
     @Test
     public void invalidPassword() throws InterruptedException {
 
