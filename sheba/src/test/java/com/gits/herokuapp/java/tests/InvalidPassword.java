@@ -2,6 +2,10 @@ package com.gits.herokuapp.java.tests;
 
 import com.gits.herokuapp.java.pom.LandingPage;
 import com.gits.herokuapp.java.pom.LoginPage;
+import com.gits.herokuapp.java.utilities.TestData;
+import io.qameta.allure.Description;
+import io.qameta.allure.Step;
+import io.qameta.allure.Story;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,6 +18,8 @@ public class InvalidPassword extends BaseTest{
     String expectedLoginErrorMessage = "Your password is invalid!\n" +
             "×";
 
+    @Description ("Invalid Password")
+        @Story("gits-5214")
     @Test
     public void invalidPassword() throws InterruptedException {
 
@@ -21,16 +27,18 @@ public class InvalidPassword extends BaseTest{
         LoginPage loginPage = new LoginPage(driver);
 
         //=====Page Object with page factory Automation==================
-        //landingPage.getFormAuthentication().click();
-        //loginPage.getUsername().sendKeys("dfasdfafdsaf");
-        //loginPage.getPassword().sendKeys("fdadsfasdfa");
-        //loginPage.getLoginBtn().click();
+//        landingPage.getFormAuthentication().click();
+//        loginPage.getUsername().sendKeys(TestData.USERNAME);
+//        loginPage.getPassword().sendKeys(TestData.PASSWORD);
+//        loginPage.getLoginBtn().click();
 
         //======Keyword Driven and DataDriven======
         clickOnElement(landingPage.getFormAuthentication());
-        typeText(loginPage.getUsername(), "tomsmith");
-        typeText(loginPage.getPassword(), "sfasdfasdfas");
+        typeText(loginPage.getUsername(), TestData.USERNAME);
+        typeText(loginPage.getPassword(), TestData.PASSWORD);
         clickOnElement(loginPage.getLoginBtn());
+
+
 
 
 
@@ -60,6 +68,8 @@ public class InvalidPassword extends BaseTest{
         WebElement errorMessage = driver.findElement(By.cssSelector("div#flash"));
         String actualErrorMessageText = errorMessage.getText();
         Assert.assertEquals(actualErrorMessageText, expectedLoginErrorMessage);
+
+
 
 
     }

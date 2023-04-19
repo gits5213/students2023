@@ -39,17 +39,6 @@ public class LoginPage extends BasePage{
         return loginBtn;
     }
 
-    //DRY & KISS
-    void userName () {
-       /*
-       - Verify Username is visible
-       -Username label validation
-       - Input field is Enable
-       - Input field is visible
-       - Enter username
-       - Log
-        */
 
-    }
 
 }
