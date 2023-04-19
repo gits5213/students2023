@@ -1,6 +1,6 @@
 # User-specific stuff
 .idea/*
-target/*
+
 
 # CMake
 cmake-build-*/
@@ -17,8 +17,4 @@ out/
 # JIRA plugin
 atlassian-ide-plugin.xml
 
-# Crashlytics plugin (for Android Studio and IntelliJ)
-com_crashlytics_export_strings.xml
-crashlytics.properties
-crashlytics-build.properties
-fabric.properties
+
