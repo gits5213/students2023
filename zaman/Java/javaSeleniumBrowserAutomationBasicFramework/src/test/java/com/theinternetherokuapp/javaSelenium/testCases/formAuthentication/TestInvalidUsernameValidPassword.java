@@ -33,13 +33,13 @@ public class TestInvalidUsernameValidPassword {
         Assert.assertEquals(data.baseUrl,currentUrl);
 
         //Ads a sleep time
-        Thread.sleep(2000);
+        //Thread.sleep(2000);
 
         // Finds the locator of Form authentication and clicks on it
         driver.findElement(By.cssSelector(locators.locatorFormAuthentication)).click();
 
         //Adds a sleep time
-        Thread.sleep(2000);
+        //Thread.sleep(2000);
 
         driver.findElement(By.cssSelector(locators.locatorUserID)).sendKeys(data.invalidUserName);
 
@@ -54,7 +54,7 @@ public class TestInvalidUsernameValidPassword {
 
         Assert.assertEquals(data.invalidLoginMessageForUsername,actualLoginErrorMessage);
 
-        Thread.sleep(2000);
+        //Thread.sleep(2000);
 
         driver.quit();
 

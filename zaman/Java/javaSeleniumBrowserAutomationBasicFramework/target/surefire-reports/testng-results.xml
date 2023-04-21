@@ -2,30 +2,30 @@
 <testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-15T07:23:39 BDT" name="My Test Suite" finished-at="2023-04-15T07:23:54 BDT" duration-ms="15090">
+  <suite started-at="2023-04-15T19:05:03 BDT" name="My Test Suite" finished-at="2023-04-15T19:05:20 BDT" duration-ms="16616">
     <groups>
     </groups>
-    <test started-at="2023-04-15T07:23:39 BDT" name="My Test" finished-at="2023-04-15T07:23:54 BDT" duration-ms="15090">
+    <test started-at="2023-04-15T19:05:03 BDT" name="My Test" finished-at="2023-04-15T19:05:20 BDT" duration-ms="16616">
       <class name="com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestInvalidUsernamePassword">
-        <test-method signature="invalidUsernamePassword()[pri:0, instance:com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestInvalidUsernamePassword@433d61fb]" started-at="2023-04-15T07:23:39 BDT" name="invalidUsernamePassword" finished-at="2023-04-15T07:23:52 BDT" duration-ms="12804" status="PASS">
+        <test-method signature="invalidUsernamePassword()[pri:0, instance:com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestInvalidUsernamePassword@433d61fb]" started-at="2023-04-15T19:05:03 BDT" name="invalidUsernamePassword" finished-at="2023-04-15T19:05:17 BDT" duration-ms="14075" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidUsernamePassword -->
       </class> <!-- com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestInvalidUsernamePassword -->
-      <class name="com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestValidUsernamePassword">
-        <test-method signature="ValidUsernamePassword()[pri:0, instance:com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestValidUsernamePassword@794cb805]" started-at="2023-04-15T07:23:39 BDT" name="ValidUsernamePassword" finished-at="2023-04-15T07:23:54 BDT" duration-ms="15071" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidUsernamePassword -->
-      </class> <!-- com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestValidUsernamePassword -->
       <class name="com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestInvalidUsernameValidPassword">
-        <test-method signature="invalidUsernameValidPassword()[pri:0, instance:com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestInvalidUsernameValidPassword@5c909414]" started-at="2023-04-15T07:23:39 BDT" name="invalidUsernameValidPassword" finished-at="2023-04-15T07:23:52 BDT" duration-ms="13036" status="PASS">
+        <test-method signature="invalidUsernameValidPassword()[pri:0, instance:com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestInvalidUsernameValidPassword@5c909414]" started-at="2023-04-15T19:05:03 BDT" name="invalidUsernameValidPassword" finished-at="2023-04-15T19:05:17 BDT" duration-ms="13886" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidUsernameValidPassword -->
       </class> <!-- com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestInvalidUsernameValidPassword -->
+      <class name="com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestValidUsernamePassword">
+        <test-method signature="ValidUsernamePassword()[pri:0, instance:com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestValidUsernamePassword@794cb805]" started-at="2023-04-15T19:05:03 BDT" name="ValidUsernamePassword" finished-at="2023-04-15T19:05:20 BDT" duration-ms="16595" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidUsernamePassword -->
+      </class> <!-- com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestValidUsernamePassword -->
       <class name="com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestValidUsernameInvalidPassword">
-        <test-method signature="invalidUsernameValidPassword()[pri:0, instance:com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestValidUsernameInvalidPassword@4b14c583]" started-at="2023-04-15T07:23:39 BDT" name="invalidUsernameValidPassword" finished-at="2023-04-15T07:23:51 BDT" duration-ms="12424" status="PASS">
+        <test-method signature="invalidUsernameValidPassword()[pri:0, instance:com.theinternetherokuapp.javaSelenium.testCases.formAuthentication.TestValidUsernameInvalidPassword@4b14c583]" started-at="2023-04-15T19:05:03 BDT" name="invalidUsernameValidPassword" finished-at="2023-04-15T19:05:17 BDT" duration-ms="13973" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidUsernameValidPassword -->
