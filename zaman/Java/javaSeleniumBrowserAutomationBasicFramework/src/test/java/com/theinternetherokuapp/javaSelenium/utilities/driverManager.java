@@ -8,7 +8,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class driverManager {
 
     WebDriver driver = null;
-    String browser = "chrome"; //change this to switch browser.
+//    String browser = "edge";
+    String browser = "chrome";
+//    String browser = "firefox";
 
 
     public WebDriver getDriver() {

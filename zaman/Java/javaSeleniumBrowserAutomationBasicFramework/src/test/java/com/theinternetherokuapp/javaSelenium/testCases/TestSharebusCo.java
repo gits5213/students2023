@@ -9,75 +9,71 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
+import java.security.Key;
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
 
 
 public class TestSharebusCo {
 
-//    public static WebElement waitForElementToBeVisible(WebDriver driver, By by, int timeoutInSeconds) {
-//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
-//        return wait.until(ExpectedConditions.visibilityOfElementLocated(by));
-//    }
+    //Custom basic function with explicit wait time for element to be visible
+    public static WebElement basicWaitForElementToBeVisible(WebDriver driver, By by, int timeoutInSeconds) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+    }
 
-
-
-//    public static WebElement waitForElementToBeClickable(WebDriver driver, By by, int timeoutInSeconds) {
-//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
-//
-//        wait.pollingEvery(Duration.ofSeconds(1))
-//                .ignoring(StaleElementReferenceException.class)
-//                .ignoring(ElementNotInteractableException.class)
-//                .ignoring(ElementClickInterceptedException.class)
-//                .ignoring(TimeoutException.class);
-//
-//        return wait.until(ExpectedConditions.elementToBeClickable(by));
-//    }
-
+    //Custom function with explicit wait time for element to be clickable
     public static WebElement waitForElementToBeClickable(WebDriver driver, By by, int timeoutInSeconds) {
         Wait<WebDriver> wait = new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(timeoutInSeconds))
-                .pollingEvery(Duration.ofSeconds(1))
+                .pollingEvery(Duration.ofMillis(1000))
+
+                .ignoring(NoSuchElementException.class)
                 .ignoring(StaleElementReferenceException.class)
                 .ignoring(ElementNotInteractableException.class)
                 .ignoring(ElementClickInterceptedException.class)
+                .ignoring(WebDriverException.class)
                 .ignoring(TimeoutException.class);
 
-        return wait.until(new Function<WebDriver, WebElement>() {
-            public WebElement apply(WebDriver driver) {
-                return driver.findElement(by);
-            }
-        });
+
+        return wait.until(ExpectedConditions.elementToBeClickable(by));
     }
 
-    //custom function for explicit wait time to click
-//    public static WebElement waitForElementToBeClickable(WebDriver driver, By by, int timeoutInSeconds) {
-//        Wait<WebDriver> wait = new FluentWait<>(driver)
-//                .withTimeout(Duration.ofSeconds(timeoutInSeconds))
-//                .pollingEvery(Duration.ofSeconds(1))
-//                .ignoring(StaleElementReferenceException.class)
-//                .ignoring(ElementNotInteractableException.class)
-//                .ignoring(ElementClickInterceptedException.class)
-//                .ignoring(TimeoutException.class);
-//
-//
-//        return wait.until(ExpectedConditions.elementToBeClickable(by));
-//    }
-
-    //custom function for explicit wait time for visible
+    //Custom function with explicit wait time for element to be visible
     public static WebElement waitForElementToBeVisible(WebDriver driver, By by, int timeoutInSeconds) {
         Wait<WebDriver> wait = new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(timeoutInSeconds))
-                .pollingEvery(Duration.ofSeconds(1))
+                .pollingEvery(Duration.ofMillis(1000))
 
+                .ignoring(NoSuchElementException.class)
                 .ignoring(StaleElementReferenceException.class)
                 .ignoring(ElementNotInteractableException.class)
                 .ignoring(ElementClickInterceptedException.class)
+                .ignoring(WebDriverException.class)
                 .ignoring(TimeoutException.class);
 
         return wait.until(ExpectedConditions.visibilityOfElementLocated(by));
     }
 
+    //Custom function with explicit wait time for element to be invisible or disappear
+    public static void waitForElementToDisappear(WebDriver driver, By by) {
+        int timeoutInSeconds = 10;
+        Wait<WebDriver> wait = new FluentWait<>(driver)
+                .withTimeout(Duration.ofSeconds(timeoutInSeconds))
+                .pollingEvery(Duration.ofMillis(1000))
+
+                .ignoring(NoSuchElementException.class)
+                .ignoring(StaleElementReferenceException.class)
+                .ignoring(ElementNotInteractableException.class)
+                .ignoring(ElementClickInterceptedException.class)
+                .ignoring(WebDriverException.class)
+                .ignoring(TimeoutException.class);
+
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(by));
+    }
+
+    //Custom function for sending a string to a text box with default value erasing
     public static void sendKeys(WebDriver driver, By by, int timeoutInSeconds, String text) throws InterruptedException {
         WebElement element = driver.findElement(by);
         Actions actions = new Actions(driver);
@@ -89,10 +85,16 @@ public class TestSharebusCo {
                 .build()
                 .perform();
     }
-
+    //Custom function for scrolling to specific element by locator
     public static void scrollToElement(WebDriver driver, By by) {
         WebElement element = driver.findElement(by);
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center', inline: 'center', behavior: 'smooth'});", element);
+    }
+    //JavaScriptExecutor for clicking hidden element
+    public static void clickHiddenElement(WebDriver driver, By by) {
+        WebElement element = driver.findElement(by);
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+        jsExecutor.executeScript("arguments[0].click();", element);
     }
 
 
@@ -103,7 +105,7 @@ public class TestSharebusCo {
         WebDriver driver = new driverManager().getDriver();
 
         //Global implicit wait time for elements
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(120));
+        //driver.manage().timeouts().implicitlyWait(120 , TimeUnit.SECONDS);
 
         //Driver window maximize
         driver.manage().window().maximize();
@@ -113,6 +115,9 @@ public class TestSharebusCo {
 
         //click login
         //Thread.sleep(3000);
+        //waitForElementToDisappear(driver,By.cssSelector("#app > div.position-absolute.vw-100.vh-100.d-flex.align-items-center.overlay.flex-column.justify-content-center.position-fixed.overlay-primary-background"));
+        //waitForElementToBeClickable(driver,By.cssSelector(".btn.btn-sm.ms-2.sb-btn-md.sb-btn-primary.text-white"),10);
+        driver.findElement(By.cssSelector(".btn.btn-sm.ms-2.sb-btn-md.sb-btn-primary.text-white")).click();
         driver.findElement(By.cssSelector(".btn.fw-normal.px-3.py-1.rounded-pill.sb-btn-lg.sb-btn-secondary")).click();
 
         //enter username
@@ -125,7 +130,7 @@ public class TestSharebusCo {
         driver.findElement(By.cssSelector(".btn.fw-bold.rounded-pill.sb-btn-lg.sb-btn-primary.w-100")).click();
 
         //dropdown click
-        driver.findElement(By.cssSelector(".p-component.p-dropdown.p-inputwrapper.p-inputwrapper-filled.w-50 > div[role='button']")).click();
+        waitForElementToBeClickable(driver,By.cssSelector(".p-component.p-dropdown.p-inputwrapper.p-inputwrapper-filled.w-50 > div[role='button']"), 10).click();
 
         //Select Sharelead
         driver.findElement(By.cssSelector("ul[role='listbox'] > li:nth-of-type(2)")).click();
@@ -134,34 +139,48 @@ public class TestSharebusCo {
         driver.findElement(By.cssSelector(".align-items-center.align-self-center.btn.btn-primary.btn-success.d-flex.fw-bolder.justify-content-between.mt-3.my-3.px-4.rounded-pill.text-white")).click();
 
         //Set up a share bus click
-        //Thread.sleep(2000);
-        waitForElementToBeClickable(driver, By.cssSelector("[class='btn btn-primary sb-btn-primary sb-btn-lg px-4 py-1 my-2 rounded-pill border-0 fw-400']"), 20).click();
+//        Thread.sleep(2000);
+        waitForElementToDisappear(driver,By.cssSelector("#app > div.position-absolute.vw-100.vh-100.d-flex.align-items-center.overlay.flex-column.justify-content-center.position-fixed.overlay-primary-background"));
+//        waitForElementToBeClickable(driver, By.cssSelector("[class='btn btn-primary sb-btn-primary sb-btn-lg px-4 py-1 my-2 rounded-pill border-0 fw-400']"), 10).click();
+        driver.findElement(By.cssSelector("[class='btn btn-primary sb-btn-primary sb-btn-lg px-4 py-1 my-2 rounded-pill border-0 fw-400']")).click();
 
         //enter From
         //Thread.sleep(2000);
-        //driver.findElement(By.cssSelector("input#startPoint")).sendKeys("Oslo, Norway" + Keys.ENTER);
-        scrollToElement(driver,By.cssSelector("input#startPoint"));
-        sendKeys(driver,By.cssSelector("input#startPoint"), 10, "Oslo, Norway");
-        waitForElementToBeClickable(driver, By.cssSelector("div:nth-of-type(2) > span:nth-of-type(3)"), 20).click();
+        waitForElementToDisappear(driver,By.cssSelector("#app > div.position-absolute.vw-100.vh-100.d-flex.align-items-center.overlay.flex-column.justify-content-center.position-fixed.overlay-primary-background"));
+        scrollToElement(driver,By.cssSelector("[class='my-3'] [type]"));
+        driver.findElement(By.cssSelector("[class='my-3'] [type]")).sendKeys("Oslo, Norwa");
+        Thread.sleep(2000);
+        driver.findElement(By.cssSelector("[class='my-3'] [type]")).sendKeys(Keys.SPACE);
+        waitForElementToBeClickable(driver, By.cssSelector("body > div:nth-child(6) > div:nth-child(2)"), 20).click();
 
         //enter To
         //Thread.sleep(2000);
-        scrollToElement(driver,By.cssSelector("input#destination"));
-        sendKeys(driver,By.cssSelector("input#destination"), 10, "Oslo, Norway");
-        waitForElementToBeClickable(driver, By.cssSelector("div:nth-of-type(4) > span:nth-of-type(2)"), 10).click();
+        scrollToElement(driver,By.cssSelector("form div:nth-child(3) [type='text']"));
+        waitForElementToBeClickable(driver,By.cssSelector("form div:nth-child(3) [type='text']"),10).click();
+        driver.findElement(By.cssSelector("form div:nth-child(3) [type='text']")).sendKeys("Kolbotn, Norwa");
+        Thread.sleep(2000);
+        driver.findElement(By.cssSelector("form div:nth-child(3) [type='text']")).sendKeys(Keys.SPACE);
+        waitForElementToBeClickable(driver, By.cssSelector("body > div:nth-child(7) > div:nth-child(1)"), 10).click();
 
         //select departure
         //Thread.sleep(2000);
+        scrollToElement(driver,By.cssSelector("[placeholder='Departure Date']"));
         waitForElementToBeClickable(driver, By.cssSelector("[placeholder='Departure Date']"), 10).click();
-        waitForElementToBeClickable(driver, By.cssSelector("tbody tr:nth-of-type(5) td:nth-of-type(6) > span"), 10).click();
+        clickHiddenElement(driver,By.cssSelector("tr:nth-of-type(4) > td:nth-of-type(6)"));
+        Thread.sleep(5000);
+        waitForElementToBeClickable(driver, By.cssSelector("[class='row my-3'] [class='col-sm-12 col-md-6']:nth-of-type(1) [placeholder='Time']"), 10).click();
+        Thread.sleep(500);
         sendKeys(driver,By.cssSelector("[class='row my-3'] [class='col-sm-12 col-md-6']:nth-of-type(1) [placeholder='Time']"), 10, "06:33");
 
 
         //select return
-        //Thread.sleep(9000);
-        scrollToElement(driver,By.cssSelector(".my-4.row .p-component.p-inputtext.pv-datepicker-input"));
-        waitForElementToBeClickable(driver, By.cssSelector(".my-4.row .p-component.p-inputtext.pv-datepicker-input"), 10).click();
-        waitForElementToBeClickable(driver, By.cssSelector("tr:nth-of-type(5) > td:nth-of-type(7) > span"), 10).click();
+        //Thread.sleep(2000);
+        scrollToElement(driver,By.cssSelector("[placeholder='Return Date']"));
+        waitForElementToBeClickable(driver, By.cssSelector("[placeholder='Return Date']"), 10).click();
+        clickHiddenElement(driver,By.cssSelector("tr:nth-of-type(5) > td:nth-of-type(3)"));
+        Thread.sleep(500);
+        waitForElementToBeClickable(driver, By.cssSelector("[class='row my-4'] [class='col-sm-12 col-md-6']:nth-of-type(1) [placeholder='Time']"), 10).click();
+        Thread.sleep(500);
         sendKeys(driver,By.cssSelector("[class='row my-4'] [class='col-sm-12 col-md-6']:nth-of-type(1) [placeholder='Time']"),10, "06:33");
 
         //Click continue
@@ -170,7 +189,7 @@ public class TestSharebusCo {
 
         //Click Yes Set up a Sharebus
         //Thread.sleep(7000);
-        waitForElementToBeClickable(driver, By.cssSelector(".border-light"), 10).click();
+        waitForElementToBeClickable(driver, By.cssSelector(".border-light"), 20).click();
         driver.findElement(By.cssSelector(".fi-chevron-down")).click();
         driver.findElement(By.cssSelector(".results > ul > li:nth-of-type(4)")).click();
         driver.findElement(By.cssSelector("[type='submit']")).click();
