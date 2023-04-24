@@ -1,4 +1,4 @@
-package com.gits.herokuapp.TestCases;
+package com.gits.herokuapp.Configuaration;
 
 
 import org.openqa.selenium.WebDriver;
@@ -43,8 +43,7 @@ public class BaseClass {
 
         public static void sleepTime(long sleepTime){
             try { Thread.sleep(sleepTime);
-            }catch (Exception e){
-
+            }catch (Exception e) {
             }
         }
 

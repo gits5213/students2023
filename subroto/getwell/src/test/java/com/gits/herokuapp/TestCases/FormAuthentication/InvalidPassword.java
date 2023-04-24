@@ -1,11 +1,10 @@
-package com.gits.herokuapp.TestCases;
+package com.gits.herokuapp.TestCases.FormAuthentication;
 
+import com.gits.herokuapp.Configuaration.BaseClass;
 import com.gits.herokuapp.Pages.FormAuthenticationValidate;
 import com.gits.herokuapp.Pages.LandingPage;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

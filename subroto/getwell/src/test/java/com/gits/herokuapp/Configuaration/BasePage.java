@@ -1,4 +1,4 @@
-package com.gits.herokuapp.Pages;
+package com.gits.herokuapp.Configuaration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
