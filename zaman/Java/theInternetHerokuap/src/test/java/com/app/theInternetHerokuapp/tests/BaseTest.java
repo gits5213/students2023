@@ -27,7 +27,7 @@ public class BaseTest {
     @BeforeMethod
     public void beforeMethod() throws InterruptedException {
         navigateTo(TestData.URL);
-        sleepTime(500);
+        sleepTest(500);
     }
 
     @AfterMethod
@@ -43,10 +43,11 @@ public class BaseTest {
 
 
 
-    //==========Custom methods==============
+    ////////////////////Custom methods///////////////////////
+
 
     //==========Sleep time==============
-    public static void sleepTime(long sleepTime){
+    public static void sleepTest(long sleepTime){
         try {
             Thread.sleep(sleepTime);
         } catch (InterruptedException e) {
@@ -148,7 +149,6 @@ public class BaseTest {
                 .ignoring(TimeoutException.class);
 
         wait.until(ExpectedConditions.invisibilityOf(element));
-        wait.until(ExpectedConditions.invisibilityOf(element));
     }
 
     //==========wait for element to be clickable and click + scroll to element==============
@@ -164,8 +164,8 @@ public class BaseTest {
                 .ignoring(WebDriverException.class)
                 .ignoring(TimeoutException.class);
 
-        element = wait.until(ExpectedConditions.elementToBeClickable(element));
-        scrollToElementAndClick(element);
+        WebElement element1 = wait.until(ExpectedConditions.elementToBeClickable(element));
+        scrollToElementAndClick(element1);
 
     }
 
@@ -173,13 +173,32 @@ public class BaseTest {
     public void scrollToElementAndClick(WebElement element) {
         // Scroll to the element using JavaScriptExecutor
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
-        try {
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        sleepTest(500);
         element.click();
     }
-}
+
+    //==========Click on Hidden element==============
+    public void clickHiddenElement(WebElement element) {
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+        jsExecutor.executeScript("arguments[0].click();", element);
+    }
+
+    //==========Click on body==============
+    public void clickOnBody(){
+
+        WebElement click = driver.findElement(By.tagName("body"));
+    }
+
+
+
+
+
+
+
+
+
+
 
 }
+
+
