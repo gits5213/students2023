@@ -1,0 +1,22 @@
+
+
+# User-specific stuff:
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/
+
+# IntelliJ
+/out/
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+*.iml
+modules.xml
+.idea/misc.xml
+*.ipr
+
+
+### Maven ###
+target/
+
