@@ -1,28 +1,26 @@
-package com.gits.herokuapp.java.pom;
+package com.app.theInternetHerokuapp.pom;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class LandingPage extends BasePage{
+public class landingPage extends BasePage {
 
-    public LandingPage(WebDriver driver) {
+    public landingPage(WebDriver driver) {
         super(driver);
     }
 
     @FindBy(css="li:nth-of-type(21) > a")
     public WebElement formAuthentication;
 
-    @FindBy(css="li:nth-of-type(20) > a")
-    public WebElement forgotPassword;
-
     public WebElement getFormAuthentication() {
         return formAuthentication;
     }
 
+    @FindBy(css="li:nth-of-type(20) > a")
+    public WebElement forgotPassword;
+
     public WebElement getForgotPassword() {
         return forgotPassword;
     }
-
 }

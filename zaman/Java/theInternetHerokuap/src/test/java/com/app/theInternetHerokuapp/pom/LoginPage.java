@@ -1,12 +1,14 @@
-package com.gits.herokuapp.java.pom;
+package com.app.theInternetHerokuapp.pom;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.sql.Driver;
+
 public class LoginPage extends BasePage{
 
-    public LoginPage(WebDriver driver) {
+    public LoginPage(WebDriver driver){
         super(driver);
     }
 
@@ -38,7 +40,4 @@ public class LoginPage extends BasePage{
     public WebElement getLoginBtn() {
         return loginBtn;
     }
-
-
-
 }

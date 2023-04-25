@@ -1,10 +1,6 @@
-D:\SQA\practices\students2023\zaman\Java\theInternetHerokuap\src\test\java\com\app\theInternetHerokuapp\testData\ABTestingPageData.java
 D:\SQA\practices\students2023\zaman\Java\theInternetHerokuap\src\test\java\com\app\theInternetHerokuapp\pom\LoginPage.java
 D:\SQA\practices\students2023\zaman\Java\theInternetHerokuap\src\test\java\com\app\theInternetHerokuapp\pom\BasePage.java
-D:\SQA\practices\students2023\zaman\Java\theInternetHerokuap\src\test\java\com\app\theInternetHerokuapp\testsCases\InvalidPassword.java
 D:\SQA\practices\students2023\zaman\Java\theInternetHerokuap\src\test\java\com\app\theInternetHerokuapp\utilities\TestData.java
-D:\SQA\practices\students2023\zaman\Java\theInternetHerokuap\src\test\java\com\app\theInternetHerokuapp\testsCases\BaseTest.java
-D:\SQA\practices\students2023\zaman\Java\theInternetHerokuap\src\test\java\com\app\theInternetHerokuapp\testsCases\ValidUsernamePassword.java
-D:\SQA\practices\students2023\zaman\Java\theInternetHerokuap\src\test\java\com\app\theInternetHerokuapp\testsCases\InvalidUsernamePassword.java
-D:\SQA\practices\students2023\zaman\Java\theInternetHerokuap\src\test\java\com\app\theInternetHerokuapp\pom\LandingPage.java
-D:\SQA\practices\students2023\zaman\Java\theInternetHerokuap\src\test\java\com\app\theInternetHerokuapp\testsCases\InvalidUsername.java
+D:\SQA\practices\students2023\zaman\Java\theInternetHerokuap\src\test\java\com\app\theInternetHerokuapp\tests\InvalidPassword.java
+D:\SQA\practices\students2023\zaman\Java\theInternetHerokuap\src\test\java\com\app\theInternetHerokuapp\tests\BaseTest.java
+D:\SQA\practices\students2023\zaman\Java\theInternetHerokuap\src\test\java\com\app\theInternetHerokuapp\pom\landingPage.java
