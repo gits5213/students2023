@@ -207,13 +207,11 @@ public class TestSharebusCo {
         driver.findElement(By.cssSelector(".align-items-center.align-self-center.btn.btn-primary.btn-success.d-flex.fw-bolder.justify-content-between.mt-3.my-3.px-4.rounded-pill.text-white")).click();
 
         //Set up a share bus click
-//        Thread.sleep(2000);
         waitForElementToDisappear(driver,By.cssSelector("#app > div.position-absolute.vw-100.vh-100.d-flex.align-items-center.overlay.flex-column.justify-content-center.position-fixed.overlay-primary-background"));
         waitForElementToBeClickableAndClick(driver, By.cssSelector("[class='btn btn-primary sb-btn-primary sb-btn-lg px-4 py-1 my-2 rounded-pill border-0 fw-400']"), 20);
 //        driver.findElement(By.cssSelector("[class='btn btn-primary sb-btn-primary sb-btn-lg px-4 py-1 my-2 rounded-pill border-0 fw-400']")).click();
 
         //enter From
-        //Thread.sleep(2000);
         waitForElementToDisappear(driver,By.cssSelector("#app > div.position-absolute.vw-100.vh-100.d-flex.align-items-center.overlay.flex-column.justify-content-center.position-fixed.overlay-primary-background"));
         driver.findElement(By.cssSelector("[class='my-3'] [type]")).sendKeys("Oslo, Norwa");
         Thread.sleep(2000);

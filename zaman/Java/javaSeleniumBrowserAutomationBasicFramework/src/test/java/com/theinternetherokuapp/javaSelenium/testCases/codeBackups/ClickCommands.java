@@ -97,6 +97,26 @@ public class ClickCommands {
 
     ////////////////////////////////////////////////////////////////////////////////
 
+    //With Web element as parameter for locator
+    public static void waitForElementToBeClickableAndClick(WebDriver driver, WebElement element, int timeoutInSeconds) {
+        Wait<WebDriver> wait = new FluentWait<>(driver)
+                .withTimeout(Duration.ofSeconds(timeoutInSeconds))
+                .pollingEvery(Duration.ofMillis(1000))
+
+                .ignoring(NoSuchElementException.class)
+                .ignoring(StaleElementReferenceException.class)
+                .ignoring(ElementNotInteractableException.class)
+                .ignoring(ElementClickInterceptedException.class)
+                .ignoring(WebDriverException.class)
+                .ignoring(TimeoutException.class);
+
+        WebElement clickableElement = wait.until(ExpectedConditions.elementToBeClickable(element));
+        clickableElement.click();
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////
+
+
     public static void clickHiddenElement(WebDriver driver, By by) {
         WebElement element = driver.findElement(by);
         JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
