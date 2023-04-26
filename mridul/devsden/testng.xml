@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="F:/github/newtest/students2023/mridul/devsden">
+        <classes>
+            <class name="com.gits.herokuappDemo.java.tests.InvalidPassword">
+                <methods>
+                    <include name="invalidPassword"/>
+                </methods>
+            </class>
+            <class name="com.gits.herokuappDemo.java.tests.InvalidUsername">
+                <methods>
+                    <include name="invalidUserName"/>
+                </methods>
+            </class>
+            <class name="com.gits.herokuappDemo.java.tests.InvalidUsernamePassword">
+                <methods>
+                    <include name="invalidUserNamePassword"/>
+                </methods>
+            </class>
+            <class name="com.gits.herokuappDemo.java.tests.ValidUsernamePassword">
+                <methods>
+                    <include name="validUserNamePassword"/>
+                </methods>
+            </class>
+            <class name="com.gits.herokuapp.TestCases.ABTestingTest">
+                <methods>
+                    <include name="aBTestingTest"/>
+                </methods>
+            </class>
+            <class name="com.gits.herokuapp.TestCases.AddRemoveElementsTest">
+                <methods>
+                    <include name="addRemoveElementsTest"/>
+                </methods>
+            </class>
+            <class name="com.gits.herokuapp.TestCases.BasicAuthTest">
+                <methods>
+                    <include name="basicAuthTest"/>
+                </methods>
+            </class>
+            <class name="com.gits.herokuapp.TestCases.BrokenImageTest">
+                <methods>
+                    <include name="brokenImageTest"/>
+                </methods>
+            </class>
+            <class name="com.gits.herokuapp.TestCases.ChallengingDOMTest">
+                <methods>
+                    <include name="challengingDOMTest"/>
+                </methods>
+            </class>
+            <class name="com.gits.herokuapp.TestCases.CheckBoxesTest">
+                <methods>
+                <include name="checkBoxesTest"/>
+                </methods>
+            </class>
+            <class name="com.gits.herokuapp.TestCases.ContextMenuTest">
+                <methods><include name="contextMenuTest"/>
+                </methods>
+            </class>
+            <class name="com.gits.herokuapp.TestCases.DigestAuthenticationTest">
+                <methods>
+                    <include name="digestAuthenticationTest"/>
+                </methods>
+            </class>
+            <class name="com.gits.herokuapp.TestCases.DisappearingElementsTest">
+                <methods><include name="disappearingElementsTest"/>
+                </methods>
+            </class>
+            <class name="com.gits.herokuapp.TestCases.DragAndDropTest">
+                <methods>
+                    <include name="dragAndDropTest"/>
+                </methods>
+            </class>
+            <class name="com.gits.herokuapp.TestCases.DropdownTest">
+                <methods>
+                    <include name="dropdownTest"/>
+                </methods>
+            </class>
+            <class name="com.gits.herokuapp.TestCases.DynamicControlsTest">
+                <methods>
+                    <include name="dynamicControlsTest"/>
+                </methods>
+            </class>
+            <class name="com.gits.herokuapp.TestCases.DynamicLoadingTest">
+                <methods>
+                <include name="dynamicLoadingTest"/>
+                </methods>
+            </class>
+            <class name="com.gits.herokuapp.TestCases.FileUploadTest">
+                <methods><include name="fileUploadTest"/>
+                </methods>
+            </class>
+            <class name="com.gits.herokuapp.TestCases.ForgotPasswordTest">
+                <methods>
+                    <include name="forgotPasswordTest"/>
+                </methods>
+            </class>
+            <class name="com.gits.herokuapp.TestCases.FormAuthenticationTest">
+                <methods>
+                    <include name="formAuthenticationTest"/>
+                </methods>
+            </class>
+            <class name="com.gits.herokuapp.TestCases.HorizontalSliderTest">
+                <methods>
+                    <include name="horizontalSliderTest"/>
+                </methods>
+            </class>
+            <class name="com.gits.herokuapp.TestCases.InputsTest">
+                <methods>
+                    <include name="inputsTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
