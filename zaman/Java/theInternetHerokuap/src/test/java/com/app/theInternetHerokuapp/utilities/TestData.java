@@ -21,6 +21,7 @@ public class TestData {
     //==========Digest authentication==============
     public static final String DIGEST_USERNAME = "admin";
     public static final String DIGEST_PASSWORD = "admin";
+    public static final String DIGEST_ACTUAL_MESSAGE = "Congratulations! You must have the proper credentials.";
 
 
 
