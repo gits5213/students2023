@@ -1,4 +1,4 @@
-package com.gits.internetherokuapp.TestCases;
+package com.gits.internetherokuapp.TestCases.FormAuthenticationValidation;
 import com.gits.internetherokuapp.TestPages.FormAuthentication;
 import com.gits.internetherokuapp.configuration.LandingPage;
 import com.gits.internetherokuapp.Utilities.Data;
@@ -6,7 +6,7 @@ import com.gits.internetherokuapp.configuration.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class FormAuthenticationValidation extends BaseTest {
+public class InvalidPasswordValidation extends BaseTest {
     @Test
     public void formAuthentication(){
 
@@ -14,14 +14,14 @@ public class FormAuthenticationValidation extends BaseTest {
         FormAuthentication fap = new FormAuthentication(driver);
 
         lp.getFormAuthentication().click();
-        sleepTime(2000);
+        sleepTime(1000);
 
         //Home URL Validation
         String link = driver.getCurrentUrl();
         System.out.println("Given"+link);
         Assert.assertEquals(link, Data.BASE_URL+Data.FORM_AUTHENTICATION_LINK);
         System.out.println("Link is Valid");
-        sleepTime(2000);
+        sleepTime(1000);
 
         //Header Validation
         if (fap.getFormAuthenticationHeader().isDisplayed()){
@@ -43,10 +43,10 @@ public class FormAuthenticationValidation extends BaseTest {
 
         //Sending Values
         fap.getUsernameField().sendKeys(Data.FORM_AUTHENTICATION_USER_NAME);
-        sleepTime(2000);
+        sleepTime(1000);
 
         fap.getPasswordInputField().sendKeys(Data.FORM_AUTHENTICATION_PASSWORD);
-        sleepTime(2000);
+        sleepTime(1000);
 
         fap.getLoginButton().click();
          sleepTime(2000);

@@ -177,19 +177,25 @@ public class LandingPage extends BasePage {
         return horizontalSlider;
     }
 
+
+     //Hovers Button
     @FindBy(css = "ul > li:nth-of-type(25)")
     public WebElement hovers;
     public WebElement getHovers(){
         return hovers;
     }
 
+
+    //Infinite Scroll  Button
     @FindBy(css = "li:nth-of-type(26) > a")
     public WebElement infiniteScroll;
     public WebElement getInfiniteScroll(){
         return infiniteScroll;
     }
 
-    @FindBy(css = "ul > li:nth-of-type(27)")
+
+    //Inputs Button
+    @FindBy(css = "#content > ul > li:nth-child(27) > a")
     public WebElement inputs;
     public WebElement getInputs(){
         return inputs;
