@@ -14,30 +14,31 @@ public class LoginPage extends BasePage{
 
     @FindBy(css="input#username")
     public WebElement username;
-
-    @FindBy(css="input#password")
-    public WebElement password;
-
-    @FindBy(css=".fa.fa-2x.fa-sign-in")
-    public WebElement loginBtn;
-
     public WebElement getUsername() {
         return username;
     }
 
-    public void setUsername(WebElement username) {
-        this.username = username;
-    }
-
+    @FindBy(css="input#password")
+    public WebElement password;
     public WebElement getPassword() {
         return password;
     }
 
-    public void setPassword(WebElement password) {
-        this.password = password;
-    }
-
+    @FindBy(css=".fa.fa-2x.fa-sign-in")
+    public WebElement loginBtn;
     public WebElement getLoginBtn() {
         return loginBtn;
     }
+
+    @FindBy(css = "div#flash")
+    public WebElement errorMessage;
+    public WebElement errorMessage() {
+        return errorMessage;
+    }
+
+
+
+
+
+
 }

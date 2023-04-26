@@ -1,5 +1,7 @@
 package com.app.theInternetHerokuapp.tests;
 
+
+import com.app.theInternetHerokuapp.pom.LandingPage;
 import com.app.theInternetHerokuapp.utilities.TestData;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,18 +12,27 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.asserts.SoftAssert;
 
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.time.Duration;
+import java.util.List;
 
 public class BaseTest {
 
     public WebDriver driver;
+    public SoftAssert softAssert;
+    public LandingPage landingPage;
 
     @BeforeClass
     public void beforeClass(){
         driver = new ChromeDriver();
         driver.manage().window().maximize();
 //        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        softAssert = new SoftAssert();
+        landingPage = new LandingPage(driver);
     }
 
     @BeforeMethod
@@ -43,7 +54,7 @@ public class BaseTest {
 
 
 
-    ////////////////////Custom methods///////////////////////
+    ////////////////////Custom Reusable Methods///////////////////////
 
 
     //==========Sleep time==============
@@ -76,21 +87,29 @@ public class BaseTest {
         element.sendKeys(text);
     }
 
-    //==========Basic click on erb element==============
+    //==========Basic click on web element==============
     public void clickOnElement(WebElement element){
         element.click();
     }
 
-    //==========URL hard assertion==============
-    public void verifyAssertUrl(String expectedUrl){
+    //==========Assert Expected URL==============
+    public void assertUrl(String expectedUrl){
         String url = driver.getCurrentUrl();
         Assert.assertEquals(url, expectedUrl);
     }
 
-    //==========Verify expected text==============
-    public void verifyExpectedText(WebElement element, String text){
+    //==========Assert expected text==============
+    public void assertText(WebElement element, String text){
         String expectedText = element.getText().trim();
         Assert.assertEquals(expectedText, text);
+
+    }
+
+    //==========Soft assert expected text==============
+    public void SoftAssertText(WebElement element, String text){
+        String expectedText = element.getText().trim();
+        softAssert.assertEquals(expectedText, text);
+
     }
 
     //==========clear text box==============
@@ -108,7 +127,7 @@ public class BaseTest {
     //==========Get text of an web element==============
     public String getText(WebElement element) {
         highlightWebElement(element);
-        return element.getText();
+        return element.getText().trim();
     }
 
     //==========Mouse hover on element==============
@@ -124,14 +143,9 @@ public class BaseTest {
 
         Wait<WebDriver> wait = new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(10))
-                .pollingEvery(Duration.ofMillis(500))
+                .pollingEvery(Duration.ofMillis(500));
 
-                .ignoring(NoSuchElementException.class)
-                .ignoring(StaleElementReferenceException.class)
-                .ignoring(ElementNotInteractableException.class)
-                .ignoring(ElementClickInterceptedException.class)
-                .ignoring(WebDriverException.class)
-                .ignoring(TimeoutException.class);
+        wait.until(ExpectedConditions.visibilityOf(element));
 
     }
 
@@ -139,14 +153,7 @@ public class BaseTest {
     public void waitForElementToDisappear(WebElement element) {
         Wait<WebDriver> wait = new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(10))
-                .pollingEvery(Duration.ofMillis(500))
-
-                .ignoring(NoSuchElementException.class)
-                .ignoring(StaleElementReferenceException.class)
-                .ignoring(ElementNotInteractableException.class)
-                .ignoring(ElementClickInterceptedException.class)
-                .ignoring(WebDriverException.class)
-                .ignoring(TimeoutException.class);
+                .pollingEvery(Duration.ofMillis(500));
 
         wait.until(ExpectedConditions.invisibilityOf(element));
     }
@@ -155,14 +162,7 @@ public class BaseTest {
     public void waitForElementToBeClickableAndClick(WebElement element) {
         Wait<WebDriver> wait = new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(10))
-                .pollingEvery(Duration.ofMillis(500))
-
-                .ignoring(NoSuchElementException.class)
-                .ignoring(StaleElementReferenceException.class)
-                .ignoring(ElementNotInteractableException.class)
-                .ignoring(ElementClickInterceptedException.class)
-                .ignoring(WebDriverException.class)
-                .ignoring(TimeoutException.class);
+                .pollingEvery(Duration.ofMillis(500));
 
         WebElement element1 = wait.until(ExpectedConditions.elementToBeClickable(element));
         scrollToElementAndClick(element1);
@@ -189,6 +189,114 @@ public class BaseTest {
         WebElement click = driver.findElement(By.tagName("body"));
     }
 
+
+    ////////////////////Page Specific Methods///////////////////////
+
+
+    //==========AddRemoveElementsPage==============
+    public void addElement (int numberOfClicks ,WebElement element, List<WebElement> elements){
+        for (int i = 0; i < numberOfClicks; i++) {
+            clickOnElement(element);
+            sleepTest(1000);
+
+        }
+        System.out.println(numberOfClicks + " Buttons added");
+        Assert.assertEquals(numberOfClicks,elements.size());
+    }
+
+    public void removeElements (int numberOfClicks, WebElement element, List<WebElement> elements){
+        for (int i = 0; i < numberOfClicks; i++) {
+            clickOnElement(element);
+            sleepTest(1000);
+
+        }
+        System.out.println(numberOfClicks + " Buttons deleted");
+        Assert.assertEquals(0,elements.size());
+    }
+    //=============================================
+
+
+    //==========ABTestingPage==============
+    public void abTestingVesrionValidation(WebElement element, String testData1, String testData2 ){
+
+        try{
+            assertText(element, testData1);
+        }
+        catch (AssertionError e){
+            System.out.println(testData2 + " Validated");
+            e.printStackTrace();
+        }
+        try{
+            assertText(element, testData2);
+        }
+        catch (AssertionError e){
+            System.out.println(testData1 + " Validated");
+            e.printStackTrace();
+        }
+    }
+    //=============================================
+
+
+    //==========Broken image Validation==============
+    public void brokenImageValidation(List<WebElement> elements){
+        int totalNumberOfBrokenImage = 0;
+        for (WebElement brokenImage : elements) {
+            String imageURL = brokenImage.getAttribute("src");
+            try{
+                URL url = new URL(imageURL);
+                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+                connection.setConnectTimeout(5000);
+                connection.connect();
+                int responseCode = connection.getResponseCode();
+                if (responseCode != 200) {
+                    System.out.println("Broken image found at" + imageURL);
+                    totalNumberOfBrokenImage++;
+                }
+                connection.disconnect();
+            }
+            catch (IOException e){
+                e.printStackTrace();
+            }
+        }
+        System.out.println("Total number of broken images = " + totalNumberOfBrokenImage );
+    }
+    //=============================================
+
+
+    //==========Checkbox validation==============
+    public void validateCheckBoxes(List<WebElement> elements){
+        int checkboxCounter = 0;
+        System.out.println("Number of checkBoxes = " + elements.size());
+        for (WebElement checkBox : elements) {
+            System.out.println((checkboxCounter + 1) + " Checkbox is Selected = " + checkBox.isSelected());
+            if (!checkBox.isSelected()){
+                checkBox.click();
+                checkboxCounter++;
+            }
+        }
+        if (checkboxCounter == 1){
+            System.out.println( checkboxCounter + " checkbox clicked");
+        }
+        else{
+            System.out.println( checkboxCounter + " checkboxes clicked");
+        }
+    }
+    //=============================================
+
+
+    //==========Context menu==============
+    public void contextMenuValidation(WebElement element){
+
+        Actions actions = new Actions(driver);
+        actions.contextClick(element).perform();
+        Alert alert = driver.switchTo().alert();
+        String alertText = alert.getText();
+        sleepTest(2000);
+        alert.accept();
+        System.out.println("Alert text: " + alertText);
+
+    }
+    //=============================================
 
 
 
