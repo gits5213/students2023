@@ -1,6 +1,7 @@
 package com.app.theInternetHerokuapp.tests;
 
 
+import com.app.theInternetHerokuapp.pom.DigestAuthenticationPage;
 import com.app.theInternetHerokuapp.pom.LandingPage;
 import com.app.theInternetHerokuapp.utilities.TestData;
 import org.openqa.selenium.*;
@@ -90,6 +91,10 @@ public class BaseTest {
     //==========Basic click on web element==============
     public void clickOnElement(WebElement element){
         element.click();
+    }
+    //==========Print text from web element==============
+    public void printText(WebElement element){
+        System.out.println(element.getText().trim());
     }
 
     //==========Assert Expected URL==============
@@ -197,21 +202,21 @@ public class BaseTest {
     public void addElement (int numberOfClicks ,WebElement element, List<WebElement> elements){
         for (int i = 0; i < numberOfClicks; i++) {
             clickOnElement(element);
-            sleepTest(1000);
+            sleepTest(25);
 
         }
         System.out.println(numberOfClicks + " Buttons added");
         Assert.assertEquals(numberOfClicks,elements.size());
     }
 
-    public void removeElements (int numberOfClicks, WebElement element, List<WebElement> elements){
-        for (int i = 0; i < numberOfClicks; i++) {
-            clickOnElement(element);
-            sleepTest(1000);
-
+    public void removeElements (List<WebElement> elements){
+        System.out.println(elements.size() + " Buttons deleted");
+        for (int i = elements.size(); i>=1; i--) {
+            clickOnElement(elements.get(i-1));
+            sleepTest(25);
         }
-        System.out.println(numberOfClicks + " Buttons deleted");
-        Assert.assertEquals(0,elements.size());
+        Assert.assertEquals(elements.size(),0);
+        System.out.println(elements.size() + " Buttons left to delete");
     }
     //=============================================
 
@@ -299,6 +304,50 @@ public class BaseTest {
     //=============================================
 
 
+    //==========Digest Authentication==============
+    public void digestAuthenticationValidation(WebElement element, String username, String password, String url){
+        String finaleLink = "https://"+username+":"+password+"@"+url;
+        System.out.println(finaleLink);
+        navigateTo(finaleLink);
+        assertText(element,TestData.DIGEST_SUCCESSFUL_MESSAGE);
+        printText(element);
+    }
+    //=============================================
+
+
+    //==========Next==============
+
+    //=============================================
+
+
+    //==========Next==============
+
+    //=============================================
+
+
+    //==========Next==============
+
+    //=============================================
+
+
+    //==========Next==============
+
+    //=============================================
+
+
+    //==========Next==============
+
+    //=============================================
+
+
+    //==========Next==============
+
+    //=============================================
+
+
+    //==========Next==============
+
+    //=============================================
 
 
 

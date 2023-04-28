@@ -22,21 +22,13 @@ public class TestDigestAuthentication extends BaseTest{
 
         DigestAuthenticationPage digestAuthenticationPage = new DigestAuthenticationPage(driver);
 
-
         clickOnElement(landingPage.getDigestAuthentication());
         //format to pass username and password within URL
         //https://username:password@the-internet.herokuapp.com/digest_auth
-        digestAuthenticationValidation(TestData.DIGEST_USERNAME,TestData.DIGEST_PASSWORD);
-        sleepTest(5000);
-        assertText(digestAuthenticationPage.digestAuthShowedMessage,TestData.DIGEST_ACTUAL_MESSAGE);
 
+        digestAuthenticationValidation(digestAuthenticationPage.digestAuthShowedMessage(),
+                TestData.DIGEST_USERNAME,
+                TestData.DIGEST_PASSWORD,
+                TestData.DIGEST_EDITABLE_URL);
     }
-    public void digestAuthenticationValidation(String username, String password){
-        DigestAuthenticationPage digestAuthenticationPage = new DigestAuthenticationPage(driver);
-        String finaleLink = "https://"+username+":"+password+"@"+digestAuthenticationPage.editableDigestAuthentication;
-        System.out.println(finaleLink);
-        navigateTo(finaleLink);
-
-    }
-
 }

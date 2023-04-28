@@ -18,10 +18,9 @@ public class TestInvalidPassword extends BaseTest {
     public void invalidPassword() throws InterruptedException {
 
 
-        LandingPage landingpage = new LandingPage(driver);
         LoginPage loginPage = new LoginPage(driver);
 
-        clickOnElement(landingpage.getAddRemoveElementsPage());
+        clickOnElement(landingPage.getFormAuthentication());
         typeText(loginPage.getUsername(), TestData.USERNAME);
         typeText(loginPage.getPassword(), TestData.WRONG_PASSWORD);
         clickOnElement(loginPage.getLoginBtn());

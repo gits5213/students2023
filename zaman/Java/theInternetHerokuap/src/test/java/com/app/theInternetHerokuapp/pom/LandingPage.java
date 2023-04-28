@@ -11,7 +11,7 @@ public class LandingPage extends BasePage {
     }
 
     @FindBy(css = "li:nth-of-type(1) > a")
-    public  WebElement abTestingPage;
+    public WebElement abTestingPage;
     public WebElement getAbTestingPage() {
         return abTestingPage;
     }

@@ -20,16 +20,10 @@ public class AddRemoveElementsPage extends BasePage{
         return addElementBtn;
     }
 
-    @FindBy(css = "div#elements > button:nth-of-type(1)")
-    public WebElement deleteBtn;
-    public WebElement getDeleteBtn(){
-        return deleteBtn;
-    }
-
-    @FindBy(css = "button.added-manually")
-    public List<WebElement> totalButtons;
-    public List<WebElement> getTotalButtons() {
-        return totalButtons;
+    @FindBy(css = "div#elements > button:nth-of-type(n)")
+    public List<WebElement> totalBtn;
+    public List<WebElement> getTotalBtn(){
+        return totalBtn;
     }
 
 

@@ -3,7 +3,7 @@
 <suite name="My Test Suite">
     <test name="My Test">
         <classes>
-            <class name="com.app.theInternetHerokuapp.tests.InvalidPassword"/>
+            <class name="com.app.theInternetHerokuapp.tests.LoginPage.TestInvalidPassword"/>
         </classes>
     </test>
 </suite>

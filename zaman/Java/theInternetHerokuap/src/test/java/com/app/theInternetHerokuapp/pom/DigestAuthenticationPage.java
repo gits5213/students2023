@@ -11,11 +11,6 @@ public class DigestAuthenticationPage extends BasePage{
         super(driver);
     }
 
-    public String editableDigestAuthentication = "the-internet.herokuapp.com/digest_auth";
-    public String getDigestAuthentication() {
-        return editableDigestAuthentication;
-    }
-
     @FindBy(css = "p")
     public WebElement digestAuthShowedMessage;
     public WebElement digestAuthShowedMessage(){

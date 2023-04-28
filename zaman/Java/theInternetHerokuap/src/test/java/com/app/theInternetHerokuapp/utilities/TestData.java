@@ -21,7 +21,13 @@ public class TestData {
     //==========Digest authentication==============
     public static final String DIGEST_USERNAME = "admin";
     public static final String DIGEST_PASSWORD = "admin";
-    public static final String DIGEST_ACTUAL_MESSAGE = "Congratulations! You must have the proper credentials.";
+    public static final String DIGEST_SUCCESSFUL_MESSAGE = "Congratulations! You must have the proper credentials.";
+    public static final String DIGEST_EDITABLE_URL = "the-internet.herokuapp.com/digest_auth";
+
+    //==========Next==============
+
+
+    //==========Next==============
 
 
 
