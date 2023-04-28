@@ -102,9 +102,13 @@ public class TestSharebusCo {
         Actions actions = new Actions(driver);
         actions.click(element)
                 .sendKeys(Keys.CONTROL + "a")
+                .pause(Duration.ofMillis(250))
                 .sendKeys(Keys.BACK_SPACE)
+                .pause(Duration.ofMillis(250))
                 .sendKeys(text)
+                .pause(Duration.ofMillis(250))
                 .click(driver.findElement(By.cssSelector("body")))
+                .pause(Duration.ofMillis(250))
                 .build()
                 .perform();
     }
