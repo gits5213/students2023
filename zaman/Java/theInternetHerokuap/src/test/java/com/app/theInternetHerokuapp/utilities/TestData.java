@@ -32,7 +32,9 @@ public class TestData {
     public static final String[] DISAPPEARING_ELEMENTS = {"Home", "About", "Contact Us", "Portfolio", "Gallery"};
 
 
-    //==========Next==============
+    //==========LoginValidationWithExcelData==============
+    public static final String LOGIN_EXCEL_FILEPATH = "src/test/java/com/app/theInternetHerokuapp/testData/loginData.xlsx";
+
 
 
     //==========Next==============

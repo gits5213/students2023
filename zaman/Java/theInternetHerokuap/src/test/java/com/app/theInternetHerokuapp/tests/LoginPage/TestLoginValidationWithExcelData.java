@@ -32,50 +32,8 @@ public class TestLoginValidationWithExcelData extends BaseTest {
 
         LoginValidationWithExcelDataPage loginValidationWithExcelDataPage = new LoginValidationWithExcelDataPage(driver);
 
-        String filePath = "src/test/java/com/app/theInternetHerokuapp/testData/loginData.xlsx";
         clickOnElement(landingPage.getFormAuthentication());
         excelToWebInput(loginValidationWithExcelDataPage.getUsername(), loginValidationWithExcelDataPage.getPassword(),
-                loginValidationWithExcelDataPage.getLoginBtn(), loginValidationWithExcelDataPage.errorMessage(),  filePath);
+                loginValidationWithExcelDataPage.getLoginBtn(), loginValidationWithExcelDataPage.errorMessage(),TestData.LOGIN_EXCEL_FILEPATH);
     }
-    public  void excelToWebInput(WebElement input1, WebElement input2, WebElement logIn, WebElement message, String excelDirectory) throws IOException {
-
-        FileInputStream inputStream = new FileInputStream(excelDirectory);
-        Workbook workbook = new XSSFWorkbook(inputStream);
-        Sheet sheet = workbook.getSheetAt(0);
-
-        // Get input fields
-        List<WebElement> inputFields = new ArrayList<>();
-        inputFields.add(input1);
-        inputFields.add(input2);
-
-        int lastRowNum = sheet.getLastRowNum();
-        for (int i = 1; i <= lastRowNum; i++) {
-            Row row = sheet.getRow(i);
-//            System.out.println("Number of cells = " + lastRowNum);
-            int lastCellIndex = sheet.getRow(0).getLastCellNum();;
-//            System.out.println("Number of cells = " + lastCellIndex);
-            for (int j = 0; j < lastCellIndex; j++) {
-                Cell cell = row.getCell(j);
-                String cellValue = cell.getStringCellValue();
-                inputFields.get(j).sendKeys(cellValue);
-                sleepTest(250);
-
-            }
-            clickOnElement(logIn);
-            sleepTest(500);
-            printText(message);
-            if (Objects.equals(message.getText(), TestData.EXPECTED_LOGIN_SUCCESSFUL_MESSAGE)){
-                driver.navigate().back();
-                for(WebElement element : inputFields){
-                    element.clear();
-                    sleepTest(500);
-
-                }
-            }
-            inputStream.close();
-            workbook.close();
-        }
-
-    }
-
 }

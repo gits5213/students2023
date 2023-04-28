@@ -4,6 +4,11 @@ package com.app.theInternetHerokuapp.tests;
 import com.app.theInternetHerokuapp.pom.DigestAuthenticationPage;
 import com.app.theInternetHerokuapp.pom.LandingPage;
 import com.app.theInternetHerokuapp.utilities.TestData;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -15,11 +20,15 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.asserts.SoftAssert;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class BaseTest {
 
@@ -31,9 +40,9 @@ public class BaseTest {
     public void beforeClass(){
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         softAssert = new SoftAssert();
         landingPage = new LandingPage(driver);
+        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
     @BeforeMethod
@@ -337,8 +346,44 @@ public class BaseTest {
     //=============================================
 
 
-    //==========Next==============
+    //==========excelToWebInput==============
+    public  void excelToWebInput(WebElement input1, WebElement input2, WebElement logIn, WebElement message, String excelDirectory) throws IOException {
 
+        FileInputStream inputStream = new FileInputStream(excelDirectory);
+        Workbook workbook = new XSSFWorkbook(inputStream);
+        Sheet sheet = workbook.getSheetAt(0);
+
+        List<WebElement> inputFields = new ArrayList<>();
+        inputFields.add(input1);
+        inputFields.add(input2);
+
+        int lastRowNum = sheet.getLastRowNum();
+        for (int i = 1; i <= lastRowNum; i++) {
+            Row row = sheet.getRow(i);
+//            System.out.println("Number of cells = " + lastRowNum);
+            int lastCellIndex = sheet.getRow(0).getLastCellNum();;
+//            System.out.println("Number of cells = " + lastCellIndex);
+            for (int j = 0; j < lastCellIndex; j++) { //cell index corresponds to the web element's data fields,
+                Cell cell = row.getCell(j);
+                String cellValue = cell.getStringCellValue();
+                inputFields.get(j).sendKeys(cellValue);
+                sleepTest(250);
+            }
+            clickOnElement(logIn);
+            sleepTest(500);
+            printText(message);
+            if (Objects.equals(message.getText(), TestData.EXPECTED_LOGIN_SUCCESSFUL_MESSAGE)){
+                driver.navigate().back();
+                for(WebElement element : inputFields){
+                    element.clear();
+                    sleepTest(500);
+                }
+            }
+            inputStream.close();
+            workbook.close();
+        }
+
+    }
     //=============================================
 
 
