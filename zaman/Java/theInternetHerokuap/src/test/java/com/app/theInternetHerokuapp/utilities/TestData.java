@@ -1,5 +1,7 @@
 package com.app.theInternetHerokuapp.utilities;
 
+import java.lang.reflect.Array;
+
 public class TestData {
 
     //==========Global Test Data==============
@@ -17,12 +19,18 @@ public class TestData {
     public static final String WRONG_PASSWORD = "ERFGAERGAR";
     public static final String EXPECTED_LOGIN_ERROR_MESSAGE = "Your password is invalid!\n" +
             "×";
+    public static final String EXPECTED_LOGIN_SUCCESSFUL_MESSAGE = "You logged into a secure area!\n" +
+            "×";
 
     //==========Digest authentication==============
     public static final String DIGEST_USERNAME = "admin";
     public static final String DIGEST_PASSWORD = "admin";
     public static final String DIGEST_SUCCESSFUL_MESSAGE = "Congratulations! You must have the proper credentials.";
     public static final String DIGEST_EDITABLE_URL = "the-internet.herokuapp.com/digest_auth";
+
+    //==========Disappearing Elements==============
+    public static final String[] DISAPPEARING_ELEMENTS = {"Home", "About", "Contact Us", "Portfolio", "Gallery"};
+
 
     //==========Next==============
 

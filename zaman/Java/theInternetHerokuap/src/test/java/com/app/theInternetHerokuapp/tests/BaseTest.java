@@ -193,6 +193,10 @@ public class BaseTest {
 
         WebElement click = driver.findElement(By.tagName("body"));
     }
+    //==========Switch to frame==============
+    public void switchToFrame (WebElement element){
+        driver.switchTo().frame(element);
+    }
 
 
     ////////////////////Page Specific Methods///////////////////////
@@ -315,8 +319,21 @@ public class BaseTest {
     //=============================================
 
 
-    //==========Next==============
-
+    //==========Disappearing Elements==============
+    public void disappearingElementsValidation(int noOfElements, String[] defaultData, List<WebElement> actualDataList){
+        for (int i = 0; i < noOfElements; i++) {
+            try{
+                WebElement element = actualDataList.get(i);
+                String actualData = element.getText().trim();
+                if(TestData.DISAPPEARING_ELEMENTS[i].equals(actualData)){
+                    System.out.println(actualData + " element is present");
+                }
+            }
+            catch (IndexOutOfBoundsException e){
+                System.out.println(TestData.DISAPPEARING_ELEMENTS[i] + " element is missing");
+            }
+        }
+    }
     //=============================================
 
 

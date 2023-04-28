@@ -46,6 +46,17 @@ public class LandingPage extends BasePage {
         return digestAuthentication;
     }
 
+    @FindBy(css = "li:nth-of-type(9) > a")
+    public WebElement disappearingElements;
+    public WebElement getDisappearingElements() {
+        return disappearingElements;
+    }
+    @FindBy(css = "li:nth-of-type(10) > a")
+    public WebElement dragAndDrop;
+    public WebElement getDragAndDrop() {
+        return dragAndDrop;
+    }
+
     @FindBy(css = "li:nth-of-type(21) > a")
     public WebElement formAuthentication;
     public WebElement getFormAuthentication() {
