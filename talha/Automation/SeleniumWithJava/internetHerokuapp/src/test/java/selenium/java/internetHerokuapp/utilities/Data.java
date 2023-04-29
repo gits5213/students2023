@@ -8,7 +8,7 @@ public  class Data {
     public static final String CREATE_NEW_ACCOUNT = "Create New Account";
 
     //BaseURL
-    public static final String  BASE_URL = "http://the-internet.herokuapp.com/";
+    public static final String  BASE_URL = "https://the-internet.herokuapp.com/";
 
     //AB Test
     public static final String  AB_TESTING = "A/B Testing";
