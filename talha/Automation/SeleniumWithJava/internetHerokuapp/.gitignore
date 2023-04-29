@@ -5,10 +5,3 @@ allure-results/
 ### Maven ###
 target/
 
-
-### IntelliJ IDEA ###
-*.iws
-*.iml
-*.ipr
-
-
