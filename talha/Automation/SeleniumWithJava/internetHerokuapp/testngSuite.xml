@@ -14,6 +14,19 @@
                 </methods>
             </class>
 
+            <class name ="selenium.java.internetHerokuapp.testCases.AddRemoveElements">
+                <methods>
+                    <include name="addRemoveElements" />
+                </methods>
+            </class>
+
+            <class name ="selenium.java.internetHerokuapp.testCases.BasicAuth">
+                <methods>
+                    <include name="basicAuth" />
+                </methods>
+            </class>
+
+
         </classes>
     </test>
 </suite>

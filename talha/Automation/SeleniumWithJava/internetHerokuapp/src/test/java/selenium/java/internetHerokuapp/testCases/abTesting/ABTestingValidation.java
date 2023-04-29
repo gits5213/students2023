@@ -4,21 +4,22 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import selenium.java.internetHerokuapp.configurations.BaseClass;
 import selenium.java.internetHerokuapp.pages.AbTestingPage;
-import selenium.java.internetHerokuapp.pages.LandingPage;
+import selenium.java.internetHerokuapp.pages.TheInternet;
 import selenium.java.internetHerokuapp.utilities.Data;
 
 public class ABTestingValidation extends BaseClass {
 
     @Test(description = "User Able to visit Landing Page and Validate that AB testing is available and clickable")
+
     public void aBTestingValidation(){
 
-        LandingPage lnp = new LandingPage(driver); // to use this class in java we have to create new instance
+        TheInternet lnp = new TheInternet(driver); // to use this class in java we have to create new instance
         AbTestingPage atp  = new AbTestingPage(driver);
 
         //TC-1 HOME URL Validation
         String baseLink = driver.getCurrentUrl();
         System.out.println("Given "+baseLink);
-        Assert.assertEquals(baseLink, Data.LANDING_PAGE_URL);
+        Assert.assertEquals(baseLink, Data.BASE_URL);
         System.out.println("Home URL is validate");
         sleepTest(2000);
 
@@ -38,7 +39,7 @@ public class ABTestingValidation extends BaseClass {
         //TC-3 Corresponding Page URL Validation
         String link = driver.getCurrentUrl();
         System.out.println("Given "+link);
-        Assert.assertEquals(link, Data.LANDING_PAGE_URL+Data.AB_Test_LINK);
+        Assert.assertEquals(link, Data.BASE_URL+Data.AB_Test_LINK);
         System.out.println("Link is validate");
         sleepTest(2000);
 
@@ -56,7 +57,7 @@ public class ABTestingValidation extends BaseClass {
 
         sleepTest(2000);
         driver.navigate().back();
-        sleepTest(5000);
+
 
     }
 }
