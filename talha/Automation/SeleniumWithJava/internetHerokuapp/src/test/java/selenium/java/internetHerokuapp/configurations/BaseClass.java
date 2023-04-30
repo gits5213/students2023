@@ -1,22 +1,48 @@
 package selenium.java.internetHerokuapp.configurations;
 
 
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.*;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 
 import java.time.Duration;
 
 
 public class BaseClass {
     public WebDriver driver;
+
+
+    // ============================ Excel Data read method =======================
+
+    @DataProvider(name = "loginData")
+    public Object[][] getLoginData() throws IOException {
+        String filePath = "src/test/java/selenium/java/internetHerokuapp/utilities/testData.xlsx";
+        String sheetName = "Login";
+        FileInputStream file = new FileInputStream(new File(filePath));
+        XSSFWorkbook workbook = new XSSFWorkbook(file);
+        XSSFSheet sheet = workbook.getSheet(sheetName);
+        int rowCount = sheet.getLastRowNum();
+        int colCount = sheet.getRow(0).getLastCellNum();
+        Object[][] data = new Object[rowCount][colCount];
+        for (int i = 1; i <= rowCount; i++) {
+            for (int j = 0; j < colCount; j++) {
+                XSSFRow row = sheet.getRow(i);
+                data[i - 1][j] = row.getCell(j).toString();
+            }
+        }
+        return data;
+    }
 
     @BeforeClass
     public void beforeClass() {
@@ -92,6 +118,10 @@ public class BaseClass {
         WebElement typeAbleElement = wait.until(ExpectedConditions.elementToBeClickable(element));
         typeAbleElement.sendKeys(text);
     }
+
+
+
+
 
 
 }
