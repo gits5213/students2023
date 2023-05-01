@@ -15,9 +15,11 @@ public class TestData {
     public static final String AB_TESTING_HEADER_TEXT_2 = "A/B Test Control";
 
     //==========Login page==============
-    public static final String WRONG_USERNAME = "tomsmit";
+    public static final String WRONG_USERNAME = "tomsmitt";
     public static final String WRONG_PASSWORD = "ERFGAERGAR";
-    public static final String EXPECTED_LOGIN_ERROR_MESSAGE = "Your password is invalid!\n" +
+    public static final String EXPECTED_LOGIN_ERROR_MESSAGE_USERNAME = "Your username is invalid!\n" +
+            "×";
+    public static final String EXPECTED_LOGIN_ERROR_MESSAGE_PASSWORD = "Your password is invalid!\n" +
             "×";
     public static final String EXPECTED_LOGIN_SUCCESSFUL_MESSAGE = "You logged into a secure area!\n" +
             "×";

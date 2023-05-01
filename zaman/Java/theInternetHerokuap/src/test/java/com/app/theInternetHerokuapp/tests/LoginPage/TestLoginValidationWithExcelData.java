@@ -24,6 +24,6 @@ public class TestLoginValidationWithExcelData extends BaseTest {
 
         clickOnElement(landingPage.getFormAuthentication());
         excelToWebInput(loginValidationWithExcelDataPage.getUsername(), loginValidationWithExcelDataPage.getPassword(),
-                loginValidationWithExcelDataPage.getLoginBtn(), loginValidationWithExcelDataPage.errorMessage(),TestData.LOGIN_EXCEL_FILEPATH);
+                loginValidationWithExcelDataPage.getLoginBtn(), loginValidationWithExcelDataPage.message(),TestData.LOGIN_EXCEL_FILEPATH);
     }
 }

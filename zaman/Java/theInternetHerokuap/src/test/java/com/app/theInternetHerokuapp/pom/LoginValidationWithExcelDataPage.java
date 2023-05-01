@@ -29,9 +29,9 @@ public class LoginValidationWithExcelDataPage extends BasePage{
     }
 
     @FindBy(css = "div#flash")
-    public WebElement errorMessage;
-    public WebElement errorMessage() {
-        return errorMessage;
+    public WebElement message;
+    public WebElement message() {
+        return message;
     }
 
 }

@@ -24,7 +24,7 @@ public class TestInvalidPassword extends BaseTest {
         typeText(loginPage.getUsername(), TestData.USERNAME);
         typeText(loginPage.getPassword(), TestData.WRONG_PASSWORD);
         clickOnElement(loginPage.getLoginBtn());
-        assertText(loginPage.errorMessage,TestData.EXPECTED_LOGIN_ERROR_MESSAGE);
+        assertText(loginPage.errorMessage,TestData.EXPECTED_LOGIN_ERROR_MESSAGE_PASSWORD);
 
     }
 }
