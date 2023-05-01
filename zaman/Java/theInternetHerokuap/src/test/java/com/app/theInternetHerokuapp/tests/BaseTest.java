@@ -1,7 +1,6 @@
 package com.app.theInternetHerokuapp.tests;
 
 
-import com.app.theInternetHerokuapp.pom.DigestAuthenticationPage;
 import com.app.theInternetHerokuapp.pom.LandingPage;
 import com.app.theInternetHerokuapp.utilities.TestData;
 import org.apache.poi.ss.usermodel.Cell;
@@ -21,7 +20,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.asserts.SoftAssert;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -116,7 +114,6 @@ public class BaseTest {
     public void assertText(WebElement element, String text){
         String expectedText = element.getText().trim();
         Assert.assertEquals(expectedText, text);
-
     }
 
     //==========Soft assert expected text==============
@@ -154,11 +151,9 @@ public class BaseTest {
 
     //==========wait for element to be visible==============
     public void waitForElementToBeVisible(WebElement element) {
-
         Wait<WebDriver> wait = new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(10))
                 .pollingEvery(Duration.ofMillis(500));
-
         wait.until(ExpectedConditions.visibilityOf(element));
 
     }
@@ -168,7 +163,6 @@ public class BaseTest {
         Wait<WebDriver> wait = new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(10))
                 .pollingEvery(Duration.ofMillis(500));
-
         wait.until(ExpectedConditions.invisibilityOf(element));
     }
 
@@ -177,7 +171,6 @@ public class BaseTest {
         Wait<WebDriver> wait = new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(10))
                 .pollingEvery(Duration.ofMillis(500));
-
         WebElement element1 = wait.until(ExpectedConditions.elementToBeClickable(element));
         scrollToElementAndClick(element1);
 
