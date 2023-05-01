@@ -57,6 +57,12 @@ public class LandingPage extends BasePage {
         return dragAndDrop;
     }
 
+    @FindBy(css = "li:nth-of-type(11) > a")
+    public WebElement dropDownPage;
+    public WebElement getDropDownPage() {
+        return dropDownPage;
+    }
+
     @FindBy(css = "li:nth-of-type(21) > a")
     public WebElement formAuthentication;
     public WebElement getFormAuthentication() {
