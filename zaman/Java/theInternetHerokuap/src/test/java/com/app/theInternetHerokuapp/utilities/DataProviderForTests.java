@@ -29,11 +29,10 @@ public class DataProviderForTests extends BaseTest {
             for (int j = 0; j < lastCellIndex; j++) { //first loop for column iteration
                 Cell cell = row.getCell(j);
                 loginData[i-1][j] = cell.getStringCellValue();
-                sleepTest(250);
             }
-            inputStream.close();
-            workbook.close();
         }
+        inputStream.close();
+        workbook.close();
         return loginData;
     }
 }
