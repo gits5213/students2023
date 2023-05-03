@@ -2,7 +2,18 @@
 <module type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/sheba/target/classes" />
+      <excludeFolder url="file://$MODULE_DIR$/sheba/target/generated-sources" />
+      <excludeFolder url="file://$MODULE_DIR$/sheba/target/generated-test-sources" />
+      <excludeFolder url="file://$MODULE_DIR$/sheba/target/test-classes" />
+      <excludeFolder url="file://$MODULE_DIR$/subroto/getwell/target/classes" />
+      <excludeFolder url="file://$MODULE_DIR$/subroto/getwell/target/generated-sources" />
+      <excludeFolder url="file://$MODULE_DIR$/subroto/getwell/target/generated-test-sources" />
+      <excludeFolder url="file://$MODULE_DIR$/subroto/getwell/target/surefire-reports" />
+      <excludeFolder url="file://$MODULE_DIR$/subroto/getwell/target/test-classes" />
+      <excludeFolder url="file://$MODULE_DIR$/subroto/getwell/allure-results" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

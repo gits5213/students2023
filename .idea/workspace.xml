@@ -5,48 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27b990f1-65ef-4573-8cad-31d3bb5a398a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/subroto/getwell/Testngsuite.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/InfiniteScroll.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/Input.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/JavaScriptAlert.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/MouseHover.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/MultipleWindows.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/NotificationMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/RedirectLink.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/students2023.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/students2023.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subroto/getwell/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/subroto/getwell/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/Pages/DynamicContentPages.java" beforeDir="false" afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/Pages/DyanamicPages/DynamicContentPages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/Pages/DynamicControlsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/Pages/DyanamicPages/DynamicControlsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/Pages/LandingPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/LandingPageConfiguaration/LandingPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/Pages/LoginSignUp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/Pages/MultipleWindowsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/Pages/MultipleWindow/MultipleWindowsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/Pages/NewWindowsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/Pages/MultipleWindow/NewWindowsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/Pages/NotificationMassagesPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/Pages/NotificationMassagesPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/Pages/RedirectLinkPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/Pages/RedirectLink/RedirectLinkPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/Pages/StatusCodePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/Pages/RedirectLink/StatusCodePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/ABTestingValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/ABTestingValidation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/AddRemoveElementsValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/AddRemoveElementsValidation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/BasicAuth.java" beforeDir="false" afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/BasicAuth.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/BrokenImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/BrokenImage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/CheckboxesValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/CheckboxesValidation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/ContextMenuValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/ContextMenuValidation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/DigestAuthentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/DigestAuthentication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/DisappearingElementsValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/DisappearingElementsValidation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/DragAndDropValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/DragAndDropValidation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/DropDownValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/DropDownValidation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/DynamicContentValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/DynamicPageValidation/DynamicContentValidation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/DynamicControlsValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/DynamicPageValidation/DynamicControlsValidation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/FileDownloadValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/FileDownloadValidation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/FileUploadValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/FileUploadValidation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/ForgotPassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/ForgotPassword.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/FormAuthentication/InvalidPassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/FormAuthentication/InvalidPassword.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/FormAuthentication/InvalidUserName.java" beforeDir="false" afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/FormAuthentication/InvalidUserName.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/FormAuthentication/InvalidUserNamePassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/FormAuthentication/InvalidUserNamePassword.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/FormAuthentication/ValidUserNamePassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/FormAuthentication/ValidUserNamePassword.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/Frames/Iframe.java" beforeDir="false" afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/Frames/Iframe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/Frames/NestedFrames.java" beforeDir="false" afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/Frames/NestedFrames.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/HorizontalSlider.java" beforeDir="false" afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/TestCases/HorizontalSlider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/Utilites/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/subroto/getwell/src/test/java/com/gits/herokuapp/Utilites/Data.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subroto/getwell/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/subroto/getwell/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,19 +25,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;H:/github/newdirectory/students2023&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "H:/github/newdirectory/students2023",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  },
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+      "directory"
+    ]
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

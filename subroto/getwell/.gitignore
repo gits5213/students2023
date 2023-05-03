@@ -1,6 +1,5 @@
-target/
-allure-results/
 .idea/
+allure-results/
 
 ### Maven ###
 target/
