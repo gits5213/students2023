@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="44.28" tests="2" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="java.vm.version" value="11.0.14+8-LTS-263"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\jdk-11.0.14\bin"/>
+    <property name="maven.multiModuleProjectDirectory" value="E:\Github\GITS 2023\students2023\talha\Automation\SeleniumWithJava\internetHerokuapp"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="https://openjdk.java.net/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="E:\Github\GITS 2023\students2023\talha\Automation\SeleniumWithJava\internetHerokuapp"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="java.runtime.version" value="11.0.14+8-LTS-263"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\Talha\AppData\Local\Temp\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="classworlds.conf" value="C:\Program Files\apache-maven-3.8.6\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\jdk-11.0.14\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\apache-maven-3.8.6\bin;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\jdk-11.0.14\bin;D:\Talha\SQA\Software\apache-maven-3.8.1\bin;D:\Talha\SQA\Software\allure-commandline-2.12.1\allure-2.12.1\bin;C:\Users\Talha\AppData\Local\Microsoft\WindowsApps;C:\Users\Talha\AppData\Roaming\npm;C:\Users\Talha\AppData\Local\Programs\Microsoft VS Code\bin;."/>
+    <property name="maven.conf" value="C:\Program Files\apache-maven-3.8.6/conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="55.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="library.jansi.path" value="C:\Program Files\apache-maven-3.8.6\lib\jansi-native"/>
+    <property name="user.home" value="C:\Users\Talha"/>
+    <property name="user.timezone" value="Asia/Dhaka"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="user.name" value="Talha"/>
+    <property name="java.class.path" value="C:\Program Files\apache-maven-3.8.6\boot\plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean test"/>
+    <property name="java.home" value="C:\Program Files\jdk-11.0.14"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="11.0.14"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="sun.stderr.encoding" value="cp437"/>
+    <property name="maven.home" value="C:\Program Files\apache-maven-3.8.6"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.version.date" value="2022-01-18"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="java.vendor.version" value="18.9"/>
+    <property name="sun.stdout.encoding" value="cp437"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase name="landingPageValidation" classname="selenium.java.internetHerokuapp.testCases.landingPage.LandingPageValidation" time="2.004"/>
+  <testcase name="aBTestingValidation" classname="selenium.java.internetHerokuapp.testCases.abTesting.ABTestingValidation" time="36.341">
+    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@id=&apos;content&apos;]//h3[.=&apos;A/B Test Variation 1&apos;]&quot;}&#10;  (Session info: chrome=111.0.5563.147)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: &apos;4.8.3&apos;, revision: &apos;e5e76298c3&apos;&#10;System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.14&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [8585d341ee79f156d7e4118b46db4fb1, findElement {using=xpath, value=//div[@id=&apos;content&apos;]//h3[.=&apos;A/B Test Variation 1&apos;]}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.147, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Program Files (x86)\scop...}, goog:chromeOptions: {debuggerAddress: localhost:62805}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62805/devtoo..., se:cdpVersion: 111.0.5563.147, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 8585d341ee79f156d7e4118b46db4fb1" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='content']//h3[.='A/B Test Variation 1']"}
+  (Session info: chrome=111.0.5563.147)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.3', revision: 'e5e76298c3'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8585d341ee79f156d7e4118b46db4fb1, findElement {using=xpath, value=//div[@id='content']//h3[.='A/B Test Variation 1']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.147, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Program Files (x86)\scop...}, goog:chromeOptions: {debuggerAddress: localhost:62805}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62805/devtoo..., se:cdpVersion: 111.0.5563.147, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8585d341ee79f156d7e4118b46db4fb1
+	at selenium.java.internetHerokuapp.testCases.abTesting.ABTestingValidation.aBTestingValidation(ABTestingValidation.java:46)
+</failure>
+    <system-out><![CDATA[Test Ran Properly
+Given https://the-internet.herokuapp.com/abtest
+Link is validate
+]]></system-out>
+  </testcase>
+</testsuite>
