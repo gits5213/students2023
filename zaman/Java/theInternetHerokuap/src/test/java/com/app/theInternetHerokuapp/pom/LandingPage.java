@@ -1,5 +1,6 @@
 package com.app.theInternetHerokuapp.pom;
 
+import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -67,6 +68,12 @@ public class LandingPage extends BasePage {
     public WebElement dynamicContent;
     public WebElement getDynamicContent() {
         return dynamicContent;
+    }
+
+    @FindBy(css = "li:nth-of-type(14) > a")
+    public WebElement dynamicLoading;
+    public WebElement getDynamicLoading() {
+        return dynamicLoading;
     }
 
     @FindBy(css = "li:nth-of-type(21) > a")

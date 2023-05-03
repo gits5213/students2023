@@ -47,6 +47,7 @@ public class TestData {
     public static final String DYNAMIC_CONTROLS_DEMO_TEXT = "bla bla bla!!";
 
     //==========Next==============
+    public static final String DYNAMIC_LOADING_SUCCESSFUL_TEXT = "Hello World!";
     //==========Next==============
     //==========Next==============
     //==========Next==============

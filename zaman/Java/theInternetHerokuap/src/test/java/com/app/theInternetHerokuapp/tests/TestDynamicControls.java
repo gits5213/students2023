@@ -1,4 +1,4 @@
-package com.app.theInternetHerokuapp.tests.LoginPage;
+package com.app.theInternetHerokuapp.tests;
 
 import com.app.theInternetHerokuapp.pom.DynamicControlsPage;
 import com.app.theInternetHerokuapp.tests.BaseTest;
@@ -12,7 +12,7 @@ public class TestDynamicControls extends BaseTest {
 
 
 
-    @Story("gits-Test-Dynamic-Controls")
+    @Story("gits-5225-Test-Dynamic-Controls")
     @Description("Test-Dynamic-Controls")
     @Test
     public void testDynamicContent(){

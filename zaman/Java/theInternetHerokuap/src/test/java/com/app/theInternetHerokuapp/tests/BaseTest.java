@@ -90,6 +90,11 @@ public class BaseTest {
         driver.get(Url);
     }
 
+    //==========GO back a page==============
+    public void navigateBack() {
+        driver.navigate().back();
+    }
+
     //==========Type text in text box==============
     public void typeText(WebElement element, String text){
         element.sendKeys(text);
@@ -152,7 +157,7 @@ public class BaseTest {
     //==========wait for element to be visible==============
     public void waitForElementToBeVisible(WebElement element) {
         Wait<WebDriver> wait = new FluentWait<>(driver)
-                .withTimeout(Duration.ofSeconds(10))
+                .withTimeout(Duration.ofSeconds(15))
                 .pollingEvery(Duration.ofMillis(500))
                 .ignoring(NoSuchElementException.class);
         wait.until(ExpectedConditions.visibilityOf(element));
