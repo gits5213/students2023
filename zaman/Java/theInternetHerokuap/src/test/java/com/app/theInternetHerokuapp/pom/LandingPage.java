@@ -76,6 +76,12 @@ public class LandingPage extends BasePage {
         return dynamicLoading;
     }
 
+    @FindBy(css = "li:nth-of-type(15) > a")
+    public WebElement entryAdd;
+    public WebElement getEntryAdd() {
+        return entryAdd;
+    }
+
     @FindBy(css = "li:nth-of-type(21) > a")
     public WebElement formAuthentication;
     public WebElement getFormAuthentication() {
