@@ -190,7 +190,6 @@ public class BaseTest {
                 .pollingEvery(Duration.ofMillis(500));
         WebElement element1 = wait.until(ExpectedConditions.elementToBeClickable(element));
         scrollToElementAndClick(element1);
-
     }
 
     //==========Scroll to web element==============

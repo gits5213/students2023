@@ -2,6 +2,7 @@ package com.app.theInternetHerokuapp.tests.LoginPage;
 
 import com.app.theInternetHerokuapp.pom.DynamicControlsPage;
 import com.app.theInternetHerokuapp.tests.BaseTest;
+import com.app.theInternetHerokuapp.utilities.TestData;
 import io.qameta.allure.Description;
 import io.qameta.allure.Story;
 import org.testng.Assert;
@@ -14,7 +15,6 @@ public class TestDynamicControls extends BaseTest {
     @Story("gits-Test-Dynamic-Controls")
     @Description("Test-Dynamic-Controls")
     @Test
-
     public void testDynamicContent(){
 
         DynamicControlsPage dcp = new DynamicControlsPage(driver);
@@ -23,9 +23,10 @@ public class TestDynamicControls extends BaseTest {
 
         //For checkBox
         if(dcp.getCheckBox().isDisplayed()){
-            System.out.println("check Box in visible");
+            System.out.println("Check Box in visible");
         }
         else {
+            System.out.println("Making check Box visible");
             clickOnElement(dcp.getAddRmvCheckBoxBtn());
             waitForElementToBeVisible(dcp.getCheckBox());
             Assert.assertTrue(dcp.getCheckBox().isDisplayed());
@@ -36,6 +37,8 @@ public class TestDynamicControls extends BaseTest {
         clickOnElement(dcp.getAddRmvCheckBoxBtn());
         waitForElementToBeVisible(dcp.getCheckBox());
         clickOnElement(dcp.getCheckBox());
+        Assert.assertTrue(dcp.getCheckBox().isDisplayed());
+
 
         //For TextBox
         if(dcp.getTextBox().isEnabled()){
@@ -47,20 +50,9 @@ public class TestDynamicControls extends BaseTest {
             Assert.assertTrue(true);
         }
         waitForElementToBeClickable(dcp.getTextBox());
-        typeText(dcp.getTextBox(),"sdafsdf");
+        typeText(dcp.getTextBox(), TestData.DYNAMIC_CONTROLS_DEMO_TEXT);
         clickOnElement(dcp.getEnableDisableTextBoxBtn());
         waitForElementToBeDisabled(dcp.getTextBox());
         Assert.assertFalse(dcp.getTextBox().isEnabled());
-
-
-
-
-
-
-
-
-
-
-
     }
 }

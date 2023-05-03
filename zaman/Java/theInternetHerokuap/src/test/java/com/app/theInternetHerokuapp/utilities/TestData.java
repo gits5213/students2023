@@ -43,7 +43,9 @@ public class TestData {
     public static final String DRAG_AND_DROP_URL = "https://www.globalsqa.com/demo-site/draganddrop/";
 
 
-    //==========Next==============
+    //==========Dynamic Controls==============
+    public static final String DYNAMIC_CONTROLS_DEMO_TEXT = "bla bla bla!!";
+
     //==========Next==============
     //==========Next==============
     //==========Next==============
