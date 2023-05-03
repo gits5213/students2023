@@ -10,8 +10,8 @@ public class TestEntryAdd extends BaseTest{
 
 
 
-    @Story("gits-5227-TestDynamic-Loading")
-    @Description("Test-TestDynamic-Loading")
+    @Story("gits-5227-Dynamic-Loading")
+    @Description("Dynamic-Loading")
     @Test
     public void entryAdd(){
 
@@ -19,9 +19,9 @@ public class TestEntryAdd extends BaseTest{
 
         clickOnElement(landingPage.getEntryAdd());
         waitForElementToBeVisible(eap.getAddWindow());
-        Assert.assertTrue(eap.getAddWindow().isDisplayed(),"Add is displayed");
+        Assert.assertTrue(eap.getAddWindow().isDisplayed(),"Add is not displayed");
         clickOnElement(eap.getAddCloseBtn());
         waitForElementToDisappear(eap.getAddWindow());
-        Assert.assertFalse(eap.getAddWindow().isDisplayed(),"Add is not displayed");
+        Assert.assertFalse(eap.getAddWindow().isDisplayed(),"Add is displayed");
     }
 }

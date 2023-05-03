@@ -11,7 +11,7 @@ public class TestDynamicLoading extends BaseTest{
 
 
     @Story("gits-5226-TestDynamic-Loading")
-    @Description("Test-TestDynamic-Loading")
+    @Description("TestDynamic-Loading")
     @Test
     public void dynamicLoading(){
 

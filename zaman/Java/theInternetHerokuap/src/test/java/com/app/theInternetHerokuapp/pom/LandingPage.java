@@ -82,6 +82,12 @@ public class LandingPage extends BasePage {
         return entryAdd;
     }
 
+    @FindBy(css = "li:nth-of-type(16) > a")
+    public WebElement exitIntent;
+    public WebElement getExitIntent() {
+        return exitIntent;
+    }
+
     @FindBy(css = "li:nth-of-type(21) > a")
     public WebElement formAuthentication;
     public WebElement getFormAuthentication() {
