@@ -4,13 +4,12 @@ import com.app.theInternetHerokuapp.pom.DragAndDropPage;
 import com.app.theInternetHerokuapp.utilities.TestData;
 import io.qameta.allure.Description;
 import io.qameta.allure.Story;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TestDragAndDropPage extends BaseTest {
+public class TestDragAndDrop extends BaseTest {
 
 
     @Story("gits-5223-Drag-AndDrop")
