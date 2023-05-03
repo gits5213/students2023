@@ -153,9 +153,9 @@ public class BaseTest {
     public void waitForElementToBeVisible(WebElement element) {
         Wait<WebDriver> wait = new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(10))
-                .pollingEvery(Duration.ofMillis(500));
+                .pollingEvery(Duration.ofMillis(500))
+                .ignoring(NoSuchElementException.class);
         wait.until(ExpectedConditions.visibilityOf(element));
-
     }
 
     //==========wait for element to disappear==============
@@ -164,6 +164,23 @@ public class BaseTest {
                 .withTimeout(Duration.ofSeconds(10))
                 .pollingEvery(Duration.ofMillis(500));
         wait.until(ExpectedConditions.invisibilityOf(element));
+    }
+
+    //==========wait for element to be clickable==============
+    public void waitForElementToBeClickable(WebElement element) {
+        Wait<WebDriver> wait = new FluentWait<>(driver)
+                .withTimeout(Duration.ofSeconds(10))
+                .pollingEvery(Duration.ofMillis(500));
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+    }
+
+    //==========wait for element to be Disabled==============
+    public void waitForElementToBeDisabled(WebElement element) {
+        Wait<WebDriver> wait = new FluentWait<>(driver)
+                .withTimeout(Duration.ofSeconds(10))
+                .pollingEvery(Duration.ofMillis(500))
+                .ignoring(NoSuchElementException.class);
+        wait.until(ExpectedConditions.not(ExpectedConditions.elementToBeClickable(element)));
     }
 
     //==========wait for element to be clickable and click + scroll to element==============

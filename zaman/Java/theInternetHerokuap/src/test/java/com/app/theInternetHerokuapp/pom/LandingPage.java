@@ -63,6 +63,12 @@ public class LandingPage extends BasePage {
         return dropDownPage;
     }
 
+    @FindBy(css = "li:nth-of-type(13) > a")
+    public WebElement dynamicContent;
+    public WebElement getDynamicContent() {
+        return dynamicContent;
+    }
+
     @FindBy(css = "li:nth-of-type(21) > a")
     public WebElement formAuthentication;
     public WebElement getFormAuthentication() {
