@@ -3,7 +3,7 @@ package com.gits.herokuapp.TestCases.Frames;
 
 import com.gits.herokuapp.Configuaration.BaseClass;
 import com.gits.herokuapp.Pages.FramePage;
-import com.gits.herokuapp.Pages.LandingPage;
+import com.gits.herokuapp.LandingPageConfiguaration.LandingPage;
 import com.gits.herokuapp.Utilites.Data;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -21,7 +21,7 @@ public class Iframe extends BaseClass {
         lp.getFrames().click();
         sleepTime(2000);
 
-        //TC-1 Corresponding Page URL Validation
+        //Corresponding Page URL Validation
         String link = driver.getCurrentUrl();
         System.out.println("Given "+link);
         Assert.assertEquals(link, Data.BASE_URL+Data.FRAMES_LINK);

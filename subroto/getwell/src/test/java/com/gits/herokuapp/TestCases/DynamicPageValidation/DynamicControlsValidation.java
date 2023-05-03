@@ -1,9 +1,9 @@
-package com.gits.herokuapp.TestCases;
+package com.gits.herokuapp.TestCases.DynamicPageValidation;
 
 
 import com.gits.herokuapp.Configuaration.BaseClass;
-import com.gits.herokuapp.Pages.DynamicControlsPage;
-import com.gits.herokuapp.Pages.LandingPage;
+import com.gits.herokuapp.Pages.DyanamicPages.DynamicControlsPage;
+import com.gits.herokuapp.LandingPageConfiguaration.LandingPage;
 import com.gits.herokuapp.Utilites.Data;
 import org.testng.Assert;
 import org.testng.annotations.Test;

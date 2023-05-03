@@ -2,14 +2,13 @@ package com.gits.herokuapp.TestCases;
 
 import com.gits.herokuapp.Configuaration.BaseClass;
 import com.gits.herokuapp.Pages.DropDown;
-import com.gits.herokuapp.Pages.LandingPage;
+import com.gits.herokuapp.LandingPageConfiguaration.LandingPage;
 import com.gits.herokuapp.Utilites.Data;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class DropDownValidation extends BaseClass {
@@ -55,71 +54,68 @@ public class DropDownValidation extends BaseClass {
         }
 
         //DropDown Validation Using Loop
-//         //driver.findElement(By.xpath("//*[@id=\"dropdown\"]")).click();
-//         sleepTime(3000);
-//
-//         List<WebElement> allOptions = driver.findElements(By.cssSelector("select option"));
-//
-//         String option = "Highest to lowest";
-//
-//         // Iterate the list using for loop
-//
-//          for (int i = 0; i < allOptions.size(); i++) {
-//
-//              if (allOptions.get(i).getText().contains(option)) {
-//
-//              allOptions.get(i).click();
-//              sleepTime(5000);
-//
-//              System.out.println("clicked");
-//
-//              break;}}
+         driver.findElement(By.xpath("//*[@id=\"dropdown\"]")).click();
+         sleepTime(3000);
 
-//        driver.navigate().back();
-//        sleepTime(1000);
+         List<WebElement> allOptions = driver.findElements(By.cssSelector("select option"));
 
+         String option = "Highest to lowest";
 
+         // Iterate the list using for loop
 
+          for (int i = 0; i < allOptions.size(); i++) {
 
-        //Click on DropDown List Option
-        dd.getDropDownListOption().click();
-        sleepTime(1000);
+              if (allOptions.get(i).getText().contains(option)) {
 
-        //Click on the list and Select Option 1
-        dd.getDropDownListOption1().click();
-        sleepTime(2000);
-
-        //TC-5 Drop Down option Text Validation
-        if(dd.getDropDownListOption1().isDisplayed()){
-            String dropDownList1Text = dd.getDropDownListOption1().getText();
-            System.out.println("Selected :"+Data.DROP_DOWN_TEXT_OPTION1 );
-            Assert.assertEquals(dropDownList1Text,Data.DROP_DOWN_TEXT_OPTION1);
-        }
-        else {
-            System.out.println(Data.NEGATIVE_ERROR_MASSAGE);
-        }
-        dd.getDropDownListOption().click();
-        sleepTime(1000);
-
-        //Click on the list and select option 2
-        dd.getDropDownListOption2().click();
-        sleepTime(1000);
-
-        //Drop Down Option2 Text Validation
-        if(dd.getDropDownListOption2().isDisplayed()){
-            String dropDownList2Text = dd.getDropDownListOption2().getText();
-            System.out.println("Selected :"+Data.DROP_DOWN_TEXT_OPTION2 );
-            Assert.assertEquals(dropDownList2Text,Data.DROP_DOWN_TEXT_OPTION2);
-        }
-        else {
-            System.out.println(Data.NEGATIVE_ERROR_MASSAGE);
-        }
-        sleepTime(1000);
-        dd.getDropDownListOption().click();
-        sleepTime(1000);
+              allOptions.get(i).click();
+              sleepTime(5000);
+              break;}}
 
         driver.navigate().back();
         sleepTime(1000);
+
+
+
+
+//        //Click on DropDown List Option
+//        dd.getDropDownListOption().click();
+//        sleepTime(1000);
+//
+//        //Click on the list and Select Option 1
+//        dd.getDropDownListOption1().click();
+//        sleepTime(2000);
+//
+//        //Drop Down option Text Validation
+//        if(dd.getDropDownListOption1().isDisplayed()){
+//            String dropDownList1Text = dd.getDropDownListOption1().getText();
+//            System.out.println("Selected :"+Data.DROP_DOWN_TEXT_OPTION1 );
+//            Assert.assertEquals(dropDownList1Text,Data.DROP_DOWN_TEXT_OPTION1);
+//        }
+//        else {
+//            System.out.println(Data.NEGATIVE_ERROR_MASSAGE);
+//        }
+//        dd.getDropDownListOption().click();
+//        sleepTime(1000);
+//
+//        //Click on the list and select option 2
+//        dd.getDropDownListOption2().click();
+//        sleepTime(1000);
+//
+//        //Drop Down Option2 Text Validation
+//        if(dd.getDropDownListOption2().isDisplayed()){
+//            String dropDownList2Text = dd.getDropDownListOption2().getText();
+//            System.out.println("Selected :"+Data.DROP_DOWN_TEXT_OPTION2 );
+//            Assert.assertEquals(dropDownList2Text,Data.DROP_DOWN_TEXT_OPTION2);
+//        }
+//        else {
+//            System.out.println(Data.NEGATIVE_ERROR_MASSAGE);
+//        }
+//        sleepTime(1000);
+//        dd.getDropDownListOption().click();
+//        sleepTime(1000);
+//
+//        driver.navigate().back();
+//        sleepTime(1000);
 
 
 

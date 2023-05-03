@@ -2,7 +2,7 @@ package com.gits.herokuapp.TestCases;
 
 import com.gits.herokuapp.Configuaration.BaseClass;
 import com.gits.herokuapp.Pages.CheckBoxesPage;
-import com.gits.herokuapp.Pages.LandingPage;
+import com.gits.herokuapp.LandingPageConfiguaration.LandingPage;
 import com.gits.herokuapp.Utilites.Data;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -15,14 +15,14 @@ public class CheckboxesValidation extends BaseClass {
         LandingPage lp = new LandingPage(driver);
         CheckBoxesPage cbp =new CheckBoxesPage(driver);
 
-        // HOME URL Validation
+        //HOME URL Validation
         String baseLink = driver.getCurrentUrl();
         System.out.println("Given "+baseLink);
         Assert.assertEquals(baseLink, Data.BASE_URL);
         System.out.println("Home URL is valid");
         sleepTime(1000);
 
-        // Header Validation and click on checkboxes button
+        //Header Validation and click on checkboxes button
         if(lp.getCheckBoxes().isDisplayed()){
             String checkBoxText= lp.getCheckBoxes().getText();
             Assert.assertTrue(true,checkBoxText);
@@ -41,7 +41,7 @@ public class CheckboxesValidation extends BaseClass {
         cbp.getCheckbox2().click();
 
 
-        // Checkbox 2 selection and Checkbox text validation
+        //Checkbox 2 selection and Checkbox text validation
         if(cbp.getCheckbox2().isSelected())
         {
             System.out.println(Data.POSITIVE_MASSAGE+ Data.CHECK_BOX2_SELECTED);

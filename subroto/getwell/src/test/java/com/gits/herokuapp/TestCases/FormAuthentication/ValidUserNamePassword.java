@@ -2,7 +2,8 @@ package com.gits.herokuapp.TestCases.FormAuthentication;
 
 import com.gits.herokuapp.Configuaration.BaseClass;
 import com.gits.herokuapp.Pages.FormAuthenticationValidate;
-import com.gits.herokuapp.Pages.LandingPage;
+import com.gits.herokuapp.LandingPageConfiguaration.LandingPage;
+import com.gits.herokuapp.Utilites.Data;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -21,11 +22,11 @@ public class ValidUserNamePassword extends BaseClass {
         sleepTime(1000);
 
         //enter valid username
-        fav.getUserName().sendKeys("tomsmith");
+        fav.getUserName().sendKeys(Data.FORM_AUTHENTICATION_USER_NAME);
         sleepTime(1000);
 
         //enter valid password
-        fav.getPassword().sendKeys("SuperSecretPassword!");
+        fav.getPassword().sendKeys(Data.FORM_AUTHENTICATION_PASSWORD);
         sleepTime(1000);
 
         //click on login button
@@ -35,7 +36,7 @@ public class ValidUserNamePassword extends BaseClass {
         //validate login secure area massage
         WebElement secureMassage = driver.findElement(By.cssSelector("#flash"));
         String actualLoginSecureMassage = secureMassage.getText();
-        String expectedLoginSecureMassage = "You logged into a secure area!\n"+"×";
+        String expectedLoginSecureMassage = Data.FORM_AUTHENTICATION_LOGIN_ALERT_TEXT;
         Assert.assertEquals(actualLoginSecureMassage ,expectedLoginSecureMassage);
 
     }

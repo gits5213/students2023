@@ -2,7 +2,7 @@ package com.gits.herokuapp.TestCases;
 
 import com.gits.herokuapp.Configuaration.BaseClass;
 import com.gits.herokuapp.Pages.ForgotPasswordPage;
-import com.gits.herokuapp.Pages.LandingPage;
+import com.gits.herokuapp.LandingPageConfiguaration.LandingPage;
 import com.gits.herokuapp.Utilites.Data;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -18,14 +18,14 @@ public class ForgotPassword extends BaseClass {
         lp.getForgotPassword().click();
         sleepTime(3000);
 
-        //TC-1 Corresponding Page URL Validation
+        //Corresponding Page URL Validation
         String link = driver.getCurrentUrl();
         System.out.println("Given "+link);
         Assert.assertEquals(link, Data.BASE_URL+Data.FORGOT_PASSWORD_LINK);
         System.out.println("Link is valid");
         sleepTime(2000);
 
-        //TC-2 Header Validation
+        //Header Validation
         if (fpp.getForgotPasswordHeader().isDisplayed()){
             String forgotPasswordHeader = fpp.getForgotPasswordHeader().getText();
             Assert.assertTrue(true, forgotPasswordHeader);

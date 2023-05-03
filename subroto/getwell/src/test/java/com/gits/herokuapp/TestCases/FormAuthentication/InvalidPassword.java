@@ -2,7 +2,8 @@ package com.gits.herokuapp.TestCases.FormAuthentication;
 
 import com.gits.herokuapp.Configuaration.BaseClass;
 import com.gits.herokuapp.Pages.FormAuthenticationValidate;
-import com.gits.herokuapp.Pages.LandingPage;
+import com.gits.herokuapp.LandingPageConfiguaration.LandingPage;
+import com.gits.herokuapp.Utilites.Data;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -22,11 +23,11 @@ public class InvalidPassword extends BaseClass {
           sleepTime(1000);
 
         //Enter valid username
-        fav.getUserName().sendKeys("tomsmith");
+        fav.getUserName().sendKeys(Data.FORM_AUTHENTICATION_USER_NAME);
         sleepTime(1000);
 
         //Enter invalid password
-        fav.getPassword().sendKeys("tomsmith");
+        fav.getPassword().sendKeys(Data.FORM_AUTHENTICATION_INVALID_PASSWORD);
         sleepTime(500);
 
         //click on login button
@@ -36,7 +37,7 @@ public class InvalidPassword extends BaseClass {
         //validate login error massages
         WebElement errorMassage = driver.findElement(By.cssSelector("div#flash"));
         String actualErrorMassageText = errorMassage.getText();
-        String expectedLoginErrorMassage = "Your password is invalid!\n"+ "×";
+        String expectedLoginErrorMassage = Data.FORM_AUTHENTICATION_PASSWORD_ALERT_TEXT;
         Assert.assertEquals(actualErrorMassageText, expectedLoginErrorMassage);
 
 

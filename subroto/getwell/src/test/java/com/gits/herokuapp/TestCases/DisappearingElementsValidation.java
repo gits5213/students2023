@@ -2,7 +2,7 @@ package com.gits.herokuapp.TestCases;
 
 import com.gits.herokuapp.Configuaration.BaseClass;
 import com.gits.herokuapp.Pages.DisapperingElements;
-import com.gits.herokuapp.Pages.LandingPage;
+import com.gits.herokuapp.LandingPageConfiguaration.LandingPage;
 import com.gits.herokuapp.Utilites.Data;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -36,7 +36,7 @@ public class DisappearingElementsValidation extends BaseClass {
         System.out.println(disappearingElementBaseUrl);
         Assert.assertEquals(disappearingElementBaseUrl, Data.BASE_URL+Data.DISAPPEARING_ELEMENTS_LINK);
 
-        //TC-3 headerValidation
+        //headerValidation
         if(de.getDisappearingElementsHeaderText().isDisplayed()){
             String disappearingElementHeaderText= de.getDisappearingElementsHeaderText().getText();
             Assert.assertTrue(true,disappearingElementHeaderText);

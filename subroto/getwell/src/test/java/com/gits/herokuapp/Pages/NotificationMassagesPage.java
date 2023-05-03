@@ -10,18 +10,7 @@ public class NotificationMassagesPage extends BasePage {
         super(driver);
     }
 
-    //Header1
-    @FindBy(css = "#content > div > h3")
-    public WebElement header1;
-    public WebElement getHeader1(){
-        return header1;
-    }
-    //Paragraph1
-    @FindBy(css = "#content > div > p")
-    public WebElement paragraph1;
-    public WebElement getParagraph1(){
-        return paragraph1;
-    }
+
     //ClickHere
     @FindBy(css = "#content > div > p > a")
     public WebElement clickHere;

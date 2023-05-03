@@ -3,15 +3,10 @@ package com.gits.herokuapp.TestCases;
 
 import com.gits.herokuapp.Configuaration.BaseClass;
 import com.gits.herokuapp.Pages.BrokenImagePage;
-import com.gits.herokuapp.Pages.LandingPage;
+import com.gits.herokuapp.LandingPageConfiguaration.LandingPage;
 import com.gits.herokuapp.Utilites.Data;
-import org.asynchttpclient.Response;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import java.util.List;
 
 
 public class BrokenImage extends BaseClass {
@@ -26,7 +21,7 @@ public class BrokenImage extends BaseClass {
         lp.getBrokenImage().click();
         sleepTime(2000);
 
-        // URL Validation
+        //URL Validation
         String link = driver.getCurrentUrl();
         System.out.println("Given "+link);
         Assert.assertEquals(link, Data.BASE_URL+Data.BROKEN_IMAGE_LINK);

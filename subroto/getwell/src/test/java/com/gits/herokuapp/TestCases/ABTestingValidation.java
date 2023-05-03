@@ -3,20 +3,20 @@ package com.gits.herokuapp.TestCases;
 
 import com.gits.herokuapp.Configuaration.BaseClass;
 import com.gits.herokuapp.Pages.AbTesting;
-import com.gits.herokuapp.Pages.LandingPage;
+import com.gits.herokuapp.LandingPageConfiguaration.LandingPage;
 import com.gits.herokuapp.Utilites.Data;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class ABTestingValidation extends BaseClass {
 
-    @Test(description = "Test Description Here")
+    @Test
     public void ABTestingValidation() {
 
         LandingPage lp = new LandingPage(driver);
         AbTesting at = new AbTesting(driver);
 
-        // HOME URL Validation
+        //HOME URL Validation
         String baseLink = driver.getCurrentUrl();
         System.out.println("Given " + baseLink);
         Assert.assertEquals(baseLink, Data.BASE_URL);
@@ -40,7 +40,7 @@ public class ABTestingValidation extends BaseClass {
         System.out.println("Link is validate");
         sleepTime(2000);
 
-        // Header Validation
+        //Header Validation
         if (at.getabTestingVariation1().isDisplayed()) {
             String header1 = at.getabTestingVariation1().getText();
             Assert.assertEquals(Data.AB_TEST_VARIATION, header1);

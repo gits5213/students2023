@@ -2,10 +2,9 @@ package com.gits.herokuapp.Utilites;
 
 public class Data {
 
-    public static final String PHONE_NUMBER ="01409546174";
+
     public static final String POSITIVE_MASSAGE ="Visible";
     public static final String NEGATIVE_ERROR_MASSAGE ="Not Visible";
-    public static final String CREATE_NEW_ACCOUNT = "Create New Account";
 
     //base url
     public static final String BASE_URL ="https://the-internet.herokuapp.com/";
@@ -63,12 +62,13 @@ public class Data {
     public static final String FORGOT_PASSWORD_PAGE_EMAIL = "paulbadhan6128@gmail.com";
 
     //Form Authentication
-    public static final String FORM_AUTHENTICATION_LINK = "login";
-    public static final String FORM_AUTHENTICATION_HEADER1 = "login page";
-    public static final String FORM_AUTHENTICATION_HEADER2 = "This is where you can log into the secure area.Enter tomsmith for the username and SuperSecretPassword!for the password. If the information is wrong,you should see error messages.";
     public static final String FORM_AUTHENTICATION_USER_NAME = "tomsmith";
-    public static final String FORM_AUTHENTICATION_PASSWORD = "super secret password!";
-    public static final String FORM_AUTHENTICATION_ALERT_TEXT = "the user name is invalid!";
+    public static final String FORM_AUTHENTICATION_PASSWORD = "SuperSecretPassword!";
+    public static final String FORM_AUTHENTICATION_USERNAME_ALERT_TEXT = "Your username is invalid!\n"+"×";
+    public static final String FORM_AUTHENTICATION_PASSWORD_ALERT_TEXT = "Your password is invalid!\n"+ "×";
+    public static final String FORM_AUTHENTICATION_LOGIN_ALERT_TEXT = "You logged into a secure area!\n"+"×";
+    public static final String FORM_AUTHENTICATION_INVALID_PASSWORD = "TOMSMITH";
+    public static final String FORM_AUTHENTICATION_INVALID_USER_NAME = "super secret password!";
 
     //Frames
     public static final String FRAMES_LINK = "frames";
@@ -86,15 +86,17 @@ public class Data {
 
     //InfiniteScroll
     public static final String INFINITE_SCROLL_LINK = "infinite_scroll";
+    public static final String INFINITE_SCROLL_HEADER = "Infinite Scroll";
 
     //Inputs
     public static final String INPUTS_LINK = "inputs";
+    public static final String INPUT_NUMBER = "1213141516171819";
 
     //JsAlert
-    public static final String JAVA_SCRIPT_ALERT_LINK = "javascript_alerts";
+    public static final String JAVA_SCRIPT_ALERT_JS_PROMPT_INPUT_TEXT = "HI,This is subroto!";
 
     //Notification
-    public static final String NOTIFICATION_MASSAGE_LINK = "notification_massage_rendered";
+    public static final String NOTIFICATION_MASSAGE_LINK = "notification_message_rendered";
 
     //Notification massage
     public static final String REDIRECT_LINK = "redirector";

@@ -1,8 +1,6 @@
-package com.gits.herokuapp.Pages;
+package com.gits.herokuapp.LandingPageConfiguaration;
 
 import com.gits.herokuapp.Configuaration.BasePage;
-import com.gits.herokuapp.TestCases.DigestAuthentication;
-import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -130,6 +128,47 @@ public class LandingPage extends BasePage {
         return Frames;
     }
 
+    @FindBy(css = "#content > ul > li:nth-child(26) > a")
+    public WebElement InfiniteScroll;
+    public WebElement getInfiniteScroll(){
+        return InfiniteScroll;
+    }
+
+    @FindBy(css = "#content > ul > li:nth-child(25) > a")
+    public WebElement MouseHover;
+    public WebElement getMouseHover(){
+        return MouseHover;
+    }
+
+    @FindBy(css = "#content > ul > li:nth-child(27) > a")
+    public WebElement Inputs;
+    public WebElement getInputs(){
+        return Inputs;
+    }
+
+    @FindBy(css = "#content > ul > li:nth-child(29) > a")
+    public WebElement JavaScriptAlert;
+    public WebElement getJavaScriptAlert(){
+        return JavaScriptAlert;
+    }
+
+    @FindBy(css = "#content > ul > li:nth-child(33) > a")
+    public WebElement MultipleWindow;
+    public WebElement getMultipleWindow(){
+        return MultipleWindow;
+    }
+
+    @FindBy(css = "#content > ul > li:nth-child(35) > a")
+    public WebElement NotificationMessage;
+    public WebElement getNotificationMessage(){
+        return NotificationMessage;
+    }
+
+    @FindBy(css = "#content > ul > li:nth-child(36) > a")
+    public WebElement ReDirectLink;
+    public WebElement getReDirectLink(){
+        return ReDirectLink;
+    }
 
 
 

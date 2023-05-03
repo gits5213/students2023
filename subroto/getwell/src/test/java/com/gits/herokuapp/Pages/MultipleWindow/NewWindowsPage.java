@@ -1,4 +1,4 @@
-package com.gits.herokuapp.Pages;
+package com.gits.herokuapp.Pages.MultipleWindow;
 
 import com.gits.herokuapp.Configuaration.BasePage;
 import org.openqa.selenium.WebDriver;

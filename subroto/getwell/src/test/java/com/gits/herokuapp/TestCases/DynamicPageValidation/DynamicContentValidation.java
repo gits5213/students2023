@@ -1,8 +1,8 @@
-package com.gits.herokuapp.TestCases;
+package com.gits.herokuapp.TestCases.DynamicPageValidation;
 
 import com.gits.herokuapp.Configuaration.BaseClass;
-import com.gits.herokuapp.Pages.DynamicContentPages;
-import com.gits.herokuapp.Pages.LandingPage;
+import com.gits.herokuapp.Pages.DyanamicPages.DynamicContentPages;
+import com.gits.herokuapp.LandingPageConfiguaration.LandingPage;
 import com.gits.herokuapp.Utilites.Data;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
