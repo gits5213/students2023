@@ -1,4 +1,5 @@
 package com.gits.internetherokuapp.TestCases;
+import com.gits.internetherokuapp.TestPages.ABTesting;
 import com.gits.internetherokuapp.configuration.LandingPage;
 import com.gits.internetherokuapp.Utilities.Data;
 import com.gits.internetherokuapp.configuration.BaseTest;
@@ -12,6 +13,7 @@ public class ABTestingValidation extends BaseTest {
 
 
         LandingPage lp = new LandingPage(driver);
+        ABTesting ab=new ABTesting(driver);
 
         //Landing Page URL validation
 

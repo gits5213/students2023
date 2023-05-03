@@ -22,13 +22,6 @@ public class AddRemoveElementsValidation extends BaseTest {
         System.out.println("Home URL is valid");
         sleepTime(2000);
 
-        //Header Validation
-        if (lp.getAddRemoveElement().isDisplayed()) {
-            String addRemoveElementsText = lp.getAddRemoveElement().getText();
-            Assert.assertTrue(true,addRemoveElementsText);
-        } else {
-            System.out.println(Data.NEGATIVE_ERROR_MASSAGE);
-        }
         lp.getAddRemoveElement().click();
          sleepTime(1000);
 

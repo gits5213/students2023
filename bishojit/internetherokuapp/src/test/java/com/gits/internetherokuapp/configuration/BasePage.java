@@ -1,5 +1,4 @@
 package com.gits.internetherokuapp.configuration;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
@@ -10,7 +9,6 @@ public abstract class BasePage {
         this.driver = driver;
         this.inItPage();
     }
-
 
     public void inItPage(){
         PageFactory.initElements(driver, this);

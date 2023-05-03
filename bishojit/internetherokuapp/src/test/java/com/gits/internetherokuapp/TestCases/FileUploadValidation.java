@@ -28,7 +28,6 @@ public class FileUploadValidation extends BaseTest {
         lp.getFileUpload().click();
         sleepTime(2000);
 
-
         //Header Validation
         if (fu.getFileUploadHeader().isDisplayed()){
             String header = fu.getFileUploadHeader().getText();

@@ -48,7 +48,7 @@ public class Data {
 
     //File Download
     public static final String DOWNLOAD_LINK = "download";
-    public static final String DOWNLOAD_FILE_PATH = "C:\\Users\\Bisho\\Downloads";
+    public static final String DOWNLOAD_FILE_PATH = "C:\\Users\\Bisho\\Download";
 
     //File Upload
     public static final String UPLOAD_LINK = "upload";
