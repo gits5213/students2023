@@ -11,7 +11,7 @@ public class TestFrames extends BaseTest{
 
 
     @Story("gits-5233-Frames")
-    @Description("Frames")
+    @Description("Nested-Frames")
     @Test
     public void frames(){
 
@@ -21,7 +21,6 @@ public class TestFrames extends BaseTest{
         clickOnElement(fp.getNestedFrames());
 
         switchToFrame(fp.getMotherFrame1());
-
 
         switchToFrame(fp.getLeftFrame());
         highlightWebElement(fp.getLeftFrameBodyText());
@@ -38,6 +37,7 @@ public class TestFrames extends BaseTest{
         switchTODefaultContent();
 
         switchToFrame(fp.getMotherFrame2());
+
         highlightWebElement(fp.getBottomFrameText());
         System.out.println("switching to " + fp.getBottomFrameText().getText() + " frame");
         sleepTest(3000);
