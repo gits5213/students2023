@@ -24,12 +24,14 @@ import java.awt.*;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
@@ -365,19 +367,23 @@ public class BaseTest {
 
 
     //==========Disappearing Elements==============
-    public void disappearingElementsValidation(int noOfElements, String[] defaultData, List<WebElement> actualDataList){
-        for (int i = 0; i < noOfElements; i++) {
-            try{
-                WebElement element = actualDataList.get(i);
-                String actualData = element.getText().trim();
-                if(TestData.DISAPPEARING_ELEMENTS[i].equals(actualData)){
-                    System.out.println(actualData + " element is present");
-                }
+    public void disappearingElementsValidation(String[] defaultData, List<WebElement> actualDataList){
+
+        String[] webElementList = new String[actualDataList.size()];
+        for (int i = 0; i < actualDataList.size(); i++) {
+            webElementList[i] = actualDataList.get(i).getText();
+        }
+
+        for (String data : defaultData) {
+            if (Arrays.asList(webElementList).contains(data)) {
+                System.out.println(data + " element is present");
             }
-            catch (IndexOutOfBoundsException e){
-                System.out.println(TestData.DISAPPEARING_ELEMENTS[i] + " element is missing");
+            else {
+                System.out.println(data + " element is missing");
             }
         }
+
+
     }
     //=============================================
 

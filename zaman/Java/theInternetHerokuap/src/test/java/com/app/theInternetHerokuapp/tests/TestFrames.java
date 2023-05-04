@@ -3,7 +3,6 @@ package com.app.theInternetHerokuapp.tests;
 import com.app.theInternetHerokuapp.pom.FramesPage;
 import com.app.theInternetHerokuapp.utilities.TestData;
 import io.qameta.allure.Description;
-import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 import org.openqa.selenium.By;
 import org.testng.Assert;
