@@ -100,6 +100,12 @@ public class LandingPage extends BasePage {
         return fileUploader;
     }
 
+    @FindBy(css = "li:nth-of-type(19) > a")
+    public WebElement floatingMenu;
+    public WebElement getFloatingMenu() {
+        return floatingMenu;
+    }
+
     @FindBy(css = "li:nth-of-type(21) > a")
     public WebElement formAuthentication;
     public WebElement getFormAuthentication() {

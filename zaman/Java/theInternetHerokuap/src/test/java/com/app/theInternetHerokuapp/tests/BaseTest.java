@@ -210,6 +210,13 @@ public class BaseTest {
         element.click();
     }
 
+    //==========Scroll to window==============
+    public void scrollWindow(int verticalScroll, int horizontalScroll) {
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+        jsExecutor.executeScript("window.scrollBy(0," + verticalScroll + ")");
+        jsExecutor.executeScript("window.scrollBy(" + horizontalScroll + ",0)");
+    }
+
     //==========Click on Hidden element==============
     public void clickHiddenElement(WebElement element) {
         JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
