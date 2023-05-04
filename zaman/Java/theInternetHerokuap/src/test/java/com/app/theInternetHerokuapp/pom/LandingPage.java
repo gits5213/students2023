@@ -88,6 +88,18 @@ public class LandingPage extends BasePage {
         return exitIntent;
     }
 
+    @FindBy(css = "li:nth-of-type(17) > a")
+    public WebElement fileDownloader;
+    public WebElement getFileDownloader() {
+        return fileDownloader;
+    }
+
+    @FindBy(css = "li:nth-of-type(18) > a")
+    public WebElement fileUploader;
+    public WebElement getFileUploader() {
+        return fileUploader;
+    }
+
     @FindBy(css = "li:nth-of-type(21) > a")
     public WebElement formAuthentication;
     public WebElement getFormAuthentication() {

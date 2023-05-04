@@ -3,14 +3,10 @@ package com.app.theInternetHerokuapp.tests;
 import com.app.theInternetHerokuapp.pom.ExitIntentPage;
 import io.qameta.allure.Description;
 import io.qameta.allure.Story;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import javax.swing.*;
 import java.awt.*;
-import java.time.Duration;
 
 public class TestExitIntent extends BaseTest{
 

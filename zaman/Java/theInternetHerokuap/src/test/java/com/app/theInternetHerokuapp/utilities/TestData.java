@@ -1,5 +1,6 @@
 package com.app.theInternetHerokuapp.utilities;
 
+import java.awt.*;
 import java.lang.reflect.Array;
 
 public class TestData {
@@ -46,8 +47,17 @@ public class TestData {
     //==========Dynamic Controls==============
     public static final String DYNAMIC_CONTROLS_DEMO_TEXT = "bla bla bla!!";
 
-    //==========Next==============
+    //==========Dynamic Loading==============
     public static final String DYNAMIC_LOADING_SUCCESSFUL_TEXT = "Hello World!";
+
+    //==========File downloader==============
+    public static final String FILE_DOWNLOAD_PATH = "C:\\Users\\abzam\\Downloads";
+
+    //==========File Uploader==============
+    public static final String FILE_UPLOAD_PATH = "C:\\Users\\abzam\\Desktop\\dem\\WhatsApp Image 2020-05-08 at 12.10.05 AM.jpeg";
+    public static final String FILE_UPLOAD_SUCCESSFUL_MESSAGE = "File Uploaded!";
+    //==========Next==============
+    //==========Next==============
     //==========Next==============
     //==========Next==============
     //==========Next==============
