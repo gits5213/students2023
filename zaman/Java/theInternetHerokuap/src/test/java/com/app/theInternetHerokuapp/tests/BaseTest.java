@@ -383,7 +383,7 @@ public class BaseTest {
                 softAssert.fail();
             }
         }
-        softAssert.assertAll();
+        softAssert.assertAll("Missing element found!!");
 
 
     }

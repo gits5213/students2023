@@ -20,6 +20,5 @@ public class TestDisappearingElements extends BaseTest{
 
         clickOnElement(landingPage.getDisappearingElements());
         disappearingElementsValidation(TestData.DISAPPEARING_ELEMENTS,disappearingElementsPage.getNumberofelements());
-        sleepTest(2000);
     }
 }
