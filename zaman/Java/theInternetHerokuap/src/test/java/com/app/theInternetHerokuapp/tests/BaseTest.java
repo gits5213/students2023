@@ -380,8 +380,10 @@ public class BaseTest {
             }
             else {
                 System.out.println(data + " element is missing");
+                softAssert.fail();
             }
         }
+        softAssert.assertAll();
 
 
     }
