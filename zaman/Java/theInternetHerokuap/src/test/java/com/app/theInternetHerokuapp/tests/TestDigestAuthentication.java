@@ -8,8 +8,6 @@ import io.qameta.allure.Story;
 
 import org.testng.annotations.Test;
 
-import java.util.Base64;
-
 
 public class TestDigestAuthentication extends BaseTest{
 
@@ -30,5 +28,6 @@ public class TestDigestAuthentication extends BaseTest{
                 TestData.DIGEST_USERNAME,
                 TestData.DIGEST_PASSWORD,
                 TestData.DIGEST_EDITABLE_URL);
+        assertText(digestAuthenticationPage.digestAuthShowedMessage(), TestData.BASIC_AUTH_SUCCESSFUL_MESSAGE);
     }
 }

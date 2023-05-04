@@ -14,7 +14,7 @@ public class TestFloatingMenu extends BaseTest{
 
     @Story("gits-5231-Floating-Menu")
     @Description("Floating-Menu")
-    @Test()
+    @Test
     public void floatingMenu(){
 
         FloatingMenuPage fm =new FloatingMenuPage(driver);

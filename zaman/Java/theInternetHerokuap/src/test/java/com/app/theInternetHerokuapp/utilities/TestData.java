@@ -25,6 +25,12 @@ public class TestData {
     public static final String EXPECTED_LOGIN_SUCCESSFUL_MESSAGE = "You logged into a secure area!\n" +
             "×";
 
+    //==========Basic authentication==============
+    public static final String BASIC_AUTH_USERNAME = "admin";
+    public static final String BASIC_AUTH_PASSWORD = "admin";
+    public static final String BASIC_AUTH_SUCCESSFUL_MESSAGE = "Congratulations! You must have the proper credentials.";
+    public static final String BASIC_AUTH_EDITABLE_URL = "the-internet.herokuapp.com/basic_auth";
+
     //==========Digest authentication==============
     public static final String DIGEST_USERNAME = "admin";
     public static final String DIGEST_PASSWORD = "admin";

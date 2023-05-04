@@ -23,6 +23,12 @@ public class LandingPage extends BasePage {
         return addRemoveElementsPage;
     }
 
+    @FindBy(css = "li:nth-child(3) > a")
+    public WebElement basicAuth;
+    public WebElement getBasicAuth() {
+        return basicAuth;
+    }
+
     @FindBy(css = "li:nth-of-type(4) > a")
     public WebElement brokenImages;
     public WebElement getBrokenImages() {
