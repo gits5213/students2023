@@ -118,6 +118,12 @@ public class LandingPage extends BasePage {
         return formAuthentication;
     }
 
+    @FindBy(css = "li:nth-of-type(22) > a")
+    public WebElement frames;
+    public WebElement getFrames() {
+        return frames;
+    }
+
     @FindBy(css = "li:nth-of-type(20) > a")
     public WebElement forgotPassword;
     public WebElement getForgotPassword() {

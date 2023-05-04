@@ -233,6 +233,16 @@ public class BaseTest {
         driver.switchTo().frame(element);
     }
 
+    //==========Switch to parent frame==============
+    public void switchToParentFrame(){
+        driver.switchTo().parentFrame();
+    }
+
+    //==========Switch to default content==============
+    public void switchTODefaultContent(){
+        driver.switchTo().defaultContent();
+    }
+
 
     ////////////////////Page Specific Methods///////////////////////
 
