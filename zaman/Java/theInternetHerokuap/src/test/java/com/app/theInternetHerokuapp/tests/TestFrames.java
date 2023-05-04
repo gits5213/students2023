@@ -1,6 +1,7 @@
 package com.app.theInternetHerokuapp.tests;
 
 import com.app.theInternetHerokuapp.pom.FramesPage;
+import com.app.theInternetHerokuapp.utilities.TestData;
 import io.qameta.allure.Description;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
@@ -63,9 +64,9 @@ public class TestFrames extends BaseTest{
 
         switchToFrame(fp.getTxtBoxFrame());
 
-        typeText(fp.getParagraph(),"dfsgsdfgdsgf");
+        typeText(fp.getParagraph(), TestData.FRAME_DEMO_TEXT);
 
-        boolean isBold = fp.getParagraph().findElement(By.tagName("strong")).getCssValue("font-weight").equals("700");
+        boolean isBold = fp.getParagraph().findElement(By.tagName(TestData.FRAME_TEXT_TAG_NAME)).getCssValue(TestData.FRAME_BOLD_TEXT_CSS_VALUE).equals(TestData.FRAME_BOLD_TEXT_NUMERIC_VALUE);
 
         Assert.assertTrue(isBold);
 

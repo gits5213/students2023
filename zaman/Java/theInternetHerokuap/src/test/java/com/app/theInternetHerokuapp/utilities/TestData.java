@@ -62,7 +62,14 @@ public class TestData {
     //==========File Uploader==============
     public static final String FILE_UPLOAD_PATH = "C:\\Users\\abzam\\Desktop\\dem\\WhatsApp Image 2020-05-08 at 12.10.05 AM.jpeg";
     public static final String FILE_UPLOAD_SUCCESSFUL_MESSAGE = "File Uploaded!";
-    //==========Next==============
+
+    //==========Frames==============
+    public static final String FRAME_DEMO_TEXT = "dfsgsdfgdsgf";
+    public static final String FRAME_TEXT_TAG_NAME = "strong";
+    public static final String FRAME_BOLD_TEXT_CSS_VALUE = "font-weight";
+    public static final String FRAME_BOLD_TEXT_NUMERIC_VALUE = "700";
+
+
     //==========Next==============
     //==========Next==============
     //==========Next==============
