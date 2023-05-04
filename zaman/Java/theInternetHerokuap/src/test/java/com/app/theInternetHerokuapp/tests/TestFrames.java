@@ -14,7 +14,7 @@ public class TestFrames extends BaseTest{
 
     @Story("gits-5233-Frames")
     @Description("Nested-Frames")
-    @Test(priority = 0)
+    @Test(priority = 1)
     public void frames(){
 
         FramesPage fp =new FramesPage(driver);
@@ -42,20 +42,18 @@ public class TestFrames extends BaseTest{
 
         highlightWebElement(fp.getBottomFrameText());
         System.out.println("switching to " + fp.getBottomFrameText().getText() + " frame");
-        sleepTest(3000);
     }
 
 
     @Story("gits-5233-Frames")
     @Description("IFrames")
-    @Test(priority = 1)
+    @Test(priority = 2)
     public void iframe(){
 
         FramesPage fp =new FramesPage(driver);
+
         clickOnElement(landingPage.getFrames());
         clickOnElement(fp.getIFrame());
-
-        sleepTest(2000);
 
         clickOnElement(fp.getMenuBar().get(0));
         clickOnElement(fp.getNewDocBtn());
@@ -69,7 +67,7 @@ public class TestFrames extends BaseTest{
 
         Assert.assertTrue(isBold);
 
-        sleepTest(3000);
+        switchTODefaultContent();
     }
 
 }
