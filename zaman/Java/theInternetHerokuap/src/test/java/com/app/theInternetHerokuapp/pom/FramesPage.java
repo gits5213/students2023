@@ -92,10 +92,10 @@ public class FramesPage extends BasePage{
         return menuBar;
     }
 
-    @FindBy(css = "div:nth-of-type(3) > button[title='Bold']")
-    public WebElement boldSelector;
-    public WebElement getBoldSelector() {
-        return boldSelector;
+    @FindBy(css = "div[title='formatting'] button:nth-of-type(n)")
+    public List<WebElement> textFormatter;
+    public List<WebElement> getTextFormatter() {
+        return textFormatter;
     }
 
     @FindBy(css = "div[role='menuitem']")
@@ -114,11 +114,5 @@ public class FramesPage extends BasePage{
     public WebElement paragraph;
     public WebElement getParagraph() {
         return paragraph;
-    }
-
-    @FindBy(css = "strong")
-    public WebElement txtBoldTag;
-    public WebElement getTxtBoldTag() {
-        return txtBoldTag;
     }
 }

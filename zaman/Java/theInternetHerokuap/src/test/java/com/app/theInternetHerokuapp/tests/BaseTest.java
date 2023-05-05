@@ -482,7 +482,41 @@ public class BaseTest {
     //=============================================
 
 
-    //==========Next==============
+    //==========Frames==============
+    //text formatter and style validation
+    public boolean textBoldValidation(WebElement parentElement){
+        return parentElement.findElement(By.tagName("strong")).getCssValue("font-weight").equals("700");
+    }
+
+    public boolean textItalicValidation(WebElement parentElement){
+        return parentElement.findElement(By.tagName("em")).getCssValue("font-style").equals("italic");
+    }
+
+    public boolean textAlignCenterValidation(WebElement parentElement){
+        return parentElement.getCssValue("text-align").equals("center");
+    }
+
+    //text formatter and style switcher
+    public void iframeTextBoldItalicSwitcher(
+            List<WebElement> menuBar,
+            int menuItem,
+            List<WebElement> textFormatter,
+            int selectTextFormatter,
+            WebElement newDocBtn,
+            WebElement TextFrame,
+            WebElement paragraph,
+            String demoText){
+
+        clickOnElement(menuBar.get(menuItem));
+        sleepTest(500);
+        clickOnElement(newDocBtn);
+        sleepTest(500);
+        clickOnElement(textFormatter.get(selectTextFormatter));
+        sleepTest(1000);
+
+        switchToFrame(TextFrame);
+        typeText(paragraph, demoText);
+    }
 
     //=============================================
 

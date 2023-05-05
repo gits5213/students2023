@@ -5,8 +5,11 @@ import com.app.theInternetHerokuapp.utilities.TestData;
 import io.qameta.allure.Description;
 import io.qameta.allure.Story;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.util.List;
 
 public class TestFrames extends BaseTest{
 
@@ -55,19 +58,36 @@ public class TestFrames extends BaseTest{
         clickOnElement(landingPage.getFrames());
         clickOnElement(fp.getIFrame());
 
-        clickOnElement(fp.getMenuBar().get(0));
-        clickOnElement(fp.getNewDocBtn());
-        clickOnElement(fp.getBoldSelector());
+        //Text Bold validation
+        iframeTextBoldItalicSwitcher(
+                fp.getMenuBar(),
+                0,
+                fp.getTextFormatter(),
+                0,
+                fp.getNewDocBtn(),
+                fp.getTxtBoxFrame(),
+                fp.getParagraph(),
+                TestData.FRAME_DEMO_TEXT);
 
-        switchToFrame(fp.getTxtBoxFrame());
+        System.out.println(textBoldValidation(fp.getParagraph()));
+        Assert.assertTrue(textBoldValidation(fp.getParagraph()));
 
-        typeText(fp.getParagraph(), TestData.FRAME_DEMO_TEXT);
+        switchTODefaultContent();
 
-        boolean isBold = fp.getParagraph().findElement(By.tagName(TestData.FRAME_TEXT_TAG_NAME)).getCssValue(TestData.FRAME_BOLD_TEXT_CSS_VALUE).equals(TestData.FRAME_BOLD_TEXT_NUMERIC_VALUE);
+        //Text italic validation
+        iframeTextBoldItalicSwitcher(
+                fp.getMenuBar(),
+                0,
+                fp.getTextFormatter(),
+                1,
+                fp.getNewDocBtn(),
+                fp.getTxtBoxFrame(),
+                fp.getParagraph(),
+                TestData.FRAME_DEMO_TEXT);
 
-        Assert.assertTrue(isBold);
+        System.out.println(textItalicValidation(fp.getParagraph()));
+        Assert.assertTrue(textItalicValidation(fp.getParagraph()));
 
         switchTODefaultContent();
     }
-
 }
