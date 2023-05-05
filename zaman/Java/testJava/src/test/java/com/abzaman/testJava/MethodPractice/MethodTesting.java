@@ -2,6 +2,8 @@ package com.abzaman.testJava.MethodPractice;
 
 import java.util.Scanner;
 
+import com.abzaman.testJava.MethodPractice.CustomMethod;
+
 public class MethodTesting extends CustomMethod {
 
     public static void main(String[] args) {

@@ -9,51 +9,40 @@ public class BasicCalculatorWithFunction {
     public static String add(double x, double y) {
         double result = x + y;
         DecimalFormat df = new DecimalFormat("#.##");
-        df.setMinimumFractionDigits(2);
-        df.setMaximumFractionDigits(2);
+        df.setMinimumFractionDigits(0);
+        df.setMaximumFractionDigits(10);
         return df.format(result);
     }
 
     public static String multi(double x, double y) {
         double result = x * y;
         DecimalFormat df = new DecimalFormat("#.##");
-        df.setMinimumFractionDigits(2);
-        df.setMaximumFractionDigits(2);
+        df.setMinimumFractionDigits(0);
+        df.setMaximumFractionDigits(10);
         return df.format(result);
     }
 
     public static String sub(double x, double y) {
         double result = x - y;
         DecimalFormat df = new DecimalFormat("#.##");
-        df.setMinimumFractionDigits(2);
-        df.setMaximumFractionDigits(2);
+        df.setMinimumFractionDigits(0);
+        df.setMaximumFractionDigits(10);
         return df.format(result);
     }
-
-    // public static String divide(double x, double y) throws ArithmeticException {
-    // if (y == 0) {
-    // throw new ArithmeticException("Cannot divide by zero");
-    // }
-    // double result = x / y;
-    // DecimalFormat df = new DecimalFormat("#.##");
-    // df.setMinimumFractionDigits(2);
-    // df.setMaximumFractionDigits(2);
-    // return df.format(result);
-    // }
 
     public static String divide(double x, double y) {
         double result = x / y;
         DecimalFormat df = new DecimalFormat("#.##");
-        df.setMinimumFractionDigits(2);
-        df.setMaximumFractionDigits(2);
+        df.setMinimumFractionDigits(0);
+        df.setMaximumFractionDigits(10);
         return df.format(result);
     }
 
     public static String rem(double x, double y) {
         double result = x % y;
         DecimalFormat df = new DecimalFormat("#.##");
-        df.setMinimumFractionDigits(2);
-        df.setMaximumFractionDigits(2);
+        df.setMinimumFractionDigits(0);
+        df.setMaximumFractionDigits(10);
         return df.format(result);
     }
 
@@ -76,7 +65,7 @@ public class BasicCalculatorWithFunction {
             // Input validation for choice
 
             do {
-                System.out.print("Enter choice(1/2/3/4):");
+                System.out.print("Enter choice(1/2/3/4/5):");
                 choice = input.nextLine();
                 try {
                     choice1 = Integer.parseInt(choice);
@@ -100,7 +89,7 @@ public class BasicCalculatorWithFunction {
                 System.out.print("Enter first number:");
                 choice = input.nextLine();
                 try {
-                    num1 = Integer.parseInt(choice);
+                    num1 = Double.parseDouble(choice);
                     break;
 
                 } catch (NumberFormatException e) {
@@ -117,7 +106,7 @@ public class BasicCalculatorWithFunction {
                 System.out.print("Enter second number:");
                 choice = input.nextLine();
                 try {
-                    num2 = Integer.parseInt(choice);
+                    num2 = Double.parseDouble(choice);
                     break;
 
                 } catch (NumberFormatException e) {

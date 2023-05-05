@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-04-16T20:17:34Z" name="Regression" finished-at="2023-04-16T20:18:18Z" duration-ms="43962">
+    <groups>
+    </groups>
+    <test started-at="2023-04-16T20:17:34Z" name="UI Test" finished-at="2023-04-16T20:18:18Z" duration-ms="43962">
+      <class name="selenium.java.internetHerokuapp.testCases.landingPage.LandingPageValidation">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:selenium.java.internetHerokuapp.testCases.landingPage.LandingPageValidation@1a5a4e19]" started-at="2023-04-16T20:17:34Z" name="beforeClass" finished-at="2023-04-16T20:17:35Z" duration-ms="1214" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:selenium.java.internetHerokuapp.testCases.landingPage.LandingPageValidation@1a5a4e19]" started-at="2023-04-16T20:17:35Z" name="beforeMethod" finished-at="2023-04-16T20:17:41Z" duration-ms="5825" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="landingPageValidation()[pri:0, instance:selenium.java.internetHerokuapp.testCases.landingPage.LandingPageValidation@1a5a4e19]" started-at="2023-04-16T20:17:41Z" name="landingPageValidation" description="User Able to visit Landing Page " finished-at="2023-04-16T20:17:43Z" duration-ms="2004" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- landingPageValidation -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:selenium.java.internetHerokuapp.testCases.landingPage.LandingPageValidation@1a5a4e19]" started-at="2023-04-16T20:17:43Z" name="afterTest" finished-at="2023-04-16T20:17:43Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:selenium.java.internetHerokuapp.testCases.landingPage.LandingPageValidation@1a5a4e19]" started-at="2023-04-16T20:17:43Z" name="afterClass" finished-at="2023-04-16T20:17:44Z" duration-ms="564" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- selenium.java.internetHerokuapp.testCases.landingPage.LandingPageValidation -->
+      <class name="selenium.java.internetHerokuapp.testCases.abTesting.ABTestingValidation">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:selenium.java.internetHerokuapp.testCases.abTesting.ABTestingValidation@7068e664]" started-at="2023-04-16T20:17:34Z" name="beforeClass" finished-at="2023-04-16T20:17:35Z" duration-ms="1214" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:selenium.java.internetHerokuapp.testCases.abTesting.ABTestingValidation@7068e664]" started-at="2023-04-16T20:17:35Z" name="beforeMethod" finished-at="2023-04-16T20:17:41Z" duration-ms="5706" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="aBTestingValidation()[pri:0, instance:selenium.java.internetHerokuapp.testCases.abTesting.ABTestingValidation@7068e664]" started-at="2023-04-16T20:17:41Z" name="aBTestingValidation" description="User Able to visit Landing Page and Validate that AB testing is available and clickable" finished-at="2023-04-16T20:18:18Z" duration-ms="36422" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='content']//h3[.='A/B Test Variation 1']"}
+  (Session info: chrome=111.0.5563.147)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.3', revision: 'e5e76298c3'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8585d341ee79f156d7e4118b46db4fb1, findElement {using=xpath, value=//div[@id='content']//h3[.='A/B Test Variation 1']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.147, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Program Files (x86)\scop...}, goog:chromeOptions: {debuggerAddress: localhost:62805}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62805/devtoo..., se:cdpVersion: 111.0.5563.147, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8585d341ee79f156d7e4118b46db4fb1]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='content']//h3[.='A/B Test Variation 1']"}
+  (Session info: chrome=111.0.5563.147)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.3', revision: 'e5e76298c3'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8585d341ee79f156d7e4118b46db4fb1, findElement {using=xpath, value=//div[@id='content']//h3[.='A/B Test Variation 1']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.147, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Program Files (x86)\scop...}, goog:chromeOptions: {debuggerAddress: localhost:62805}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62805/devtoo..., se:cdpVersion: 111.0.5563.147, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8585d341ee79f156d7e4118b46db4fb1
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+at com.sun.proxy.$Proxy18.isDisplayed(Unknown Source)
+at selenium.java.internetHerokuapp.testCases.abTesting.ABTestingValidation.aBTestingValidation(ABTestingValidation.java:46)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:834)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aBTestingValidation -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:selenium.java.internetHerokuapp.testCases.abTesting.ABTestingValidation@7068e664]" started-at="2023-04-16T20:18:18Z" name="afterTest" finished-at="2023-04-16T20:18:18Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:selenium.java.internetHerokuapp.testCases.abTesting.ABTestingValidation@7068e664]" started-at="2023-04-16T20:18:18Z" name="afterClass" finished-at="2023-04-16T20:18:18Z" duration-ms="566" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- selenium.java.internetHerokuapp.testCases.abTesting.ABTestingValidation -->
+    </test> <!-- UI Test -->
+  </suite> <!-- Regression -->
+</testng-results>

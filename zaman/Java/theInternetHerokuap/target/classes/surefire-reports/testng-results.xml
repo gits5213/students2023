@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-04-28T07:52:01 BDT" name="My Test Suite" finished-at="2023-04-28T07:52:09 BDT" duration-ms="7808">
+    <groups>
+    </groups>
+    <test started-at="2023-04-28T07:52:01 BDT" name="My Test" finished-at="2023-04-28T07:52:09 BDT" duration-ms="7808">
+      <class name="com.app.theInternetHerokuapp.tests.LoginPage.TestInvalidPassword">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.app.theInternetHerokuapp.tests.LoginPage.TestInvalidPassword@16fe9c29]" started-at="2023-04-28T07:52:01 BDT" name="beforeClass" finished-at="2023-04-28T07:52:03 BDT" duration-ms="1893" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.app.theInternetHerokuapp.tests.LoginPage.TestInvalidPassword@16fe9c29]" started-at="2023-04-28T07:52:03 BDT" name="beforeMethod" finished-at="2023-04-28T07:52:08 BDT" duration-ms="4319" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="invalidPassword()[pri:0, instance:com.app.theInternetHerokuapp.tests.LoginPage.TestInvalidPassword@16fe9c29]" started-at="2023-04-28T07:52:08 BDT" name="invalidPassword" finished-at="2023-04-28T07:52:09 BDT" duration-ms="1438" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidPassword -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.app.theInternetHerokuapp.tests.LoginPage.TestInvalidPassword@16fe9c29]" started-at="2023-04-28T07:52:09 BDT" name="afterTest" finished-at="2023-04-28T07:52:09 BDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.app.theInternetHerokuapp.tests.LoginPage.TestInvalidPassword@16fe9c29]" started-at="2023-04-28T07:52:09 BDT" name="afterClass" finished-at="2023-04-28T07:52:09 BDT" duration-ms="68" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.app.theInternetHerokuapp.tests.LoginPage.TestInvalidPassword -->
+    </test> <!-- My Test -->
+  </suite> <!-- My Test Suite -->
+</testng-results>
