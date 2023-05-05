@@ -17,7 +17,6 @@ public class TestBrokenImages extends BaseTest{
     @Test
     public void BrokenImages (){
 
-
         BrokenImagesPage brokenImagesPage = new BrokenImagesPage(driver);
 
         clickOnElement(landingPage.getBrokenImages());

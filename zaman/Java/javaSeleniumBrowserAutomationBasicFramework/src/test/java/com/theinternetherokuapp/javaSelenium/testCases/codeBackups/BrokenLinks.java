@@ -20,8 +20,7 @@ public class BrokenLinks {
             try{
                 String linkURL = link.getAttribute("href");
                 URL url = new URL(linkURL);
-                URLConnection urlConnection = url.openConnection();
-                HttpURLConnection httpURLConnection = (HttpURLConnection) urlConnection;
+                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setConnectTimeout(5000);
                 httpURLConnection.connect();
                 if(httpURLConnection.getResponseCode() != 200)
@@ -54,8 +53,7 @@ public class BrokenLinks {
                 String linkURL = link.getAttribute("href");
                 Proxy proxy = new Proxy(java.net.Proxy.Type.HTTP, new InetSocketAddress("hostname", 80));
                 URL url = new URL(linkURL);
-                URLConnection urlConnection = url.openConnection(proxy);
-                HttpURLConnection httpURLConnection = (HttpURLConnection) urlConnection;
+                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection(proxy);
                 httpURLConnection.setConnectTimeout(5000);
                 httpURLConnection.connect();
                 if(httpURLConnection.getResponseCode() != 200)

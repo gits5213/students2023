@@ -303,10 +303,12 @@ public class BaseTest {
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                 connection.setConnectTimeout(5000);
                 connection.connect();
-                int responseCode = connection.getResponseCode();
-                if (responseCode != 200) {
-                    System.out.println("Broken image found at" + imageURL);
+                if (connection.getResponseCode() != 200) {
+                    System.err.println("Broken image found at " + imageURL + " >>> " + connection.getResponseCode() + " >>> " + connection.getResponseMessage());
                     totalNumberOfBrokenImage++;
+                }
+                else {
+                    System.out.println("Working image found at " + imageURL + " >>> " + connection.getResponseCode() + " >>> " + connection.getResponseMessage());
                 }
                 connection.disconnect();
             }

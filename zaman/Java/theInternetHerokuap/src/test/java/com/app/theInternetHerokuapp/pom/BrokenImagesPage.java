@@ -12,7 +12,7 @@ public class BrokenImagesPage extends BasePage{
         super(driver);
     }
 
-    @FindBy(css = "div > img:nth-of-type(n)")
+    @FindBy(css = "img")
     public List<WebElement> listOfBrokenImages;
     public List<WebElement> getListOfBrokenImages() {
         return listOfBrokenImages;

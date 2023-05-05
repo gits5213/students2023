@@ -21,6 +21,7 @@ public class TestFloatingMenu extends BaseTest{
 
         clickOnElement(landingPage.getFloatingMenu());
 
+        //Check elements before scrolling
         for(WebElement element: fm.getFloatingMenuList()){
             if (element.isDisplayed()){
                 System.out.println(element.getText() + " ---- Element is visible");
@@ -31,10 +32,13 @@ public class TestFloatingMenu extends BaseTest{
                 Assert.assertTrue(element.isDisplayed());
             }
         }
+
         sleepTest(2000);
         scrollWindow(500,0);
         sleepTest(2000);
         System.out.println();
+
+        //Check elements after scrolling
         for(WebElement element: fm.getFloatingMenuList()){
             if (element.isDisplayed()){
                 System.out.println(element.getText() + " ---- Element is visible after scroll");
