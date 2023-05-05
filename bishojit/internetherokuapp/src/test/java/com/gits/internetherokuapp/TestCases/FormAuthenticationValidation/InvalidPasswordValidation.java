@@ -3,6 +3,8 @@ import com.gits.internetherokuapp.TestPages.FormAuthentication;
 import com.gits.internetherokuapp.configuration.LandingPage;
 import com.gits.internetherokuapp.Utilities.Data;
 import com.gits.internetherokuapp.configuration.BaseTest;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -51,18 +53,19 @@ public class InvalidPasswordValidation extends BaseTest {
         fap.getLoginButton().click();
          sleepTime(2000);
 
+        //login button valid massage
+        WebElement invalidMassage = driver.findElement(By.cssSelector("#flash"));
+        String actualLoginMassageText = invalidMassage.getText();
+        String expectedLoginMassageText = "Your username is invalid!\n"+"×";
+        Assert.assertEquals(actualLoginMassageText, expectedLoginMassageText);
+
+
+
         //Alert Text Validation
         String text = fap.getAlert().getText();
         System.out.println(text);
         sleepTime(2000);
 
-        //Driver Close
-        driver.close();
-        sleepTime(2000);
-
-        //Driver Quit
-        driver.quit();
-        sleepTime(2000);
 
     }
 

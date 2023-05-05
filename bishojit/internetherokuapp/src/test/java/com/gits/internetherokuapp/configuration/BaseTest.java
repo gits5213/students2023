@@ -1,5 +1,4 @@
 package com.gits.internetherokuapp.configuration;
-
 import com.gits.internetherokuapp.Utilities.Data;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

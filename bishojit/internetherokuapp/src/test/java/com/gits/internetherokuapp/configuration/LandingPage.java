@@ -8,7 +8,7 @@ public class LandingPage extends BasePage {
         super(driver);
     }
 
-    //AB Testing Button
+    //==============AB Testing Button==============
     @FindBy(css = "li:nth-of-type(1) > a")
     public WebElement ABTesting;
     public WebElement getABTesting(){
@@ -16,7 +16,7 @@ public class LandingPage extends BasePage {
     }
 
 
-    //Add Remove Elements Button
+    //==============Add Remove Elements Button==============
     @FindBy(css = "li:nth-of-type(2) > a")
     public WebElement addRemoveElement;
     public WebElement getAddRemoveElement(){
@@ -24,7 +24,7 @@ public class LandingPage extends BasePage {
     }
 
 
-    //Basic Auth Button
+    //===============Basic Auth Button===============
     @FindBy(css = "ul > li:nth-of-type(3)")
     public WebElement basicAuth;
     public WebElement getBasicAuth(){
@@ -32,7 +32,7 @@ public class LandingPage extends BasePage {
     }
 
 
-    //Broken Image Button
+    //===================Broken Image Button============
     @FindBy(css = "li:nth-of-type(4) > a")
     public WebElement brokenImages;
     public WebElement getBrokenImages(){
@@ -40,7 +40,7 @@ public class LandingPage extends BasePage {
     }
 
 
-    //CheckBoxes Button
+    //=============CheckBoxes Button==============
     @FindBy(css = "#content > ul > li:nth-child(6) > a")
     public WebElement checkBoxes;
     public WebElement getCheckBoxes(){
@@ -48,6 +48,7 @@ public class LandingPage extends BasePage {
     }
 
 
+    //==============ContextMenu Button==============
     @FindBy(css = "#content > ul > li:nth-child(7) > a")
     public WebElement contextMenu;
     public WebElement getContextMenu(){
@@ -55,7 +56,7 @@ public class LandingPage extends BasePage {
     }
 
 
-    //DisappearingElements Button
+    //=============DisappearingElements Button============
     @FindBy(css = "li:nth-of-type(9) > a")
     public WebElement disappearingElements;
     public WebElement getDisappearingElements(){
@@ -63,7 +64,7 @@ public class LandingPage extends BasePage {
     }
 
 
-    //Drag & Drop Button
+    //====================Drag & Drop Button===================
     @FindBy(css = "li:nth-of-type(10) > a")
     public WebElement dragAndDrop;
     public WebElement getDragAndDrop(){
@@ -71,7 +72,7 @@ public class LandingPage extends BasePage {
     }
 
 
-    //DropDown Button
+    //===================DropDown Button==================
     @FindBy(css = "li:nth-of-type(11) > a")
     public WebElement dropDown;
     public WebElement getDropDown(){
@@ -79,7 +80,7 @@ public class LandingPage extends BasePage {
     }
 
 
-    //Dynamic Content Button
+    //==================Dynamic Content Button================
     @FindBy(css = "#content > ul > li:nth-child(12) > a")
     public WebElement dynamicContent;
 
@@ -88,7 +89,7 @@ public class LandingPage extends BasePage {
     }
 
 
-    //Dynamic Controls Button
+    //=================Dynamic Controls Button====================
     @FindBy(css = "#content > ul > li:nth-child(13) > a")
     public WebElement dynamicControls;
 
@@ -98,7 +99,7 @@ public class LandingPage extends BasePage {
 
 
 
-    //EntryAd Button
+    //====================EntryAd Button=================
     @FindBy(css = "ul > li:nth-of-type(15)")
     public WebElement entryAd;
     public WebElement getEntryAd(){
@@ -106,7 +107,7 @@ public class LandingPage extends BasePage {
     }
 
 
-    //ExitIntent Button
+    //===============ExitIntent Button===============
     @FindBy(css = "ul > li:nth-of-type(16)")
     public WebElement exitIntent;
     public WebElement getExitIntent(){
@@ -114,7 +115,7 @@ public class LandingPage extends BasePage {
     }
 
 
-    //File Download Button
+    //===============File Download Button=================
     @FindBy(css = "#content > ul > li:nth-child(17) > a")
     public WebElement fileDownload;
     public WebElement getFileDownload(){
@@ -122,7 +123,7 @@ public class LandingPage extends BasePage {
     }
 
 
-    //File Upload Button
+    //====================File Upload Button=================
     @FindBy(css = "#content > ul > li:nth-child(18) > a")
     public WebElement fileUpload;
     public WebElement getFileUpload(){
@@ -130,7 +131,7 @@ public class LandingPage extends BasePage {
     }
 
 
-    //Floating Menu Button
+    //====================Floating Menu Button==================
     @FindBy(css = "ul > li:nth-of-type(19)")
     public WebElement floatingMenu;
     public WebElement getFloatingMenu(){
@@ -138,7 +139,7 @@ public class LandingPage extends BasePage {
     }
 
 
-    //Forgot Password Button
+    //========================Forgot Password Button==================
     @FindBy(css = "#content > ul > li:nth-child(20) > a")
     public WebElement forgetPassword;
     public WebElement getForgetPassword(){
@@ -146,7 +147,7 @@ public class LandingPage extends BasePage {
     }
 
 
-    //Form Authentication Button
+    //=================Form Authentication Button===================
     @FindBy(css = "li:nth-of-type(21) > a")
     public WebElement formAuthentication;
     public WebElement getFormAuthentication(){
@@ -154,7 +155,7 @@ public class LandingPage extends BasePage {
     }
 
 
-    //Frames Button
+    //=====================Frames Button=========================
     @FindBy(css = "#content > ul > li:nth-child(22) > a")
     public WebElement frames;
     public WebElement getFrames(){
@@ -162,7 +163,7 @@ public class LandingPage extends BasePage {
     }
 
 
-    //Geo Location Button
+    //========================Geo Location Button====================
     @FindBy(css = "li:nth-of-type(23) > a")
     public WebElement geoLocation;
     public WebElement getGeoLocation(){
@@ -170,7 +171,7 @@ public class LandingPage extends BasePage {
     }
 
 
-    //Horizontal Slider Button
+    //====================Horizontal Slider Button====================
     @FindBy(css = "#content > ul > li:nth-child(24) > a")
     public WebElement horizontalSlider;
     public WebElement getHorizontalSlider(){
@@ -178,7 +179,7 @@ public class LandingPage extends BasePage {
     }
 
 
-     //Hovers Button
+     //======================Hovers Button============================
     @FindBy(css = "ul > li:nth-of-type(25)")
     public WebElement hovers;
     public WebElement getHovers(){
@@ -186,7 +187,7 @@ public class LandingPage extends BasePage {
     }
 
 
-    //Infinite Scroll  Button
+    //===========================Infinite Scroll  Button==================
     @FindBy(css = "li:nth-of-type(26) > a")
     public WebElement infiniteScroll;
     public WebElement getInfiniteScroll(){
@@ -194,7 +195,7 @@ public class LandingPage extends BasePage {
     }
 
 
-    //Inputs Button
+    //=====================Inputs Button=========================
     @FindBy(css = "#content > ul > li:nth-child(27) > a")
     public WebElement inputs;
     public WebElement getInputs(){
