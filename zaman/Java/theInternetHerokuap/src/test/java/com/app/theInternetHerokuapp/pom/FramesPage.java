@@ -19,9 +19,9 @@ public class FramesPage extends BasePage{
     }
 
     @FindBy(css = "frame[name='frame-top']")
-    public WebElement motherFrame1;
-    public WebElement getMotherFrame1() {
-        return motherFrame1;
+    public WebElement topFrame;
+    public WebElement getTopFrame() {
+        return topFrame;
     }
 
     @FindBy(css = "frame[name='frame-top']")
@@ -67,9 +67,9 @@ public class FramesPage extends BasePage{
     }
 
     @FindBy(css = "frame[name='frame-bottom']")
-    public WebElement motherFrame2;
-    public WebElement getMotherFrame2() {
-        return motherFrame2;
+    public WebElement bottomFrame;
+    public WebElement getBottomFrame() {
+        return bottomFrame;
     }
 
     @FindBy(css = "body")

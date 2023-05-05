@@ -4,12 +4,8 @@ import com.app.theInternetHerokuapp.pom.FramesPage;
 import com.app.theInternetHerokuapp.utilities.TestData;
 import io.qameta.allure.Description;
 import io.qameta.allure.Story;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import java.util.List;
 
 public class TestFrames extends BaseTest{
 
@@ -25,7 +21,7 @@ public class TestFrames extends BaseTest{
         clickOnElement(landingPage.getFrames());
         clickOnElement(fp.getNestedFrames());
 
-        switchToFrame(fp.getMotherFrame1());
+        switchToFrame(fp.getTopFrame());
 
         switchToFrame(fp.getLeftFrame());
         highlightWebElement(fp.getLeftFrameBodyText());
@@ -41,8 +37,7 @@ public class TestFrames extends BaseTest{
 
         switchTODefaultContent();
 
-        switchToFrame(fp.getMotherFrame2());
-
+        switchToFrame(fp.getBottomFrame());
         highlightWebElement(fp.getBottomFrameText());
         System.out.println("switching to " + fp.getBottomFrameText().getText() + " frame");
     }
