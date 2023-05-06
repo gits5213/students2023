@@ -124,6 +124,18 @@ public class LandingPage extends BasePage {
         return frames;
     }
 
+    @FindBy(css = "li:nth-of-type(23) > a")
+    public WebElement geoLocation;
+    public WebElement getGeoLocation() {
+        return geoLocation;
+    }
+
+    @FindBy(css = "li:nth-of-type(28) > a")
+    public WebElement jQueryMenus;
+    public WebElement getJQueryMenus() {
+        return jQueryMenus;
+    }
+
     @FindBy(css = "li:nth-of-type(20) > a")
     public WebElement forgotPassword;
     public WebElement getForgotPassword() {

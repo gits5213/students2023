@@ -22,6 +22,7 @@ public class TestExitIntent extends BaseTest{
         Robot robot = new Robot();
 
         clickOnElement(landingPage.getExitIntent());
+        sleepTest(2000);
         robot.mouseMove(400,50);
 
 //        //Mouse move with delay

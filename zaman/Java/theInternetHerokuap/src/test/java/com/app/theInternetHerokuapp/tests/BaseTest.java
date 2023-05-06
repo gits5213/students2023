@@ -8,11 +8,15 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.openqa.selenium.*;
 import org.openqa.selenium.Point;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.Wait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -24,7 +28,6 @@ import java.awt.*;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.HttpURLConnection;
@@ -37,16 +40,38 @@ import java.util.Objects;
 
 public class BaseTest {
 
+
     public WebDriver driver;
     public SoftAssert softAssert;
     public LandingPage landingPage;
+    public Actions actions;
+    public ChromeOptions options;
+    public Alert alert;
+    public String incognito;
+
+    //default constructor
+    public BaseTest() {
+    }
+
+    //Constructor for Chrome incognito selection
+    public BaseTest(String incognito) {
+        this.incognito = incognito;
+    }
 
     @BeforeClass
-    public void beforeClass(){
-        driver = new ChromeDriver();
+    public void beforeClass() {
+        options = new ChromeOptions();
+        if (incognito != null) {
+            options.addArguments(incognito);
+            driver = new ChromeDriver(options);
+        } else {
+            driver = new ChromeDriver();
+//            driver = new FirefoxDriver();
+        }
         driver.manage().window().maximize();
         softAssert = new SoftAssert();
         landingPage = new LandingPage(driver);
+        actions = new Actions(driver);
         //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
@@ -57,12 +82,12 @@ public class BaseTest {
     }
 
     @AfterMethod
-    public void afterTest(){
+    public void afterTest() {
         System.out.println("Test is being executed");
     }
 
     @AfterClass
-    public void afterClass(){
+    public void afterClass() {
         driver.quit();
 
     }
@@ -245,6 +270,18 @@ public class BaseTest {
         driver.switchTo().defaultContent();
     }
 
+    //==========Switch to alert and accept==============
+    public void switchToAlertAndAccept(){
+        alert = driver.switchTo().alert();
+        alert.accept();
+    }
+
+    //==========Switch to alert and decline==============
+    public void switchToAlertAndDecline(){
+        alert = driver.switchTo().alert();
+        alert.dismiss();
+    }
+
 
     ////////////////////Page Specific Methods///////////////////////
 
@@ -409,7 +446,7 @@ public class BaseTest {
 //            System.out.println("Number of cells = " + lastRowNum);
             int lastCellIndex = sheet.getRow(0).getLastCellNum();;
 //            System.out.println("Number of cells = " + lastCellIndex);
-            for (int j = 0; j < lastCellIndex; j++) { //cell index corresponds to the web element's data fields,
+            for (int j = 0; j < lastCellIndex-1; j++) { //cell index corresponds to the web element's data fields,
                 Cell cell = row.getCell(j);
                 String cellValue = cell.getStringCellValue();
                 inputFields.get(j).sendKeys(cellValue);

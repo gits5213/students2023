@@ -1,14 +1,13 @@
 package com.app.theInternetHerokuapp.tests;
 
 import com.app.theInternetHerokuapp.pom.DynamicControlsPage;
-import com.app.theInternetHerokuapp.tests.BaseTest;
 import com.app.theInternetHerokuapp.utilities.TestData;
 import io.qameta.allure.Description;
 import io.qameta.allure.Story;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TestDynamicControls extends BaseTest {
+public  class TestDynamicControls extends BaseTest {
 
 
 

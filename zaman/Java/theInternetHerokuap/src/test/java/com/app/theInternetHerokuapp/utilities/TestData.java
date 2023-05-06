@@ -70,6 +70,12 @@ public class TestData {
     public static final String FRAME_BOLD_TEXT_NUMERIC_VALUE = "700";
 
 
+    //==========JQueryMenus==============
+    public static final String JQUERY_UI_LINK = "https://the-internet.herokuapp.com/jqueryui";
+
+
+    //==========Next==============
+    //==========Next==============
     //==========Next==============
     //==========Next==============
     //==========Next==============

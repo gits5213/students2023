@@ -101,7 +101,7 @@
           <version>2.22.1</version>
           <configuration>
             <suiteXmlFiles>
-              <suiteXmlFile>testng.xml</suiteXmlFile>
+              <suiteXmlFile>defaultSuit.xml</suiteXmlFile>
             </suiteXmlFiles>
             <parallel>classes</parallel>
             <threadCount>4</threadCount>
