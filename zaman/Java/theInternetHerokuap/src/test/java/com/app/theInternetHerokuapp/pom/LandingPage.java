@@ -142,6 +142,12 @@ public class LandingPage extends BasePage {
         return hovers;
     }
 
+    @FindBy(css = "li:nth-of-type(26) > a")
+    public WebElement infiniteScroll;
+    public WebElement getInfiniteScroll() {
+        return infiniteScroll;
+    }
+
     @FindBy(css = "li:nth-of-type(28) > a")
     public WebElement jQueryMenus;
     public WebElement getJQueryMenus() {

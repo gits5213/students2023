@@ -121,7 +121,7 @@ public class BaseTest {
     }
 
     //==========Reload page==============
-    public void reload(){
+    public void reload() {
         driver.navigate().refresh();
     }
 
@@ -190,6 +190,16 @@ public class BaseTest {
         hover.perform();
     }
 
+    //==========Wait for DOM to load==============
+    public void waitForDOMToLoad() {
+        Wait<WebDriver> wait = new FluentWait<>(driver)
+                .withTimeout(Duration.ofSeconds(10))
+                .pollingEvery(Duration.ofMillis(500))
+                .ignoring(NoSuchElementException.class);
+        wait.until(webDriver -> ((JavascriptExecutor) webDriver)
+                .executeScript("return document.readyState").equals("complete"));
+    }
+
     //==========wait for element to be visible==============
     public void waitForElementToBeVisible(WebElement element) {
         Wait<WebDriver> wait = new FluentWait<>(driver)
@@ -233,12 +243,20 @@ public class BaseTest {
         scrollToElementAndClick(element1);
     }
 
-    //==========Scroll to web element==============
+    //==========Scroll to web element and click==============
     public void scrollToElementAndClick(WebElement element) {
         // Scroll to the element using JavaScriptExecutor
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
         sleepTest(500);
         element.click();
+    }
+
+    //==========Scroll to web element==============
+    public void scrollToElement(WebElement element) {
+        // Scroll to the element using JavaScriptExecutor
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
+        sleepTest(500);
+
     }
 
     //==========Scroll to window==============
