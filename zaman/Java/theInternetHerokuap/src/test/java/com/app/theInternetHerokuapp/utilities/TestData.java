@@ -72,7 +72,9 @@ public class TestData {
     //==========Horizontal Slider==============
     public static final String SLIDER_VALUE= "5";
     public static final String SLIDER_STEPS= "10";
-    //==========Next==============
+
+    //==========Hovers==============
+
     //==========Next==============
     //==========Next==============
     //==========Next==============

@@ -136,6 +136,12 @@ public class LandingPage extends BasePage {
         return horizontalSlider;
     }
 
+    @FindBy(css = "li:nth-of-type(25) > a")
+    public WebElement hovers;
+    public WebElement getHovers() {
+        return hovers;
+    }
+
     @FindBy(css = "li:nth-of-type(28) > a")
     public WebElement jQueryMenus;
     public WebElement getJQueryMenus() {
