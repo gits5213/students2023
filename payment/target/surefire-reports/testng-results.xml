@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-05-08T10:00:42 EDT" name="All Test Suite" finished-at="2023-05-08T10:00:46 EDT" duration-ms="3709">
+    <groups>
+    </groups>
+    <test started-at="2023-05-08T10:00:42 EDT" name="/Users/mdzaman/Downloads/Business/Bangladesh/students2023/sheba" finished-at="2023-05-08T10:00:46 EDT" duration-ms="3709">
+      <class name="com.gits.payment.tests.UserList">
+        <test-method signature="userList()[pri:0, instance:com.gits.payment.tests.UserList@76b0ae1b]" started-at="2023-05-08T10:00:42 EDT" name="userList" finished-at="2023-05-08T10:00:46 EDT" duration-ms="3536" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userList -->
+      </class> <!-- com.gits.payment.tests.UserList -->
+    </test> <!-- /Users/mdzaman/Downloads/Business/Bangladesh/students2023/sheba -->
+  </suite> <!-- All Test Suite -->
+</testng-results>
