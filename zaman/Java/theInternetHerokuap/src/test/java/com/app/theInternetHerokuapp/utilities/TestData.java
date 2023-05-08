@@ -65,16 +65,13 @@ public class TestData {
 
     //==========Frames==============
     public static final String FRAME_DEMO_TEXT = "dfsgsdfgdsgf";
-    public static final String FRAME_TEXT_TAG_NAME = "strong";
-    public static final String FRAME_BOLD_TEXT_CSS_VALUE = "font-weight";
-    public static final String FRAME_BOLD_TEXT_NUMERIC_VALUE = "700";
-
 
     //==========JQueryMenus==============
     public static final String JQUERY_UI_LINK = "https://the-internet.herokuapp.com/jqueryui";
 
-
-    //==========Next==============
+    //==========Horizontal Slider==============
+    public static final String SLIDER_VALUE= "5";
+    public static final String SLIDER_STEPS= "10";
     //==========Next==============
     //==========Next==============
     //==========Next==============

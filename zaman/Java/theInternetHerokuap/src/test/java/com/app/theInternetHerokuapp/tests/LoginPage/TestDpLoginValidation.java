@@ -11,7 +11,8 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class TestDpLoginValidation extends BaseTest {
+public class TestDpLoginValidation extends BaseTest{
+
 
 
     @Story("gits-5225-DP-Login-Validation-With-ExcelData")
@@ -19,9 +20,7 @@ public class TestDpLoginValidation extends BaseTest {
     @Test(dataProvider = "loginData", dataProviderClass = DataProviderForTests.class)
     public void dpLoginValidation(String username, String password, String validation) throws IOException {
 
-
         LoginValidationWithExcelDataPage lv = new LoginValidationWithExcelDataPage(driver);
-
 
         clickOnElement(landingPage.getFormAuthentication());
         typeText(lv.getUsername(), username);

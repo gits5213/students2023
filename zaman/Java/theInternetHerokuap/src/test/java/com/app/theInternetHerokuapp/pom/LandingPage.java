@@ -130,6 +130,12 @@ public class LandingPage extends BasePage {
         return geoLocation;
     }
 
+    @FindBy(css = "li:nth-of-type(24) > a")
+    public WebElement horizontalSlider;
+    public WebElement getHorizontalSlider() {
+        return horizontalSlider;
+    }
+
     @FindBy(css = "li:nth-of-type(28) > a")
     public WebElement jQueryMenus;
     public WebElement getJQueryMenus() {
