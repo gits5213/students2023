@@ -30,7 +30,6 @@ public class TestInfiniteScroll extends BaseTest {
             scrollCount = verticalScroll * i;
         }
 
-        waitForDOMToLoad();
         System.out.println("Total scroll made = " + (scrollCount) + " Pixels");
         int eventualElementCount = ifp.getScrollGeneratedElements().size();
         System.out.println("Eventual elements after scroll = " + eventualElementCount);

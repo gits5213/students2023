@@ -7,7 +7,8 @@ import org.testng.annotations.Test;
 
 public class TestGeoLocation extends BaseTest {
 
-//    public TestGeoLocation(String incognito) {
+
+//    public TestGeoLocation() {
 //        super("incognito");
 //    }
 

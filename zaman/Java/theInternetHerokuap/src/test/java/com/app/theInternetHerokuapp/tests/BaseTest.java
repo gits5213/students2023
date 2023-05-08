@@ -61,7 +61,7 @@ public class BaseTest {
     @BeforeClass
     public void beforeClass() {
         options = new ChromeOptions();
-        if (incognito != null) {
+        if (incognito != null && incognito.equalsIgnoreCase("incognito")) {
             options.addArguments(incognito);
             driver = new ChromeDriver(options);
         } else {
@@ -76,7 +76,7 @@ public class BaseTest {
     }
 
     @BeforeMethod
-    public void beforeMethod() throws InterruptedException {
+    public void beforeMethod() {
         navigateTo(TestData.URL);
         sleepTest(500);
     }
@@ -97,7 +97,7 @@ public class BaseTest {
 
 
     //==========Sleep time==============
-    public static void sleepTest(long sleepTime) {
+    public void sleepTest(long sleepTime) {
         try {
             Thread.sleep(sleepTime);
         } catch (InterruptedException e) {
@@ -489,7 +489,7 @@ public class BaseTest {
 
 
     //==========File Uploader==============
-    public static void uploadFile(String filePath) throws AWTException, InterruptedException {
+    public void uploadFile(String filePath) throws AWTException, InterruptedException {
 
         StringSelection stringSelection = new StringSelection(filePath);
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);

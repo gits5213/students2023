@@ -148,10 +148,22 @@ public class LandingPage extends BasePage {
         return infiniteScroll;
     }
 
+    @FindBy(css = "li:nth-of-type(27) > a")
+    public WebElement inputs;
+    public WebElement getInputs() {
+        return inputs;
+    }
+
     @FindBy(css = "li:nth-of-type(28) > a")
     public WebElement jQueryMenus;
     public WebElement getJQueryMenus() {
         return jQueryMenus;
+    }
+
+    @FindBy(css = "li:nth-of-type(29) > a")
+    public WebElement javaScriptAlerts;
+    public WebElement getJavaScriptAlerts() {
+        return javaScriptAlerts;
     }
 
     @FindBy(css = "li:nth-of-type(20) > a")

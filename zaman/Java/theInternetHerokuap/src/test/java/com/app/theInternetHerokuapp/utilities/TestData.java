@@ -73,7 +73,8 @@ public class TestData {
     public static final String SLIDER_VALUE= "5";
     public static final String SLIDER_STEPS= "10";
 
-    //==========Hovers==============
+    //==========Java script alerts==============
+    public static final String FIRST_ALERT_TEXT= "You successfully clicked an alert";
 
     //==========Next==============
     //==========Next==============
