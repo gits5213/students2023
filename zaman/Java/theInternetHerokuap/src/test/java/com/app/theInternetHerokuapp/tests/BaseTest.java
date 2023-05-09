@@ -13,6 +13,9 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.logging.LogEntries;
+import org.openqa.selenium.logging.LogEntry;
+import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
@@ -37,6 +40,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
+import java.util.logging.Level;
 
 public class BaseTest {
 
@@ -274,7 +278,6 @@ public class BaseTest {
 
     //==========Click on body==============
     public void clickOnBody() {
-
         WebElement click = driver.findElement(By.tagName("body"));
     }
 
@@ -310,6 +313,41 @@ public class BaseTest {
         alert = driver.switchTo().alert();
         alert.sendKeys(alertText);
         alert.accept();
+    }
+
+    //==========Java script error on actions trigger==============
+    public static void logJavaScriptErrorsOnAction(WebDriver driver) {
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+        Object errorCount = jsExecutor.executeScript("return window.onerror = function(err) { return true; };" +
+                "return window.__errors__ ? window.__errors__.length : 0;");
+        if (errorCount instanceof Long && (Long) errorCount > 0) {
+            System.out.println("JavaScript errors found:");
+            Object errors = jsExecutor.executeScript("return window.__errors__;");
+            if (errors instanceof Object[]) {
+                for (Object error : (Object[]) errors) {
+                    if (error instanceof String) {
+                        System.out.println(error);
+                    }
+                }
+            }
+            // Clear the error array so we don't log the same errors multiple times
+            jsExecutor.executeScript("window.__errors__ = [];");
+        }
+    }
+
+    //==========Java script error on page loading==============
+    public void findJavaScriptErrorOnPageLoading(){
+        LogEntries logEntries = driver.manage().logs().get(LogType.BROWSER);
+        int logCounter = 1;
+
+        for (LogEntry entry : logEntries) {
+            System.out.println(logCounter + ". >>> " + entry.getLevel() + " >>> " + entry.getMessage());
+            if (entry.getLevel().equals(Level.SEVERE)) {
+                softAssert.fail();
+            }
+            logCounter++;
+        }
+        softAssert.assertAll();
     }
 
 

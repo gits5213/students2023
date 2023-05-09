@@ -166,6 +166,12 @@ public class LandingPage extends BasePage {
         return javaScriptAlerts;
     }
 
+    @FindBy(css = "li:nth-of-type(30) > a")
+    public WebElement JavaScriptOnLadEventError;
+    public WebElement getJavaScriptOnLadEventError() {
+        return JavaScriptOnLadEventError;
+    }
+
     @FindBy(css = "li:nth-of-type(20) > a")
     public WebElement forgotPassword;
     public WebElement getForgotPassword() {
