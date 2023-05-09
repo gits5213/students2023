@@ -89,7 +89,9 @@ public class TestData {
 
     public static final String[] CHARACTER_KEYS= {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l"};
     public static final String KEYS_DEFAULT_MESSAGE= "You entered: ";
-    //==========Next==============
+
+    //==========Multiple windows==============
+    public static final String NEW_WINDOW_TEXT= "New Window";
     //==========Next==============
     //==========Next==============
 

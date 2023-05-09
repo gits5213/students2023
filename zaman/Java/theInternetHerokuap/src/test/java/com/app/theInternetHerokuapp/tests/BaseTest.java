@@ -35,6 +35,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.security.PublicKey;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -348,6 +349,21 @@ public class BaseTest {
             logCounter++;
         }
         softAssert.assertAll();
+    }
+
+    //==========New Blank tab==============
+    public void newBlankTab(){
+        ((JavascriptExecutor)driver).executeScript("window.open();");
+    }
+
+    //==========Switch to window==============
+    public void switchToWindow(String currentWindow){
+        driver.switchTo().window(currentWindow);
+    }
+
+    //==========Close window==============
+    public void closeWindow(){
+        driver.close();
     }
 
 

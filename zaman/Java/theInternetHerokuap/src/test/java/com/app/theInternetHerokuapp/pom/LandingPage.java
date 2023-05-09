@@ -184,6 +184,18 @@ public class LandingPage extends BasePage {
         return KeyPresses;
     }
 
+    @FindBy(css = "li:nth-of-type(32) > a")
+    public WebElement largeAndDeepDOMPage;
+    public WebElement getLargeAndDeepDOMPage() {
+        return largeAndDeepDOMPage;
+    }
+
+    @FindBy(css = "li:nth-of-type(33) > a")
+    public WebElement multipleWindows;
+    public WebElement getMultipleWindows() {
+        return multipleWindows;
+    }
+
 
 
 }
