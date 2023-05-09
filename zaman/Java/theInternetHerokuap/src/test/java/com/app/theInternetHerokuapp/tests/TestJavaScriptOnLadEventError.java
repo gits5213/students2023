@@ -3,16 +3,7 @@ package com.app.theInternetHerokuapp.tests;
 import com.app.theInternetHerokuapp.pom.JavaScriptOnLadEventErrorPage;
 import io.qameta.allure.Description;
 import io.qameta.allure.Story;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.logging.LogEntries;
-import org.openqa.selenium.logging.LogEntry;
-import org.openqa.selenium.logging.LogType;
-import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import java.security.PublicKey;
-import java.util.logging.Level;
 
 public class TestJavaScriptOnLadEventError extends BaseTest{
 

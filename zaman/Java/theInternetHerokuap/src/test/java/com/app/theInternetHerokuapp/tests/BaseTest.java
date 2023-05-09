@@ -170,7 +170,7 @@ public class BaseTest {
 
     //==========clear text box==============
     public void clearTextBox(WebElement element) {
-        highlightWebElement(element);
+//        highlightWebElement(element);
         element.clear();
     }
 
@@ -617,12 +617,36 @@ public class BaseTest {
         switchToFrame(TextFrame);
         typeText(paragraph, demoText);
     }
-
     //=============================================
 
 
-    //==========Next==============
+    //==========key Presses==============
+    public void characterKeysValidation(String[] keys, WebElement inputBox, WebElement message){
+        for (String key : keys) {
+            inputBox.sendKeys(key);
+            sleepTest(100);
+            System.out.println(message.getText());
+            clearTextBox(inputBox);
+            Assert.assertEquals((TestData.KEYS_DEFAULT_MESSAGE + key.toUpperCase()), message.getText());
+        }
+    }
 
+    public void functionKeysValidation(Keys[] keys, WebElement inputBox, WebElement message){
+
+        for (Keys key : keys) {
+            actions.keyUp(key).keyDown(key).build().perform();
+            sleepTest(100);
+            String keyName = key.name();
+
+            //exception for arrow keys name on the sight
+            if (keyName.startsWith("ARROW_")) {
+                keyName = keyName.replace("ARROW_", "");
+            }
+            Assert.assertEquals((TestData.KEYS_DEFAULT_MESSAGE + keyName), message.getText());
+            System.out.println(message.getText());
+            clearTextBox(inputBox);
+        }
+    }
     //=============================================
 
 

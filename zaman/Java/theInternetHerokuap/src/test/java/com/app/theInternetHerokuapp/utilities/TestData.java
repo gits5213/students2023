@@ -1,7 +1,10 @@
 package com.app.theInternetHerokuapp.utilities;
 
+import org.openqa.selenium.Keys;
+
 import java.awt.*;
 import java.lang.reflect.Array;
+import java.security.Key;
 
 public class TestData {
 
@@ -79,7 +82,13 @@ public class TestData {
     public static final String THIRD_ALERT_DEFAULT_TEXT= "You entered: ";
     public static final String THIRD_ALERT_INPUT_TEXT= "asdasdasdasd";
 
-    //==========Next==============
+    //==========Keys==============
+    public static final Keys[] FUNCTION_KEYS = {Keys.BACK_SPACE, Keys.NUMPAD1, Keys.NUMPAD2,
+            Keys.NUMPAD3, Keys.ENTER, Keys.CONTROL, Keys.ARROW_UP, Keys.ARROW_DOWN,
+            Keys.ARROW_LEFT, Keys.ARROW_UP, Keys.ARROW_RIGHT};
+
+    public static final String[] CHARACTER_KEYS= {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l"};
+    public static final String KEYS_DEFAULT_MESSAGE= "You entered: ";
     //==========Next==============
     //==========Next==============
     //==========Next==============

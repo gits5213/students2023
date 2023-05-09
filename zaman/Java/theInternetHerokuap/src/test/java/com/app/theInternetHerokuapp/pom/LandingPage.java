@@ -112,6 +112,12 @@ public class LandingPage extends BasePage {
         return floatingMenu;
     }
 
+    @FindBy(css = "li:nth-of-type(20) > a")
+    public WebElement forgotPassword;
+    public WebElement getForgotPassword() {
+        return forgotPassword;
+    }
+
     @FindBy(css = "li:nth-of-type(21) > a")
     public WebElement formAuthentication;
     public WebElement getFormAuthentication() {
@@ -172,11 +178,12 @@ public class LandingPage extends BasePage {
         return JavaScriptOnLadEventError;
     }
 
-    @FindBy(css = "li:nth-of-type(20) > a")
-    public WebElement forgotPassword;
-    public WebElement getForgotPassword() {
-        return forgotPassword;
+    @FindBy(css = "li:nth-of-type(31) > a")
+    public WebElement KeyPresses;
+    public WebElement getKeyPresses() {
+        return KeyPresses;
     }
+
 
 
 }
