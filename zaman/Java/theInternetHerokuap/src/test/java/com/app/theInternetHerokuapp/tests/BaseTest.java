@@ -305,6 +305,13 @@ public class BaseTest {
         alert.dismiss();
     }
 
+    //==========Switch to alert and send text==============
+    public void switchToAlertAndSendText(String alertText) {
+        alert = driver.switchTo().alert();
+        alert.sendKeys(alertText);
+        alert.accept();
+    }
+
 
     ////////////////////Page Specific Methods///////////////////////
 

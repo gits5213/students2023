@@ -75,6 +75,9 @@ public class TestData {
 
     //==========Java script alerts==============
     public static final String FIRST_ALERT_TEXT= "You successfully clicked an alert";
+    public static final String SECOND_ALERT_TEXT= "You clicked: Ok";
+    public static final String THIRD_ALERT_DEFAULT_TEXT= "You entered: ";
+    public static final String THIRD_ALERT_INPUT_TEXT= "asdasdasdasd";
 
     //==========Next==============
     //==========Next==============
