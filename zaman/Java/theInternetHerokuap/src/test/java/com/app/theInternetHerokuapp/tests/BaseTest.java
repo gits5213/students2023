@@ -486,12 +486,12 @@ public class BaseTest {
 
 
     //==========Digest Authentication==============
-    public void digestAuthenticationValidation(WebElement element, String username, String password, String url) {
+    public void digestAuthentication(WebElement message, String username, String password, String url) {
         String finaleLink = "https://" + username + ":" + password + "@" + url;
         System.out.println(finaleLink);
         navigateTo(finaleLink);
-        assertText(element, TestData.DIGEST_SUCCESSFUL_MESSAGE);
-        printText(element);
+        assertUrl(finaleLink);
+        printText(message);
     }
     //=============================================
 

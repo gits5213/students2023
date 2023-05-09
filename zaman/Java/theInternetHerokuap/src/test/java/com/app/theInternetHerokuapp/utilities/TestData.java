@@ -97,7 +97,11 @@ public class TestData {
 
     //==========Redirect Link==============
     public static final String REDIRECT_LINK = "https://the-internet.herokuapp.com/status_codes";
+
     //==========Next==============
+    public static final String SECURE_FILE_DOWNLOAD_LINK= "the-internet.herokuapp.com/download_secure";
+    public static final String SECURE_FILE_DOWNLOAD_DEFAULT_LINK= "https://the-internet.herokuapp.com/download_secure";
+    public static final String SECURE_FILE_DOWNLOAD_MESSAGE= "Secure File Downloader";
     //==========Next==============
     //==========Next==============
 

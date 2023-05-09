@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.io.File;
+
 public class LandingPage extends BasePage {
 
     public LandingPage(WebDriver driver) {
@@ -206,6 +208,12 @@ public class LandingPage extends BasePage {
     public WebElement redirectLink;
     public WebElement getRedirectLink() {
         return redirectLink;
+    }
+
+    @FindBy(css = "li:nth-of-type(37) > a")
+    public WebElement secureFileDownload;
+    public WebElement getSecureFileDownload() {
+        return secureFileDownload;
     }
 
 

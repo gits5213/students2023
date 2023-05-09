@@ -21,7 +21,7 @@ public class TestBasicAuth extends BaseTest{
         //format to pass username and password within URL
         //https://username:password@the-internet.herokuapp.com/basic_auth
 
-        digestAuthenticationValidation(bap.getAuthMessage(),
+        digestAuthentication(bap.getAuthMessage(),
                 TestData.BASIC_AUTH_USERNAME,
                 TestData.BASIC_AUTH_PASSWORD,
                 TestData.BASIC_AUTH_EDITABLE_URL);

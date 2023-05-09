@@ -18,16 +18,16 @@ public class TestDigestAuthentication extends BaseTest{
     @Test
     public void digestAuthentication (){
 
-        DigestAuthenticationPage digestAuthenticationPage = new DigestAuthenticationPage(driver);
+        DigestAuthenticationPage da = new DigestAuthenticationPage(driver);
 
         clickOnElement(landingPage.getDigestAuthentication());
         //format to pass username and password within URL
         //https://username:password@the-internet.herokuapp.com/digest_auth
 
-        digestAuthenticationValidation(digestAuthenticationPage.digestAuthShowedMessage(),
+        digestAuthentication(da.digestAuthShowedMessage(),
                 TestData.DIGEST_USERNAME,
                 TestData.DIGEST_PASSWORD,
                 TestData.DIGEST_EDITABLE_URL);
-        assertText(digestAuthenticationPage.digestAuthShowedMessage(), TestData.BASIC_AUTH_SUCCESSFUL_MESSAGE);
+        assertText(da.digestAuthShowedMessage(), TestData.BASIC_AUTH_SUCCESSFUL_MESSAGE);
     }
 }
