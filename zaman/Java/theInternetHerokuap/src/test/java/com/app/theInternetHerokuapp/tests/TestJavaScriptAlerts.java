@@ -12,7 +12,7 @@ public class TestJavaScriptAlerts extends BaseTest {
     @Story("gits-5239-Java-Script-Alerts")
     @Description("Java-Script-Alerts")
     @Test()
-    public void javaScriptAlerts() {`
+    public void javaScriptAlerts() {
 
         JavaScriptAlertsPage jap = new JavaScriptAlertsPage(driver);
         clickOnElement(landingPage.getJavaScriptAlerts());
