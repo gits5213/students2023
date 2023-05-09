@@ -24,7 +24,7 @@ public class TestMultipleWindows extends BaseTest {
 
         MultipleWindowsPage mp = new MultipleWindowsPage(driver);
         clickOnElement(landingPage.getMultipleWindows());
-        String currentWindow = driver.getWindowHandle();
+        String currentWindow = currentWindowHandle();
 
         //With link click
         for (int i = 0; i < 5; i++) {
@@ -32,10 +32,9 @@ public class TestMultipleWindows extends BaseTest {
             sleepTest(250);
             switchToWindow(currentWindow);
         }
-
 //        Set<String> windowHandles = driver.getWindowHandles();
 //        List<String> windowHandlesList = new ArrayList<>(windowHandles);
-        List<String> windowHandlesList = new ArrayList<>(driver.getWindowHandles());
+        List<String> windowHandlesList = new ArrayList<>(windowHandles());
         for (int i = 1; i < windowHandlesList.size(); i++) {
             switchToWindow(windowHandlesList.get(i));
             sleepTest(250);

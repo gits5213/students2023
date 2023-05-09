@@ -8,6 +8,7 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -35,12 +36,9 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.security.PublicKey;
 import java.time.Duration;
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.*;
 import java.util.List;
-import java.util.Objects;
 import java.util.logging.Level;
 
 public class BaseTest {
@@ -364,6 +362,16 @@ public class BaseTest {
     //==========Close window==============
     public void closeWindow(){
         driver.close();
+    }
+
+    //==========All window handles==============
+    public Set<String> windowHandles(){
+        return driver.getWindowHandles();
+    }
+
+    //==========Current window handle==============
+    public String currentWindowHandle(){
+        return driver.getWindowHandle();
     }
 
 
