@@ -2,10 +2,6 @@ package com.app.theInternetHerokuapp.utilities;
 
 import org.openqa.selenium.Keys;
 
-import java.awt.*;
-import java.lang.reflect.Array;
-import java.security.Key;
-
 public class TestData {
 
     //==========Global Test Data==============
@@ -92,6 +88,16 @@ public class TestData {
 
     //==========Multiple windows==============
     public static final String NEW_WINDOW_TEXT= "New Window";
+
+    //==========Notification message==============
+    public static final String DEFAULT_NOTIFICATION_MESSAGE= "Action successful\n" +
+            "×";
+    public static final String UNSUCCESSFUL_NOTIFICATION_MESSAGE = "Action unsuccesful, please try again" +
+            "×";
+
+    //==========Redirect Link==============
+    public static final String REDIRECT_LINK = "https://the-internet.herokuapp.com/status_codes";
+    //==========Next==============
     //==========Next==============
     //==========Next==============
 

@@ -374,6 +374,10 @@ public class BaseTest {
         return driver.getWindowHandle();
     }
 
+    public String getCurrentUrl(){
+        return driver.getCurrentUrl();
+    }
+
 
     ////////////////////Page Specific Methods///////////////////////
 
@@ -671,6 +675,48 @@ public class BaseTest {
             clearTextBox(inputBox);
         }
     }
+    //=============================================
+
+
+    //==========Page status code validation + Redirect Link==============
+    public void pageStatusCodeValidation(String currentUrl) {
+        try {
+            URL obj = new URL(currentUrl);
+            HttpURLConnection connection = (HttpURLConnection) obj.openConnection();
+            connection.setConnectTimeout(5000);
+            connection.setRequestMethod("GET");
+            int statusCode = connection.getResponseCode();
+            System.out.println(currentUrl + " >>> " + statusCode + " >>> " + connection.getResponseMessage());
+            connection.disconnect();
+        } catch (Exception e) {
+            System.out.println("Exception: " + e.getMessage());
+        }
+    }
+    //=============================================
+
+
+    //==========Next==============
+
+    //=============================================
+
+
+    //==========Next==============
+
+    //=============================================
+
+
+    //==========Next==============
+
+    //=============================================
+
+
+    //==========Next==============
+
+    //=============================================
+
+
+    //==========Next==============
+
     //=============================================
 
 

@@ -4,15 +4,10 @@ import com.app.theInternetHerokuapp.pom.MultipleWindowsPage;
 import com.app.theInternetHerokuapp.utilities.TestData;
 import io.qameta.allure.Description;
 import io.qameta.allure.Story;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Set;
 
 public class TestMultipleWindows extends BaseTest {
 

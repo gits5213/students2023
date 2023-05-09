@@ -196,6 +196,18 @@ public class LandingPage extends BasePage {
         return multipleWindows;
     }
 
+    @FindBy(css = "li:nth-of-type(35) > a")
+    public WebElement notificationMessages;
+    public WebElement getNotificationMessages() {
+        return notificationMessages;
+    }
+
+    @FindBy(css = "li:nth-of-type(36) > a")
+    public WebElement redirectLink;
+    public WebElement getRedirectLink() {
+        return redirectLink;
+    }
+
 
 
 }
