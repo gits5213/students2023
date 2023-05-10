@@ -11,15 +11,8 @@ public class ShadowDomPage extends BasePage{
 
     //For js execute
     public String jsShadowRootSlot = "return document.querySelector(\"#content > my-paragraph:nth-child(5)\").shadowRoot.querySelector(\"p > slot\")";
-//    public String jsShadowRootSlot = "return document.querySelector(\"#content > my-paragraph:nth-child(5)\").shadowRoot.querySelector(\"p > slot\")";
     public String getJsShadowRootSlot() {
         return jsShadowRootSlot;
-    }
-
-    //For js execute
-    public String paragraphInsideShadowRoot = "p > slot";
-    public String getParagraphInsideShadowRoot() {
-        return paragraphInsideShadowRoot;
     }
 
     @FindBy(css = "span[slot='my-text']")

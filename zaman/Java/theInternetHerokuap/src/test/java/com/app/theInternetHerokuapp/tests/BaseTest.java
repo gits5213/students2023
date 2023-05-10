@@ -695,8 +695,18 @@ public class BaseTest {
     //=============================================
 
 
-    //==========Next==============
-
+    //==========Shadow Dom shadow root finder==============
+    public WebElement findElementInsideShadowRoot(String shadowHostElement) {
+        JavascriptExecutor jse = (JavascriptExecutor) driver;
+        return (WebElement) jse.executeScript("" + shadowHostElement + "");
+    }
+//    public WebElement findElementInsideShadowRoot(WebElement shadowHost, WebElement afterShadowHost) {
+//        String shadowRoot = shadowHost.toString();
+//        String afterShadowRoot = afterShadowHost.toString();
+//        JavascriptExecutor jse = ((JavascriptExecutor) driver);
+//        return (WebElement) jse.executeScript("document.querySelector('" + shadowRoot + "').shadowRoot.querySelector('" + afterShadowRoot + "')");
+//        return (WebElement) jse.executeScript("document.querySelector(\"#content > my-paragraph:nth-child(5)\").shadowRoot.querySelector(\"p\")");
+//    }
     //=============================================
 
 
