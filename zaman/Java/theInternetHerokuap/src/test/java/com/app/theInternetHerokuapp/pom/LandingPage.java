@@ -216,6 +216,12 @@ public class LandingPage extends BasePage {
         return secureFileDownload;
     }
 
+    @FindBy(css = "li:nth-of-type(38) > a")
+    public WebElement shadowDom;
+    public WebElement getShadowDom() {
+        return shadowDom;
+    }
+
 
 
 }
