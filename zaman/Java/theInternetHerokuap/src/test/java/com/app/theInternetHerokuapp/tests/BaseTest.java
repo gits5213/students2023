@@ -277,7 +277,7 @@ public class BaseTest {
 
     //==========Click on body==============
     public void clickOnBody() {
-        WebElement click = driver.findElement(By.tagName("body"));
+        driver.findElement(By.tagName("body")).click();
     }
 
     //==========Switch to frame==============
@@ -319,6 +319,7 @@ public class BaseTest {
         JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
         Object errorCount = jsExecutor.executeScript("return window.onerror = function(err) { return true; };" +
                 "return window.__errors__ ? window.__errors__.length : 0;");
+
         if (errorCount instanceof Long && (Long) errorCount > 0) {
             System.out.println("JavaScript errors found:");
             Object errors = jsExecutor.executeScript("return window.__errors__;");
@@ -406,7 +407,7 @@ public class BaseTest {
 
 
     //==========ABTestingPage==============
-    public void abTestingVesrionValidation(WebElement element, String testData1, String testData2) {
+    public void abTestingVersionValidation(WebElement element, String testData1, String testData2) {
 
         try {
             assertText(element, testData1);
@@ -535,7 +536,7 @@ public class BaseTest {
             Row row = sheet.getRow(i);
 //            System.out.println("Number of cells = " + lastRowNum);
             int lastCellIndex = sheet.getRow(0).getLastCellNum();
-            ;
+
 //            System.out.println("Number of cells = " + lastCellIndex);
             for (int j = 0; j < lastCellIndex - 1; j++) { //cell index corresponds to the web element's data fields,
                 Cell cell = row.getCell(j);
@@ -556,7 +557,6 @@ public class BaseTest {
             inputStream.close();
             workbook.close();
         }
-
     }
     //=============================================
 

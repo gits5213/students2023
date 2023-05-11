@@ -27,5 +27,4 @@ public class TestAddRemoveElements extends BaseTest{
         addElement(100,addRemoveElementsPage.getAddElementBtn(),addRemoveElementsPage.getTotalBtn());
         removeElements(addRemoveElementsPage.getTotalBtn());
     }
-
 }
