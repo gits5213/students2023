@@ -18,7 +18,7 @@ public class TestAddRemoveElements extends BaseTest{
         AddRemoveElementsPage addRemoveElementsPage = new AddRemoveElementsPage(driver);
 
         clickOnElement(landingPage.getAddRemoveElementsPage());
-        addElement(100,addRemoveElementsPage.getAddElementBtn(),addRemoveElementsPage.getTotalBtn());
+        addElement(37,addRemoveElementsPage.getAddElementBtn(),addRemoveElementsPage.getTotalBtn());
         removeElements(addRemoveElementsPage.getTotalBtn());
     }
 }

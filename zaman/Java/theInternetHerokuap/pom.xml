@@ -30,6 +30,7 @@
       <scope>test</scope>
     </dependency>
 
+
     <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
@@ -75,6 +76,11 @@
           <artifactId>annotations</artifactId>
           <version>RELEASE</version>
           <scope>compile</scope>
+      </dependency>
+      <dependency>
+          <groupId>top.jfunc.json</groupId>
+          <artifactId>Json-Gson</artifactId>
+          <version>1.0</version>
       </dependency>
 
   </dependencies>

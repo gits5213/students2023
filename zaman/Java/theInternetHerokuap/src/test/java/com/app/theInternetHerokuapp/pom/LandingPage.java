@@ -1,11 +1,8 @@
 package com.app.theInternetHerokuapp.pom;
 
-import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
-import java.io.File;
 
 public class LandingPage extends BasePage {
 
@@ -220,6 +217,18 @@ public class LandingPage extends BasePage {
     public WebElement shadowDom;
     public WebElement getShadowDom() {
         return shadowDom;
+    }
+
+    @FindBy(css = "li:nth-of-type(39) > a")
+    public WebElement shiftingContent;
+    public WebElement getShiftingContent() {
+        return shiftingContent;
+    }
+
+    @FindBy(css = "li:nth-of-type(40) > a")
+    public WebElement slowResources;
+    public WebElement getSlowResources() {
+        return slowResources;
     }
 
 
