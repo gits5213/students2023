@@ -1,6 +1,6 @@
 package com.app.theInternetHerokuapp.utilities;
 
-import java.lang.reflect.Array;
+import org.openqa.selenium.Keys;
 
 public class TestData {
 
@@ -24,6 +24,12 @@ public class TestData {
     public static final String EXPECTED_LOGIN_SUCCESSFUL_MESSAGE = "You logged into a secure area!\n" +
             "×";
 
+    //==========Basic authentication==============
+    public static final String BASIC_AUTH_USERNAME = "admin";
+    public static final String BASIC_AUTH_PASSWORD = "admin";
+    public static final String BASIC_AUTH_SUCCESSFUL_MESSAGE = "Congratulations! You must have the proper credentials.";
+    public static final String BASIC_AUTH_EDITABLE_URL = "the-internet.herokuapp.com/basic_auth";
+
     //==========Digest authentication==============
     public static final String DIGEST_USERNAME = "admin";
     public static final String DIGEST_PASSWORD = "admin";
@@ -43,7 +49,60 @@ public class TestData {
     public static final String DRAG_AND_DROP_URL = "https://www.globalsqa.com/demo-site/draganddrop/";
 
 
+    //==========Dynamic Controls==============
+    public static final String DYNAMIC_CONTROLS_DEMO_TEXT = "bla bla bla!!";
+
+    //==========Dynamic Loading==============
+    public static final String DYNAMIC_LOADING_SUCCESSFUL_TEXT = "Hello World!";
+
+    //==========File downloader==============
+    public static final String FILE_DOWNLOAD_PATH = "C:\\Users\\abzam\\Downloads";
+
+    //==========File Uploader==============
+    public static final String FILE_UPLOAD_PATH = "C:\\Users\\abzam\\Desktop\\dem\\WhatsApp Image 2020-05-08 at 12.10.05 AM.jpeg";
+    public static final String FILE_UPLOAD_SUCCESSFUL_MESSAGE = "File Uploaded!";
+
+    //==========Frames==============
+    public static final String FRAME_DEMO_TEXT = "dfsgsdfgdsgf";
+
+    //==========JQueryMenus==============
+    public static final String JQUERY_UI_LINK = "https://the-internet.herokuapp.com/jqueryui";
+
+    //==========Horizontal Slider==============
+    public static final String SLIDER_VALUE= "5";
+    public static final String SLIDER_STEPS= "10";
+
+    //==========Java script alerts==============
+    public static final String FIRST_ALERT_TEXT= "You successfully clicked an alert";
+    public static final String SECOND_ALERT_TEXT= "You clicked: Ok";
+    public static final String THIRD_ALERT_DEFAULT_TEXT= "You entered: ";
+    public static final String THIRD_ALERT_INPUT_TEXT= "asdasdasdasd";
+
+    //==========Keys==============
+    public static final Keys[] FUNCTION_KEYS = {Keys.BACK_SPACE, Keys.NUMPAD1, Keys.NUMPAD2,
+            Keys.NUMPAD3, Keys.ENTER, Keys.CONTROL, Keys.ARROW_UP, Keys.ARROW_DOWN,
+            Keys.ARROW_LEFT, Keys.ARROW_UP, Keys.ARROW_RIGHT};
+
+    public static final String[] CHARACTER_KEYS= {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l"};
+    public static final String KEYS_DEFAULT_MESSAGE= "You entered: ";
+
+    //==========Multiple windows==============
+    public static final String NEW_WINDOW_TEXT= "New Window";
+
+    //==========Notification message==============
+    public static final String DEFAULT_NOTIFICATION_MESSAGE= "Action successful\n" +
+            "×";
+    public static final String UNSUCCESSFUL_NOTIFICATION_MESSAGE = "Action unsuccesful, please try again" +
+            "×";
+
+    //==========Redirect Link==============
+    public static final String REDIRECT_LINK = "https://the-internet.herokuapp.com/status_codes";
+
     //==========Next==============
+    public static final String SECURE_FILE_DOWNLOAD_LINK= "the-internet.herokuapp.com/download_secure";
+    public static final String SECURE_FILE_DOWNLOAD_DEFAULT_LINK= "https://the-internet.herokuapp.com/download_secure";
+    public static final String SECURE_FILE_DOWNLOAD_MESSAGE= "Secure File Downloader";
+
     //==========Next==============
     //==========Next==============
     //==========Next==============

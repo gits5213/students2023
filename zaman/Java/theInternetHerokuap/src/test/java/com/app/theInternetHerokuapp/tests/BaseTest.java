@@ -8,9 +8,15 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.logging.LogEntries;
+import org.openqa.selenium.logging.LogEntry;
+import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.support.ui.*;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -19,54 +25,79 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.asserts.SoftAssert;
 
+import java.awt.*;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.InputEvent;
+import java.awt.event.KeyEvent;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.time.Duration;
-import java.util.ArrayList;
+import java.util.*;
 import java.util.List;
-import java.util.Objects;
+import java.util.logging.Level;
 
 public class BaseTest {
+
 
     public WebDriver driver;
     public SoftAssert softAssert;
     public LandingPage landingPage;
+    public Actions actions;
+    public ChromeOptions options;
+    public Alert alert;
+    public String incognito;
+
+    //default constructor
+    public BaseTest() {
+    }
+
+    //Constructor for Chrome incognito selection
+    public BaseTest(String incognito) {
+        this.incognito = incognito;
+    }
 
     @BeforeClass
-    public void beforeClass(){
-        driver = new ChromeDriver();
+    public void beforeClass() {
+        options = new ChromeOptions();
+        if (incognito != null && incognito.equalsIgnoreCase("incognito")) {
+            options.addArguments(incognito);
+            driver = new ChromeDriver(options);
+        } else {
+            driver = new ChromeDriver();
+//            driver = new FirefoxDriver();
+        }
         driver.manage().window().maximize();
         softAssert = new SoftAssert();
         landingPage = new LandingPage(driver);
+        actions = new Actions(driver);
         //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
     @BeforeMethod
-    public void beforeMethod() throws InterruptedException {
+    public void beforeMethod() {
         navigateTo(TestData.URL);
         sleepTest(500);
     }
 
     @AfterMethod
-    public void afterTest(){
+    public void afterTest() {
         System.out.println("Test is being executed");
     }
 
     @AfterClass
-    public void afterClass(){
+    public void afterClass() {
         driver.quit();
 
     }
-
 
 
     ////////////////////Custom Reusable Methods///////////////////////
 
 
     //==========Sleep time==============
-    public static void sleepTest(long sleepTime){
+    public void sleepTest(long sleepTime) {
         try {
             Thread.sleep(sleepTime);
         } catch (InterruptedException e) {
@@ -76,11 +107,10 @@ public class BaseTest {
 
     //==========Highlight web element==============
     public void highlightWebElement(WebElement element) {
-        try{
+        try {
             ((JavascriptExecutor) driver).executeScript(
                     "arguments[0].setAttribute('style', 'background:#ffffb3; border:3px solid green;');", element);
-        }
-        catch(Exception exception){
+        } catch (Exception exception) {
             exception.printStackTrace();
         }
     }
@@ -90,34 +120,45 @@ public class BaseTest {
         driver.get(Url);
     }
 
+    //==========Reload page==============
+    public void reload() {
+        driver.navigate().refresh();
+    }
+
+    //==========GO back a page==============
+    public void navigateBack() {
+        driver.navigate().back();
+    }
+
     //==========Type text in text box==============
-    public void typeText(WebElement element, String text){
+    public void typeText(WebElement element, String text) {
         element.sendKeys(text);
     }
 
     //==========Basic click on web element==============
-    public void clickOnElement(WebElement element){
+    public void clickOnElement(WebElement element) {
         element.click();
     }
+
     //==========Print text from web element==============
-    public void printText(WebElement element){
+    public void printText(WebElement element) {
         System.out.println(element.getText().trim());
     }
 
     //==========Assert Expected URL==============
-    public void assertUrl(String expectedUrl){
+    public void assertUrl(String expectedUrl) {
         String url = driver.getCurrentUrl();
         Assert.assertEquals(url, expectedUrl);
     }
 
     //==========Assert expected text==============
-    public void assertText(WebElement element, String text){
+    public void assertText(WebElement element, String text) {
         String expectedText = element.getText().trim();
         Assert.assertEquals(expectedText, text);
     }
 
     //==========Soft assert expected text==============
-    public void SoftAssertText(WebElement element, String text){
+    public void SoftAssertText(WebElement element, String text) {
         String expectedText = element.getText().trim();
         softAssert.assertEquals(expectedText, text);
 
@@ -125,7 +166,7 @@ public class BaseTest {
 
     //==========clear text box==============
     public void clearTextBox(WebElement element) {
-        highlightWebElement(element);
+//        highlightWebElement(element);
         element.clear();
     }
 
@@ -149,13 +190,23 @@ public class BaseTest {
         hover.perform();
     }
 
+    //==========Wait for DOM to load==============
+    public void waitForDOMToLoad() {
+        Wait<WebDriver> wait = new FluentWait<>(driver)
+                .withTimeout(Duration.ofSeconds(10))
+                .pollingEvery(Duration.ofMillis(500))
+                .ignoring(NoSuchElementException.class);
+        wait.until(webDriver -> ((JavascriptExecutor) webDriver)
+                .executeScript("return document.readyState").equals("complete"));
+    }
+
     //==========wait for element to be visible==============
     public void waitForElementToBeVisible(WebElement element) {
         Wait<WebDriver> wait = new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(10))
-                .pollingEvery(Duration.ofMillis(500));
+                .pollingEvery(Duration.ofMillis(500))
+                .ignoring(NoSuchElementException.class);
         wait.until(ExpectedConditions.visibilityOf(element));
-
     }
 
     //==========wait for element to disappear==============
@@ -166,6 +217,23 @@ public class BaseTest {
         wait.until(ExpectedConditions.invisibilityOf(element));
     }
 
+    //==========wait for element to be clickable==============
+    public void waitForElementToBeClickable(WebElement element) {
+        Wait<WebDriver> wait = new FluentWait<>(driver)
+                .withTimeout(Duration.ofSeconds(10))
+                .pollingEvery(Duration.ofMillis(500));
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+    }
+
+    //==========wait for element to be Disabled==============
+    public void waitForElementToBeDisabled(WebElement element) {
+        Wait<WebDriver> wait = new FluentWait<>(driver)
+                .withTimeout(Duration.ofSeconds(10))
+                .pollingEvery(Duration.ofMillis(500))
+                .ignoring(NoSuchElementException.class);
+        wait.until(ExpectedConditions.not(ExpectedConditions.elementToBeClickable(element)));
+    }
+
     //==========wait for element to be clickable and click + scroll to element==============
     public void waitForElementToBeClickableAndClick(WebElement element) {
         Wait<WebDriver> wait = new FluentWait<>(driver)
@@ -173,15 +241,29 @@ public class BaseTest {
                 .pollingEvery(Duration.ofMillis(500));
         WebElement element1 = wait.until(ExpectedConditions.elementToBeClickable(element));
         scrollToElementAndClick(element1);
-
     }
 
-    //==========Scroll to web element==============
+    //==========Scroll to web element and click==============
     public void scrollToElementAndClick(WebElement element) {
         // Scroll to the element using JavaScriptExecutor
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
         sleepTest(500);
         element.click();
+    }
+
+    //==========Scroll to web element==============
+    public void scrollToElement(WebElement element) {
+        // Scroll to the element using JavaScriptExecutor
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
+        sleepTest(500);
+
+    }
+
+    //==========Scroll to window==============
+    public void scrollWindow(int verticalScroll, int horizontalScroll) {
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+        jsExecutor.executeScript("window.scrollBy(0," + verticalScroll + ")");
+        jsExecutor.executeScript("window.scrollBy(" + horizontalScroll + ",0)");
     }
 
     //==========Click on Hidden element==============
@@ -191,13 +273,107 @@ public class BaseTest {
     }
 
     //==========Click on body==============
-    public void clickOnBody(){
-
-        WebElement click = driver.findElement(By.tagName("body"));
+    public void clickOnBody() {
+        driver.findElement(By.tagName("body")).click();
     }
+
     //==========Switch to frame==============
-    public void switchToFrame (WebElement element){
+    public void switchToFrame(WebElement element) {
         driver.switchTo().frame(element);
+    }
+
+    //==========Switch to parent frame==============
+    public void switchToParentFrame() {
+        driver.switchTo().parentFrame();
+    }
+
+    //==========Switch to default content==============
+    public void switchTODefaultContent() {
+        driver.switchTo().defaultContent();
+    }
+
+    //==========Switch to alert and accept==============
+    public void switchToAlertAndAccept() {
+        alert = driver.switchTo().alert();
+        alert.accept();
+    }
+
+    //==========Switch to alert and decline==============
+    public void switchToAlertAndDecline() {
+        alert = driver.switchTo().alert();
+        alert.dismiss();
+    }
+
+    //==========Switch to alert and send text==============
+    public void switchToAlertAndSendText(String alertText) {
+        alert = driver.switchTo().alert();
+        alert.sendKeys(alertText);
+        alert.accept();
+    }
+
+    //==========Java script error on actions trigger==============
+    public static void logJavaScriptErrorsOnAction(WebDriver driver) {
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+        Object errorCount = jsExecutor.executeScript("return window.onerror = function(err) { return true; };" +
+                "return window.__errors__ ? window.__errors__.length : 0;");
+
+        if (errorCount instanceof Long && (Long) errorCount > 0) {
+            System.out.println("JavaScript errors found:");
+            Object errors = jsExecutor.executeScript("return window.__errors__;");
+            if (errors instanceof Object[]) {
+                for (Object error : (Object[]) errors) {
+                    if (error instanceof String) {
+                        System.out.println(error);
+                    }
+                }
+            }
+            // Clear the error array so we don't log the same errors multiple times
+            jsExecutor.executeScript("window.__errors__ = [];");
+        }
+    }
+
+    //==========Java script error on page loading==============
+    public void findJavaScriptErrorOnPageLoading(){
+        LogEntries logEntries = driver.manage().logs().get(LogType.BROWSER);
+        int logCounter = 1;
+
+        for (LogEntry entry : logEntries) {
+            System.out.println(logCounter + ". >>> " + entry.getLevel() + " >>> " + entry.getMessage());
+            if (entry.getLevel().equals(Level.SEVERE)) {
+                softAssert.fail();
+            }
+            logCounter++;
+        }
+        softAssert.assertAll();
+    }
+
+    //==========New Blank tab==============
+    public void newBlankTab(){
+        ((JavascriptExecutor)driver).executeScript("window.open();");
+    }
+
+    //==========Switch to window==============
+    public void switchToWindow(String currentWindow){
+        driver.switchTo().window(currentWindow);
+    }
+
+    //==========Close window==============
+    public void closeWindow(){
+        driver.close();
+    }
+
+    //==========All window handles==============
+    public Set<String> windowHandles(){
+        return driver.getWindowHandles();
+    }
+
+    //==========Current window handle==============
+    public String currentWindowHandle(){
+        return driver.getWindowHandle();
+    }
+
+    public String getCurrentUrl(){
+        return driver.getCurrentUrl();
     }
 
 
@@ -205,42 +381,40 @@ public class BaseTest {
 
 
     //==========AddRemoveElementsPage==============
-    public void addElement (int numberOfClicks ,WebElement element, List<WebElement> elements){
+    public void addElement(int numberOfClicks, WebElement element, List<WebElement> elements) {
         for (int i = 0; i < numberOfClicks; i++) {
             clickOnElement(element);
             sleepTest(25);
 
         }
         System.out.println(numberOfClicks + " Buttons added");
-        Assert.assertEquals(numberOfClicks,elements.size());
+        Assert.assertEquals(numberOfClicks, elements.size());
     }
 
-    public void removeElements (List<WebElement> elements){
+    public void removeElements(List<WebElement> elements) {
         System.out.println(elements.size() + " Buttons deleted");
-        for (int i = elements.size(); i>=1; i--) {
-            clickOnElement(elements.get(i-1));
+        for (int i = elements.size(); i >= 1; i--) {
+            clickOnElement(elements.get(i - 1));
             sleepTest(25);
         }
-        Assert.assertEquals(elements.size(),0);
+        Assert.assertEquals(elements.size(), 0);
         System.out.println(elements.size() + " Buttons left to delete");
     }
     //=============================================
 
 
     //==========ABTestingPage==============
-    public void abTestingVesrionValidation(WebElement element, String testData1, String testData2 ){
+    public void abTestingVersionValidation(WebElement element, String testData1, String testData2) {
 
-        try{
+        try {
             assertText(element, testData1);
-        }
-        catch (AssertionError e){
+        } catch (AssertionError e) {
             System.out.println(testData2 + " Validated");
             e.printStackTrace();
         }
-        try{
+        try {
             assertText(element, testData2);
-        }
-        catch (AssertionError e){
+        } catch (AssertionError e) {
             System.out.println(testData1 + " Validated");
             e.printStackTrace();
         }
@@ -249,54 +423,53 @@ public class BaseTest {
 
 
     //==========Broken image Validation==============
-    public void brokenImageValidation(List<WebElement> elements){
+    public void brokenImageValidation(List<WebElement> elements) {
         int totalNumberOfBrokenImage = 0;
         for (WebElement brokenImage : elements) {
             String imageURL = brokenImage.getAttribute("src");
-            try{
+            try {
                 URL url = new URL(imageURL);
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                 connection.setConnectTimeout(5000);
                 connection.connect();
-                int responseCode = connection.getResponseCode();
-                if (responseCode != 200) {
-                    System.out.println("Broken image found at" + imageURL);
+                if (connection.getResponseCode() != 200) {
+                    System.err.println("Broken image found at " + imageURL + " >>> " + connection.getResponseCode() + " >>> " + connection.getResponseMessage());
                     totalNumberOfBrokenImage++;
+                } else {
+                    System.out.println("Working image found at " + imageURL + " >>> " + connection.getResponseCode() + " >>> " + connection.getResponseMessage());
                 }
                 connection.disconnect();
-            }
-            catch (IOException e){
+            } catch (IOException e) {
                 e.printStackTrace();
             }
         }
-        System.out.println("Total number of broken images = " + totalNumberOfBrokenImage );
+        System.out.println("Total number of broken images = " + totalNumberOfBrokenImage);
     }
     //=============================================
 
 
     //==========Checkbox validation==============
-    public void validateCheckBoxes(List<WebElement> elements){
+    public void validateCheckBoxes(List<WebElement> elements) {
         int checkboxCounter = 0;
         System.out.println("Number of checkBoxes = " + elements.size());
         for (WebElement checkBox : elements) {
             System.out.println((checkboxCounter + 1) + " Checkbox is Selected = " + checkBox.isSelected());
-            if (!checkBox.isSelected()){
+            if (!checkBox.isSelected()) {
                 checkBox.click();
                 checkboxCounter++;
             }
         }
-        if (checkboxCounter == 1){
-            System.out.println( checkboxCounter + " checkbox clicked");
-        }
-        else{
-            System.out.println( checkboxCounter + " checkboxes clicked");
+        if (checkboxCounter == 1) {
+            System.out.println(checkboxCounter + " checkbox clicked");
+        } else {
+            System.out.println(checkboxCounter + " checkboxes clicked");
         }
     }
     //=============================================
 
 
     //==========Context menu==============
-    public void contextMenuValidation(WebElement element){
+    public void contextMenuValidation(WebElement element) {
 
         Actions actions = new Actions(driver);
         actions.contextClick(element).perform();
@@ -311,36 +484,41 @@ public class BaseTest {
 
 
     //==========Digest Authentication==============
-    public void digestAuthenticationValidation(WebElement element, String username, String password, String url){
-        String finaleLink = "https://"+username+":"+password+"@"+url;
+    public void digestAuthentication(WebElement message, String username, String password, String url) {
+        String finaleLink = "https://" + username + ":" + password + "@" + url;
         System.out.println(finaleLink);
         navigateTo(finaleLink);
-        assertText(element,TestData.DIGEST_SUCCESSFUL_MESSAGE);
-        printText(element);
+        assertUrl(finaleLink);
+        printText(message);
     }
     //=============================================
 
 
     //==========Disappearing Elements==============
-    public void disappearingElementsValidation(int noOfElements, String[] defaultData, List<WebElement> actualDataList){
-        for (int i = 0; i < noOfElements; i++) {
-            try{
-                WebElement element = actualDataList.get(i);
-                String actualData = element.getText().trim();
-                if(TestData.DISAPPEARING_ELEMENTS[i].equals(actualData)){
-                    System.out.println(actualData + " element is present");
-                }
-            }
-            catch (IndexOutOfBoundsException e){
-                System.out.println(TestData.DISAPPEARING_ELEMENTS[i] + " element is missing");
+    public void disappearingElementsValidation(String[] defaultData, List<WebElement> actualDataList) {
+
+        String[] webElementList = new String[actualDataList.size()];
+        for (int i = 0; i < actualDataList.size(); i++) {
+            webElementList[i] = actualDataList.get(i).getText();
+        }
+
+        for (String data : defaultData) {
+            if (Arrays.asList(webElementList).contains(data)) {
+                System.out.println(data + " element is present");
+            } else {
+                System.out.println(data + " element is missing");
+                softAssert.fail();
             }
         }
+        softAssert.assertAll("Missing element found!!");
+
+
     }
     //=============================================
 
 
     //==========excelToWebInput==============
-    public  void excelToWebInput(WebElement input1, WebElement input2, WebElement logIn, WebElement message, String excelDirectory) throws IOException {
+    public void excelToWebInput(WebElement input1, WebElement input2, WebElement logIn, WebElement message, String excelDirectory) throws IOException {
 
         FileInputStream inputStream = new FileInputStream(excelDirectory);
         Workbook workbook = new XSSFWorkbook(inputStream);
@@ -354,9 +532,10 @@ public class BaseTest {
         for (int i = 1; i <= lastRowNum; i++) {
             Row row = sheet.getRow(i);
 //            System.out.println("Number of cells = " + lastRowNum);
-            int lastCellIndex = sheet.getRow(0).getLastCellNum();;
+            int lastCellIndex = sheet.getRow(0).getLastCellNum();
+
 //            System.out.println("Number of cells = " + lastCellIndex);
-            for (int j = 0; j < lastCellIndex; j++) { //cell index corresponds to the web element's data fields,
+            for (int j = 0; j < lastCellIndex - 1; j++) { //cell index corresponds to the web element's data fields,
                 Cell cell = row.getCell(j);
                 String cellValue = cell.getStringCellValue();
                 inputFields.get(j).sendKeys(cellValue);
@@ -365,9 +544,9 @@ public class BaseTest {
             clickOnElement(logIn);
             sleepTest(500);
             printText(message);
-            if (Objects.equals(message.getText(), TestData.EXPECTED_LOGIN_SUCCESSFUL_MESSAGE)){
+            if (Objects.equals(message.getText(), TestData.EXPECTED_LOGIN_SUCCESSFUL_MESSAGE)) {
                 driver.navigate().back();
-                for(WebElement element : inputFields){
+                for (WebElement element : inputFields) {
                     element.clear();
                     sleepTest(500);
                 }
@@ -375,7 +554,162 @@ public class BaseTest {
             inputStream.close();
             workbook.close();
         }
+    }
+    //=============================================
 
+
+    //==========File Uploader==============
+    public void uploadFile(String filePath) throws AWTException, InterruptedException {
+
+        StringSelection stringSelection = new StringSelection(filePath);
+        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
+
+        Robot robot = new Robot();
+
+        robot.keyPress(KeyEvent.VK_CONTROL);
+        robot.keyPress(KeyEvent.VK_V);
+        robot.keyRelease(KeyEvent.VK_V);
+        robot.keyRelease(KeyEvent.VK_CONTROL);
+        Thread.sleep(1000);
+
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+        sleepTest(2000);
+    }
+
+    public void uploadFileWithCoordinate(String filePath, WebElement dropArea, int offset) throws AWTException, InterruptedException {
+
+        StringSelection selection = new StringSelection(filePath);
+        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection, null);
+
+        Point location = dropArea.getLocation();
+        int x = location.getX();
+        int y = location.getY();
+
+        Robot robot = new Robot();
+
+        robot.mouseMove(x + offset, y + offset);
+        robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+        robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+
+        robot.setAutoDelay(500);
+
+        robot.keyPress(KeyEvent.VK_CONTROL);
+        robot.keyPress(KeyEvent.VK_V);
+        robot.keyRelease(KeyEvent.VK_V);
+        robot.keyRelease(KeyEvent.VK_CONTROL);
+        robot.setAutoDelay(500);
+
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+        robot.delay(1000);
+    }
+    //=============================================
+
+
+    //==========Frames==============
+    //text formatter and style validation
+    public boolean textBoldValidation(WebElement parentElement) {
+        return parentElement.findElement(By.tagName("strong")).getCssValue("font-weight").equals("700");
+    }
+
+    public boolean textItalicValidation(WebElement parentElement) {
+        return parentElement.findElement(By.tagName("em")).getCssValue("font-style").equals("italic");
+    }
+
+    public boolean textAlignCenterValidation(WebElement parentElement) {
+        return parentElement.getCssValue("text-align").equals("center");
+    }
+
+    //text formatter and style switcher
+    public void iframeTextBoldItalicSwitcher(
+            List<WebElement> menuBar,
+            int menuItem,
+            List<WebElement> textFormatter,
+            int selectTextFormatter,
+            WebElement newDocBtn,
+            WebElement TextFrame,
+            WebElement paragraph,
+            String demoText) {
+
+        clickOnElement(menuBar.get(menuItem));
+        sleepTest(500);
+        clickOnElement(newDocBtn);
+        sleepTest(500);
+        clickOnElement(textFormatter.get(selectTextFormatter));
+        sleepTest(1000);
+
+        switchToFrame(TextFrame);
+        typeText(paragraph, demoText);
+    }
+    //=============================================
+
+
+    //==========key Presses==============
+    public void characterKeysValidation(String[] keys, WebElement inputBox, WebElement message){
+        for (String key : keys) {
+            inputBox.sendKeys(key);
+            sleepTest(100);
+            System.out.println(message.getText());
+            clearTextBox(inputBox);
+            Assert.assertEquals((TestData.KEYS_DEFAULT_MESSAGE + key.toUpperCase()), message.getText());
+        }
+    }
+
+    public void functionKeysValidation(Keys[] keys, WebElement inputBox, WebElement message){
+
+        for (Keys key : keys) {
+            actions.keyUp(key).keyDown(key).build().perform();
+            sleepTest(100);
+            String keyName = key.name();
+
+            //exception for arrow keys name on the sight
+            if (keyName.startsWith("ARROW_")) {
+                keyName = keyName.replace("ARROW_", "");
+            }
+            Assert.assertEquals((TestData.KEYS_DEFAULT_MESSAGE + keyName), message.getText());
+            System.out.println(message.getText());
+            clearTextBox(inputBox);
+        }
+    }
+    //=============================================
+
+
+    //==========Page status code validation + Redirect Link==============
+    public void pageStatusCodeValidation(String currentUrl) {
+        try {
+            URL obj = new URL(currentUrl);
+            HttpURLConnection connection = (HttpURLConnection) obj.openConnection();
+            connection.setConnectTimeout(5000);
+            connection.setRequestMethod("GET");
+            int statusCode = connection.getResponseCode();
+            System.out.println(currentUrl + " >>> " + statusCode + " >>> " + connection.getResponseMessage());
+            connection.disconnect();
+        } catch (Exception e) {
+            System.out.println("Exception: " + e.getMessage());
+        }
+    }
+    //=============================================
+
+
+    //==========Shadow Dom shadow root finder==============
+    public WebElement findElementInsideShadowRoot(String shadowHostElement) {
+        JavascriptExecutor jse = (JavascriptExecutor) driver;
+        return (WebElement) jse.executeScript(shadowHostElement);
+    }
+//    public WebElement findElementInsideShadowRoot(WebElement shadowHost, WebElement afterShadowHost) {
+//        String shadowRoot = shadowHost.toString();
+//        String afterShadowRoot = afterShadowHost.toString();
+//        JavascriptExecutor jse = ((JavascriptExecutor) driver);
+//        return (WebElement) jse.executeScript("document.querySelector('" + shadowRoot + "').shadowRoot.querySelector('" + afterShadowRoot + "')");
+//        return (WebElement) jse.executeScript("document.querySelector(\"#content > my-paragraph:nth-child(5)\").shadowRoot.querySelector(\"p\")");
+//    }
+    //=============================================
+
+
+    //==========Slow loading content==============
+    public void waitForAllApiRequestsToComplete(WebDriver driver, int witTime) {
+        new WebDriverWait(driver, Duration.ofSeconds(witTime)).until(ExpectedConditions.jsReturnsValue("return (window.jQuery != null) && (jQuery.active === 0);"));
     }
     //=============================================
 
@@ -403,12 +737,6 @@ public class BaseTest {
     //==========Next==============
 
     //=============================================
-
-
-
-
-
-
 
 
 }

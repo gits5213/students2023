@@ -13,18 +13,18 @@ import java.io.IOException;
 
 public class DataProviderForTests extends BaseTest {
 
-    @DataProvider
+    @DataProvider()
     public static Object[][] loginData() throws IOException {
 
         FileInputStream inputStream = new FileInputStream(TestData.LOGIN_EXCEL_FILEPATH);
         Workbook workbook = new XSSFWorkbook(inputStream);
         Sheet sheet = workbook.getSheetAt(0);
 
-        int lastRowNum = sheet.getLastRowNum();
+        int lastRowIndex = sheet.getLastRowNum();
         int lastCellIndex = sheet.getRow(0).getLastCellNum();;
-        String[][] loginData = new String[lastRowNum][lastCellIndex];
+        String[][] loginData = new String[lastRowIndex][lastCellIndex];
 
-        for (int i = 1; i <= lastRowNum; i++) { // first loop for row iteration
+        for (int i = 1; i <= lastRowIndex; i++) { // first loop for row iteration
             Row row = sheet.getRow(i);
             for (int j = 0; j < lastCellIndex; j++) { //first loop for column iteration
                 Cell cell = row.getCell(j);

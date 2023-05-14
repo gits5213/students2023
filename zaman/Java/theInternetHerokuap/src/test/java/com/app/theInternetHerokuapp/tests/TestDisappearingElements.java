@@ -19,7 +19,6 @@ public class TestDisappearingElements extends BaseTest{
         DisappearingElementsPage disappearingElementsPage = new DisappearingElementsPage(driver);
 
         clickOnElement(landingPage.getDisappearingElements());
-        disappearingElementsValidation(5,TestData.DISAPPEARING_ELEMENTS,disappearingElementsPage.getNumberofelements());
-        sleepTest(2000);
+        disappearingElementsValidation(TestData.DISAPPEARING_ELEMENTS,disappearingElementsPage.getNumberofelements());
     }
 }

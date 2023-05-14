@@ -1,14 +1,10 @@
 package com.app.theInternetHerokuapp.tests;
 
-import com.app.theInternetHerokuapp.pom.BrokenImagesPage;
 import com.app.theInternetHerokuapp.pom.CheckBoxesPage;
-import com.app.theInternetHerokuapp.pom.LandingPage;
 import io.qameta.allure.Description;
 import io.qameta.allure.Story;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-import java.util.List;
 
 public class TestCheckBoxes extends BaseTest{
 

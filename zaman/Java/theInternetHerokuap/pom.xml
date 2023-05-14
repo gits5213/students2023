@@ -30,6 +30,7 @@
       <scope>test</scope>
     </dependency>
 
+
     <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
@@ -70,6 +71,17 @@
       <artifactId>poi-ooxml-schemas</artifactId>
       <version>4.1.2</version>
     </dependency>
+      <dependency>
+          <groupId>org.jetbrains</groupId>
+          <artifactId>annotations</artifactId>
+          <version>RELEASE</version>
+          <scope>compile</scope>
+      </dependency>
+      <dependency>
+          <groupId>top.jfunc.json</groupId>
+          <artifactId>Json-Gson</artifactId>
+          <version>1.0</version>
+      </dependency>
 
   </dependencies>
 
@@ -101,7 +113,7 @@
           <version>2.22.1</version>
           <configuration>
             <suiteXmlFiles>
-              <suiteXmlFile>testng.xml</suiteXmlFile>
+              <suiteXmlFile>defaultSuit.xml</suiteXmlFile>
             </suiteXmlFiles>
             <parallel>classes</parallel>
             <threadCount>4</threadCount>

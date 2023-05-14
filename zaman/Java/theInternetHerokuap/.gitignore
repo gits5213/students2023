@@ -6,7 +6,7 @@
 target/
 src/main/
 pom.xml/
-testng.xml/
+defaultSuit.xml/
 
 # CMake
 cmake-build-*/
