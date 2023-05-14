@@ -17,10 +17,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.logging.LogEntries;
 import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.logging.LogType;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.*;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -698,7 +695,7 @@ public class BaseTest {
     //==========Shadow Dom shadow root finder==============
     public WebElement findElementInsideShadowRoot(String shadowHostElement) {
         JavascriptExecutor jse = (JavascriptExecutor) driver;
-        return (WebElement) jse.executeScript("" + shadowHostElement + "");
+        return (WebElement) jse.executeScript(shadowHostElement);
     }
 //    public WebElement findElementInsideShadowRoot(WebElement shadowHost, WebElement afterShadowHost) {
 //        String shadowRoot = shadowHost.toString();
@@ -710,8 +707,10 @@ public class BaseTest {
     //=============================================
 
 
-    //==========Next==============
-
+    //==========Slow loading content==============
+    public void waitForAllApiRequestsToComplete(WebDriver driver, int witTime) {
+        new WebDriverWait(driver, Duration.ofSeconds(witTime)).until(ExpectedConditions.jsReturnsValue("return (window.jQuery != null) && (jQuery.active === 0);"));
+    }
     //=============================================
 
 
