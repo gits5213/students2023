@@ -6,8 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="herokuapp" />
+        <module name="Reqres" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="herokuapp" target="20" />
+    </bytecodeTargetLevel>
   </component>
 </project>

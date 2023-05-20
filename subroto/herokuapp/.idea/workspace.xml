@@ -5,20 +5,107 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="89650c5d-0214-4db8-a9a4-ffd6379585fb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/allure-results/04c84161-5ee5-4d4b-8893-a3d1602b797f-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/05a5e7bd-edc5-4f4d-bea4-82ddbf213036-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/0827ff1a-42cb-4c57-9110-8ac57e286585-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/0d04f982-2856-4c09-b80e-584d6d53b380-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/0d9c920c-27a3-45d1-8e9c-815262c4d296-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/150f6653-cfbb-4fd3-8172-2ee00cc3c213-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/16490a78-82a4-42a4-b6f4-eaa54a8990c9-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/166d7b8c-4549-4195-8ac3-92ddd05d7be2-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/16fa7c64-9165-455e-8313-dafb69ca1011-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/1cd79efd-ae3a-448d-8a08-d895a3d7a72e-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/1f43f1f1-555b-4710-873a-2bf122f66a97-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/203ea310-caf5-49ef-8ec4-4cb77cc9924d-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/237d73f1-7b91-4675-9fbe-b7c2da1d7949-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/26e74dcf-7ec0-43e0-b1e8-ad83e6c40220-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/283e87f9-8d09-46f7-b7c2-e2f2f4718c9d-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/29eaf697-361a-47d2-b7ad-2c9d179d0ec5-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/30e4e129-a543-4e09-ae4e-f0b44933dda2-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/36e94ca5-c073-40a6-982a-a16e803f4910-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/371c5098-beca-49c1-aa15-f5a870599717-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/40ca347f-ece4-41eb-8bf9-2aa219a35954-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/4278df20-0e65-44a7-94f7-dc2bf68e5485-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/4327b60e-5706-4a6f-8686-d51469f777a2-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/436c7a1c-186f-4528-8b48-820dfa9074d8-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/4397bfbd-b183-4f2b-a464-3bd984c5621b-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/44046fea-b086-499a-8dfa-a7b0cc5c7ec1-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/46396f39-5899-4511-b98b-7b142a1adb82-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/496b53b7-7666-421f-b61b-73a0b3fd72fb-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/57d8126c-c0e7-4df1-bf73-4a22f2e59692-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/58fb8a4f-d105-4195-9dd0-eebfec0debdb-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/594fce84-6e16-4042-95d7-4f98bfd95085-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/5a69c29e-743b-451a-9b0a-6f969280db58-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/5da72e3f-1349-4290-a7e0-853adb6e50ab-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/62cc036d-1864-433a-bf50-92029f5f1a6c-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/63358ef7-c1df-4697-adb1-0e16ec9e125b-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/661e29de-8f6c-48ad-b0f7-3bdd6f8e24de-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/6699a2b3-d9b8-4866-b12f-f982ee15bd27-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/66adfcfe-bb1f-4ad9-a8fe-60be06ea7636-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/6eb71690-7f0f-455b-bd1b-c20eefe25579-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/7f6db613-ca5d-4c15-b061-84bfc3fdefde-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/82425425-1f3c-4574-b770-f7230e9fde76-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/8343ef51-942a-4149-9376-91ab71158a9f-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/847ba14e-d518-4d52-af51-ca4e0e8c0adb-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/86c3f4e1-8562-41ca-8d67-433018133b51-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/89937435-9eb8-4569-93b2-42c32c8a0f8f-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/96361fc6-7c1d-4cc9-8e82-3e8285807acf-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/97db5aaa-2f4b-4aaf-8b2c-15692f93ee8c-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/98dfd49f-d967-4068-9bd7-3aeff6adc81e-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/9a6be2c0-e6ce-4088-8048-8a1d60c16108-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/9c78eb6a-b5d5-4561-b01d-da7b3eff6b86-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/a4034b90-80c3-47f6-b56c-39c35e2093f6-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/aa3bcd94-bc66-459f-b9f1-083639b6dca3-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/aad4c5cc-eb64-441d-8696-0304bebb3d9c-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/b1e77f83-50c7-4712-b6de-4678a812de70-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/b2c45c38-0940-4c32-94f2-97e9a3dfa174-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/b89a2434-c410-412d-905a-9a40ccafc482-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/c03336c2-a792-498e-9ea6-c869349f9bd8-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/cade7b0f-9683-45b2-9f6b-b97e923800eb-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/d63f5d63-2114-4ec9-8095-a6ae74e02366-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/d6564f03-f184-4e9c-bebf-7058816e1a8b-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/d7657e69-7f35-4933-8c1f-e5c2334f904a-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/dc3fa139-1694-4407-a23c-d5983c27a290-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/e8e17051-9d82-4caa-b4e9-e7dd7d05e7f7-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/e9df59a4-7c02-4f1c-a949-bd141a00405b-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/ee80ed2d-6b63-4217-85ee-01c5173177e8-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/ef30a05b-6b49-4c56-bf51-161d2f837ffb-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/efae9411-a6f5-4988-8aa0-8192cd9a06a5-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/eff2d7c4-de38-4308-9645-787846a1efda-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/f424e99a-9e3d-4b62-ac62-070bc60ccbd9-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/f65dd7a3-627d-4a3e-bfd1-0fd0e6cf07cf-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/f7a11581-ca38-4de4-bb2a-84c29bdad29e-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/fd63ca62-4779-4a31-92c7-ca125208a095-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/ffe8ca06-285e-47e9-9938-7c75ffb10167-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../getwell/src/test/java/com/gits/herokuapp/TestCases/BaseClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/../getwell/src/test/java/com/gits/herokuapp/TestCases/BaseClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../getwell/src/test/java/com/gits/herokuapp/TestCases/InvalidPassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/../getwell/src/test/java/com/gits/herokuapp/TestCases/InvalidPassword.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../getwell/src/test/java/com/gits/herokuapp/TestCases/InvalidUserName.java" beforeDir="false" afterPath="$PROJECT_DIR$/../getwell/src/test/java/com/gits/herokuapp/TestCases/InvalidUserName.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../getwell/src/test/java/com/gits/herokuapp/TestCases/InvalidUserNamePassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/../getwell/src/test/java/com/gits/herokuapp/TestCases/InvalidUserNamePassword.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../getwell/src/test/java/com/gits/herokuapp/TestCases/ValidUserNamePassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/../getwell/src/test/java/com/gits/herokuapp/TestCases/ValidUserNamePassword.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../sheba/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../sheba/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/internet/herokuapp/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/Reqres/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/internet/herokuapp/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -39,11 +126,110 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "H:/github/newdirectory/students2023/subroto/getwell"
+    "last_opened_file_path": "H:/github/sharebus/students2023",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
 }]]></component>
+  <component name="RunManager" selected="TestNG.SingleUser">
+    <configuration name="Create" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Reqres" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.internet.Reqres.PostMethod.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.internet.Reqres.PostMethod" />
+      <option name="MAIN_CLASS_NAME" value="com.internet.Reqres.PostMethod.Create" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SingleUser" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Reqres" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.internet.Reqres.GetMethod.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.internet.Reqres.GetMethod" />
+      <option name="MAIN_CLASS_NAME" value="com.internet.Reqres.GetMethod.SingleUser" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SingleUserNotFound" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Reqres" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.internet.Reqres.GetMethod.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.internet.Reqres.GetMethod" />
+      <option name="MAIN_CLASS_NAME" value="com.internet.Reqres.GetMethod.SingleUserNotFound" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SuccessfullRegister" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Reqres" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.internet.Reqres.PostMethod.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.internet.Reqres.PostMethod" />
+      <option name="MAIN_CLASS_NAME" value="com.internet.Reqres.PostMethod.SuccessfullRegister" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SuccessfullRegister.registersuccess" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Reqres" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.internet.Reqres.PostMethod.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.internet.Reqres.PostMethod" />
+      <option name="MAIN_CLASS_NAME" value="com.internet.Reqres.PostMethod.SuccessfullRegister" />
+      <option name="METHOD_NAME" value="registersuccess" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.SingleUser" />
+        <item itemvalue="TestNG.SingleUserNotFound" />
+        <item itemvalue="TestNG.SuccessfullRegister" />
+        <item itemvalue="TestNG.SuccessfullRegister.registersuccess" />
+        <item itemvalue="TestNG.Create" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
