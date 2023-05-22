@@ -4,8 +4,14 @@ import com.gits.herokuapp.Pages.DragAndDrop;
 import com.gits.herokuapp.Pages.LandingPage;
 import com.gits.herokuapp.Utilites.Data;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class DragAndDropTest extends BaseTest {
 
@@ -48,6 +54,18 @@ public class DragAndDropTest extends BaseTest {
             System.out.println(Data.NEGATIVE_ERROR_MASSAGE);
         }
         sleepTime(1000);
+
+
+        WebElement elementA = driver.findElement(By.cssSelector("div#column-a"));
+        System.out.println(elementA.getAttribute("id"));
+        WebElement elementB = driver.findElement(By.cssSelector("div#column-b"));
+        int x=elementB.getLocation().getX();
+        int y=elementB.getLocation().getY();
+
+        Actions actions = new Actions(driver);
+//		elementA.click();
+        actions.dragAndDrop(elementA, elementB).build().perform();
+
 
         driver.navigate().back();
         sleepTime(3000);

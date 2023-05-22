@@ -100,6 +100,12 @@ public class LandingPage extends BasePage {
     public WebElement getDynamicLoading() {
         return dynamicLoading;
     }
+    //File Download
+    @FindBy(css = "#content > ul > li:nth-child(17) > a")
+    public WebElement fileDownload;
+    public WebElement getFileDownload() {
+        return fileDownload;
+    }
 
     //File Upload
     @FindBy(css = "#content > ul > li:nth-child(18) > a")
@@ -120,17 +126,66 @@ public class LandingPage extends BasePage {
     public WebElement getFormAuthentication() {
         return formAuthentication;
     }
+
+    // Nested frames
+    @FindBy(css = "#content > ul > li:nth-child(34)")
+    public WebElement nestedFrames;
+    public WebElement getNestedFrames() {
+        return nestedFrames;
+    }
+
+    //Frames
+    @FindBy(css = "#content > ul > li:nth-child(22) > a")
+    public WebElement frames;
+    public WebElement getFrames() {
+        return frames;
+    }
+
     //Horizontal Slider
     @FindBy(css = "#content > ul > li:nth-child(24) > a")
     public WebElement horizontalSlider;
     public WebElement getHorizontalSlider() {
         return horizontalSlider;
     }
+
     //Inputs
     @FindBy(css = "#content > ul > li:nth-child(27) > a")
     public WebElement inputs;
     public WebElement getInputs() {
         return inputs;
+    }
+    //Infinite Scroll
+    @FindBy(css = "#content > ul > li:nth-child(26) > a")
+    public WebElement infiniteScroll;
+    public WebElement getInfiniteScroll() {
+        return infiniteScroll;
+    }
+    //JavaScript Alerts
+    @FindBy(css = "#content > ul > li:nth-child(29) > a")
+    public WebElement javaScriptAlerts;
+    public WebElement getJavaScriptAlerts() {
+        return javaScriptAlerts;
+    }
+
+
+    //Mouse HOVER
+    @FindBy(css = "#content > ul > li:nth-child(25) > a")
+    public WebElement hover;
+    public WebElement getHover() {
+        return hover;
+    }
+
+    @FindBy(css = "#content > ul > li:nth-child(33) > a")
+    public WebElement MultipleWindow;
+    public WebElement getMultipleWindow() {
+        return MultipleWindow;
+
+    }
+    //Notification Message
+    @FindBy(css = "#content > ul > li:nth-child(35) > a")
+    public WebElement NotificationMessage;
+    public WebElement getNotificationMessage(){
+        return NotificationMessage;
     }
 
 

@@ -16,4 +16,20 @@ public class DragAndDrop extends BasePage{
     public WebElement getDragAndDropHeader() {
         return dragAndDropHeader;
     }
+/*
+    //colum A validation
+    @FindBy(css = "#column-a")
+    public WebElement coloumA;
+    public WebElement getColoumA() {
+        return coloumA;
+    }
+
+    //colum B validation
+    @FindBy(css = "#column-b")
+    public WebElement columB;
+    public WebElement getColumB() {
+        return columB;
+    }
+
+ */
 }

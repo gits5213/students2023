@@ -2,11 +2,14 @@ package com.gits.herokuapp.Utilites;
 
 public class Data {
 
+    public static final String PHONE_NUMBER = "01943480240";
+    public static final String POSITIVE_MASSAGE ="Visible";
+    public static final String NEGATIVE_ERROR_MASSAGE = "Not visible";
+    public static final String CREATE_NEW_ACCOUNT = "Create New Account";
+
 
     //Url
     public static final String  BASE_URL = "https://the-internet.herokuapp.com/";
-    public static final String POSITIVE_MASSAGE ="Visible";
-    public static final String NEGATIVE_ERROR_MASSAGE ="Not Visible";
 
 
     //AB testing
@@ -51,7 +54,9 @@ public class Data {
     public static final String  CONTEXT_MENU_LINK = "context_menu";
 
     //Drag And Drop
-    public static final String  DRAG_AND_DROP_LINK = "drag and drop";
+    public static final String  DRAG_AND_DROP_LINK = "drag_and_drop";
+    public static final String COLUMN_A = "A";
+    public static final String COLUMN_B = "B";
 
     //Dropdown
     public static final String  DROPDOWN_LINK = "dropdown";
@@ -64,9 +69,14 @@ public class Data {
     //Dynamic Loading
     public static final String  DYNAMIC_LOADING_LINK = "dynamic_loading";
 
+    //File Download
+    public static final String  FILE_DOWNLOAD_LINK = "download";
+    public static final String FILE_DOWNLOAD_PATH = "C:\\Users\\ACER\\Desktop\\Downloads";
+
     //File Upload
-    //public static final String  FILE_UPLOAD_URL = "https://the-internet.herokuapp.com/upload";
-    public static final String  FILE_UPLOAD_PATH = "E:\\edit pic\\222.jpg";
+    public static final String  FILE_UPLOAD_URL = "https://the-internet.herokuapp.com/upload";
+    public static final String  FILE_UPLOAD_PATH = "C:\\Users\\ACER\\Desktop\\Downloads\\message.txt";
+
     public static final String  FILE_UPLOAD_LINK = "upload";
 
     //Forgot Password
@@ -82,11 +92,31 @@ public class Data {
     public static final String   FORM_AUTHENTICATION_PASSWORD = "SuperSecretPassword!";
     public static final String   FORM_AUTHENTICATION_SECURE_AREA = "You logged into a secure area!";
 
+    //Frames
+    public static final String FRAMES_LINK = "frames";
+    public static final String TEXT_INPUTS = "Hello World!your iframe is working and inputs is working";
+
     //Horizontal Slider
     public static final String HORIZONTAL_SLIDER_LINK = "horizontal_slider";
 
+    //MouseHover
+    public static final String  MOUSE_HOVER_LINK = "hovers" ;
+
+    //Multiple Window
+    public static final String MULTIPLE_WINDOW_LINK = "windows";
+
+    //Notification Message
+    public static final String  NOTIFICATION_MESSAGE_LINK = "notification_message_rendered" ;
+
     //Imputs
     public static final String INPUTS_LINK = "inputs";
+
+    // InfiniteScroll
+    public static final String  INFINITE_SCROLL_LINK = "infinite_scroll" ;
+
+    //JSAlert
+    public static final String  JAVASCRIPT_ALERTS_LINK = "javascript_alerts" ;
+    public static final String JAVASCRIPT_HEADER_LINK = "I am a JS Alert";
 
 
 

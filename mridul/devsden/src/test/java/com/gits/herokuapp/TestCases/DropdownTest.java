@@ -26,7 +26,7 @@ public class DropdownTest extends BaseTest {
         {
             String dropdown = lp.getDropdown().getText();
             Assert.assertEquals("Dropdown", dropdown);
-            System.out.println("DisappearingElements button is visible and clickable");
+            System.out.println("Dropdown button is visible and clickable");
             sleepTime(1000);
         }
         else {
@@ -82,12 +82,6 @@ public class DropdownTest extends BaseTest {
         sleepTime(1000);
         driver.navigate().back();
         sleepTime(1000);
-
-
-
-
-
-
 
 
 
