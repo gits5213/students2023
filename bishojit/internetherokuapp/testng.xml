@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="F:/Github/students2023/bishojit/internetherokuapp/src/test/java/com/gits/internetherokuapp">
+        <classes>
+            <class name="com.gits.internetherokuapp.TestCases.ABTestingValidation">
+                <methods>
+                    <include name="aBTestingValidation"/>
+                </methods>
+            </class>
+            <class name="com.gits.internetherokuapp.TestCases.AddRemoveElementsValidation">
+                <methods>
+                    <include name="addRemoveElements"/>
+                </methods>
+            </class>
+            <class name="com.gits.internetherokuapp.TestCases.BasicAuthValidation">
+                <methods>
+                    <include name="basicAuth"/>
+                </methods>
+            </class>
+            <class name="com.gits.internetherokuapp.TestCases.CheckboxValidation">
+                <methods>
+                    <include name="checkboxes"/>
+                </methods>
+            </class>
+            <class name="com.gits.internetherokuapp.TestCases.ContextMenuValidation">
+                <methods>
+                    <include name="contextMenuValidation"/>
+                </methods>
+            </class>
+            <class name="com.gits.internetherokuapp.TestCases.DisappearingElementsValidation">
+                <methods>
+                    <include name="disappearingElements"/>
+                </methods>
+            </class>
+            <class name="com.gits.internetherokuapp.TestCases.DropdownValidation">
+                <methods>
+                    <include name="dropDown"/>
+                </methods>
+            </class>
+            <class name="com.gits.internetherokuapp.TestCases.DynamicContentValidation">
+                <methods>
+                    <include name="dynamicContentValidation"/>
+                </methods>
+            </class>
+            <class name="com.gits.internetherokuapp.TestCases.DynamicControlValidation">
+                <methods>
+                    <include name="dynamicControlValidation"/>
+                </methods>
+            </class>
+            <class name="com.gits.internetherokuapp.TestCases.FileDownloadValidation">
+                <methods>
+                    <include name="fileDownloadValidation"/>
+                </methods>
+            </class>
+            <class name="com.gits.internetherokuapp.TestCases.FileUploadValidation">
+                <methods>
+                    <include name="fileUploadValidation"/>
+                </methods>
+            </class>
+            <class name="com.gits.internetherokuapp.TestCases.ForgotPasswordValidation">
+                <methods>
+                    <include name="forgotPassword"/>
+                </methods>
+            </class>
+            <class name="com.gits.internetherokuapp.TestCases.FormAuthenticationValidation.InvalidPasswordValidation">
+                <methods>
+                    <include name="formAuthentication"/>
+                </methods>
+            </class>
+            <class name="com.gits.internetherokuapp.TestCases.FormAuthenticationValidation.InvalidUserNamePasswordValidation">
+                <methods>
+                    <include name="inValidUsernamePassword"/>
+                </methods>
+            </class>
+            <class name="com.gits.internetherokuapp.TestCases.FormAuthenticationValidation.InvalidUserNameValidation">
+                <methods>
+                    <include name="invalidUsername"/>
+                </methods>
+            </class>
+            <class name="com.gits.internetherokuapp.TestCases.FormAuthenticationValidation.ValidUserNamePasswordValidation">
+                <methods>
+                    <include name="validUsernamePassword"/>
+                </methods>
+            </class>
+            <class name="com.gits.internetherokuapp.TestCases.HorizontalSliderValidation">
+                <methods>
+                    <include name="horizontalSlider"/>
+                </methods>
+            </class>
+            <class name="com.gits.internetherokuapp.TestCases.InputsValidation">
+                <methods>
+                    <include name="input"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

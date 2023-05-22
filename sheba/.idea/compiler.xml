@@ -6,8 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="sheba" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="sheba" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>
