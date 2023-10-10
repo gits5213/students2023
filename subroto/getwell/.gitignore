@@ -1,0 +1,7 @@
+.idea/
+allure-results/
+
+### Maven ###
+target/
+
+workspace.xml/
