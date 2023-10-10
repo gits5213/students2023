@@ -35,7 +35,7 @@ public class MultipleWindows extends BaseClass {
         sleepTime(2000);
 
         //get window handlers as list
-        List<String> browserTabs = new ArrayList<String>(driver.getWindowHandles());
+        List<String> browserTabs = new ArrayList<>(driver.getWindowHandles());
          //switch to new tab
         driver.switchTo().window(browserTabs .get(1));
         //check is it correct page opened or not (e.g. check page's title)
@@ -44,7 +44,7 @@ public class MultipleWindows extends BaseClass {
         driver.close();
         driver.switchTo().window(browserTabs.get(0));
 
-//       // System.out.println(nwp.getNHeader1().getText());
+/*//       // System.out.println(nwp.getNHeader1().getText());
 //        String title = driver.getTitle();
 //        sleepTime(2000);
 //        System.out.println("Base Window Title : " + title);
@@ -77,7 +77,7 @@ public class MultipleWindows extends BaseClass {
 //        }
 
         //switch to the parent window
-//        driver.switchTo().window(parent);
+//        driver.switchTo().window(parent);*/
         sleepTime(2000);
         driver.navigate().to(Data.BASE_URL);
         sleepTime(2000);

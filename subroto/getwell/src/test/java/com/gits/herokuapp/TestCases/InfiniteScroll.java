@@ -30,7 +30,8 @@ public class InfiniteScroll extends BaseClass {
         if (isp.getHeader().isDisplayed())
         {
             String infiniteScrollPage= isp.getHeader().getText();
-            Assert.assertTrue(true, Data.INFINITE_SCROLL_HEADER);
+            /*Assert.assertTrue(true, Data.INFINITE_SCROLL_HEADER);*/
+            Assert.assertEquals(infiniteScrollPage, Data.INFINITE_SCROLL_HEADER);
         }
         else {
             System.out.println(Data.NEGATIVE_ERROR_MASSAGE);

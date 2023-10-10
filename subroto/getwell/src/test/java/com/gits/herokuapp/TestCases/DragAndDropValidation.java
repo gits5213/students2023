@@ -73,7 +73,7 @@ public class DragAndDropValidation extends BaseClass {
         sleepTime(1000);
 
 
-//        //TC-4 Mouse Hover Validation
+/*//        //TC-4 Mouse Hover Validation
 //        WebElement from = driver.findElement(By.xpath("/html//div[@id='column-a']"));
 //        WebElement to = driver.findElement(By.xpath("/html//div[@id='column-b']"));
 //
@@ -82,7 +82,7 @@ public class DragAndDropValidation extends BaseClass {
 //        act.dragAndDrop(from,to).build().perform();
 //        sleepTime(3000);
 //        driver.navigate().back();
-//        sleepTime(3000);
+//        sleepTime(3000);*/
 
     }
 

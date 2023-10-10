@@ -27,10 +27,6 @@ public class NestedFrames extends BaseClass {
         System.out.println("Link is valid");
         sleepTime(2000);
 
-        fp.getNestedFramesText().click();
-        sleepTime(2000);
-
-        //Frame Validation
 
         //Switch to Top frame
          driver.switchTo().frame("frame-top");

@@ -63,20 +63,22 @@ public class DropDownValidation extends BaseClass {
 
          // Iterate the list using for loop
 
-          for (int i = 0; i < allOptions.size(); i++) {
+        for (WebElement allOption : allOptions) {
 
-              if (allOptions.get(i).getText().contains(option)) {
+            if (allOption.getText().contains(option)) {
 
-              allOptions.get(i).click();
-              sleepTime(5000);
-              break;}}
+                allOption.click();
+                sleepTime(5000);
+                break;
+            }
+        }
 
         driver.navigate().back();
         sleepTime(1000);
 
 
 
-
+/*
 //        //Click on DropDown List Option
 //        dd.getDropDownListOption().click();
 //        sleepTime(1000);
@@ -130,7 +132,7 @@ public class DropDownValidation extends BaseClass {
 //        System.out.println("List Of Dropdown Element: "+list);
 
 //        driver.navigate().back();
-//        sleepTime(1000);
+//        sleepTime(1000);*/
         
     }
 }

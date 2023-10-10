@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 public class BrokenImage extends BaseClass {
 
     @Test
-    public void BrokenImage(){
+    public void brokenImage(){
 
         LandingPage lp = new LandingPage(driver);
         BrokenImagePage bip = new BrokenImagePage (driver);
@@ -42,7 +42,7 @@ public class BrokenImage extends BaseClass {
         sleepTime(2000);
 
 
-        // TC-3 : Broken Image Validation Including (Http response , Broken Image Link)
+  /*      // TC-3 : Broken Image Validation Including (Http response , Broken Image Link)
 //        List<WebElement> elementList = driver.findElements(By.tagName("img"));
 //        for (int i = 0; i < elementList.size(); i++){
 //
@@ -62,7 +62,7 @@ public class BrokenImage extends BaseClass {
 //
 //        driver.navigate().back();
 //        sleepTime(2000);
-
+*/
 
     }
 }

@@ -3,6 +3,7 @@ package com.gits.herokuapp.Utilites;
 public class Data {
 
 
+
     public static final String POSITIVE_MASSAGE ="Visible";
     public static final String NEGATIVE_ERROR_MASSAGE ="Not Visible";
 
@@ -20,7 +21,7 @@ public class Data {
 
     //add remove element
     public static final String ADD_REMOVE_ELEMENT_LINK = "add_remove_elements/";
-    public static final String HEADER = "AddRemoveElementHeader";
+    public static final String HEADER = "Add/Remove Elements";
 
     //Broken images
     public static final String BROKEN_IMAGE_LINK = "broken_images";
@@ -40,7 +41,6 @@ public class Data {
     //Drop down
     public static final String DROP_DOWN_LINK = "dropdown";
     public static final String DROP_DOWN_TEXT_OPTION1 = "Option 1";
-    public static final String DROP_DOWN_TEXT_OPTION2 = "Option 2";
 
     //Dynamic Content
     public static final String DYNAMIC_CONTENT_LINK = "dynamic_content";
@@ -71,7 +71,7 @@ public class Data {
     public static final String FORM_AUTHENTICATION_INVALID_USER_NAME = "super secret password!";
 
     //Frames
-    public static final String FRAMES_LINK = "frames";
+    public static final String FRAMES_LINK = "nested_frames";
     public static final String INPUTS_TEXT = "Hi,my name is badhan.god make my wish fulfill.your iframe is working and inputs is working.";
 
     //Horizontal slider

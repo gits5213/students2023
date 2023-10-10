@@ -29,7 +29,7 @@ public class MouseHover extends BaseClass {
         Actions actionOne = new Actions(driver);
         actionOne.moveToElement(hp.getImageOne()).perform();
         sleepTime(2000);
-
+/*
 //        actionOne.moveToElement(hp.getImageOne());
 //        actionOne.build();
 //        actionOne.perform();
@@ -40,14 +40,14 @@ public class MouseHover extends BaseClass {
 //        String profileViewOne = hp.getViewProfileOne().getText();
 //        System.out.println(profileViewOne);
 //        sleepTime(2000);
-//        System.out.println(" ");
+//        System.out.println(" ");*/
 
 
         Actions actionTwo = new Actions(driver);
         actionTwo.moveToElement(hp.getImageTwo()).perform();
         sleepTime(1000);
 
-//        actionTwo.moveToElement(hp.getImageTwo());
+/*//        actionTwo.moveToElement(hp.getImageTwo());
 //        actionTwo.build();
 //        actionTwo.perform();
 //        sleepTime(2000);
@@ -59,13 +59,13 @@ public class MouseHover extends BaseClass {
 //        String profileViewTwo = hp.getViewProfileTwo().getText();
 //        System.out.println(profileViewTwo);
 //        sleepTime(2000);
-//        System.out.println(" ");
+//        System.out.println(" ");*/
 
 
         Actions actionThree = new Actions(driver);
         actionThree.moveToElement(hp.getImageThree()).perform();
         sleepTime(2000);
-//        actionThree.moveToElement(hp.getImageThree());
+/*//        actionThree.moveToElement(hp.getImageThree());
 //        actionThree.build();
 //        actionThree.perform();
 //        sleepTime(2000);
@@ -76,7 +76,7 @@ public class MouseHover extends BaseClass {
 //
 //        String profileViewThree = hp.getViewProfileThree().getText();
 //        System.out.println(profileViewThree);
-//        sleepTime(2000);
+//        sleepTime(2000);*/
 
         driver.navigate().back();
         sleepTime(2000);

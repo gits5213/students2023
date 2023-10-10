@@ -14,7 +14,7 @@ import java.io.File;
 
 public class FileDownloadValidation extends BaseClass {
     @Test
-    public void FileDownloadValidation() throws AWTException {
+    public void fileDownloadValidation() throws AWTException {
 
         LandingPage lp = new LandingPage(driver);
         FileDownloadPage fdp = new FileDownloadPage(driver);
@@ -40,12 +40,12 @@ public class FileDownloadValidation extends BaseClass {
         }
 
 
-//         WebElement fileDownload = driver.findElement(By.linkText("sample.txt"));
+/*//         WebElement fileDownload = driver.findElement(By.linkText("sample.txt"));
 //        fileDownload.click();
 //        fdp.getTextFileDownload().click();
 //        sleepTime(3000);
 //          fdp.getXlsxFileDownload().click();
-//          sleepTime(1000);
+//          sleepTime(1000);*/
           fdp.getPngFileDownload().click();
           sleepTime(1000);
 
@@ -71,6 +71,7 @@ public class FileDownloadValidation extends BaseClass {
 
         File filePath = new File(Data.DOWNLOAD_FILE_PATH);
         File[] totalFiles = filePath.listFiles();
+        assert totalFiles != null;
         for (File file:totalFiles) {
             if (file.getName().equals("logo.png")) {
                 String fileName = fdp.getTextFileDownload().getText();

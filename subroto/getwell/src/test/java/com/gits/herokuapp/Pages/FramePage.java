@@ -11,7 +11,7 @@ public class FramePage extends BasePage {
     }
 
     //Nested Frames
-    @FindBy(linkText = "Nested Frames")
+    @FindBy(css = "[href='\\/nested_frames']")
     public WebElement nestedFramesText;
     public WebElement getNestedFramesText(){
         return nestedFramesText;

@@ -47,7 +47,8 @@ public class AddRemoveElementsValidation extends BaseClass {
         if (are.getaddRemoveElementsHeader().isDisplayed())
         {
             String addRmvHeader= are.getaddRemoveElementsHeader().getText();
-            Assert.assertTrue(true,Data.HEADER);
+            /*Assert.assertTrue(true,Data.HEADER);*/
+            Assert.assertEquals(addRmvHeader, Data.HEADER);
         }
         else {
             System.out.println(Data.NEGATIVE_ERROR_MASSAGE);

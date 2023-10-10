@@ -49,18 +49,18 @@ public class HorizontalSlider extends BaseClass {
 
 
 
-        //Using Action Class TO drag the slider
-        //Horizontal Slider Validation
-//        Actions move = new Actions(driver);
-//        Action action = move.dragAndDropBy(slider, 20, 0).build();
-//        action.perform();
-//        sleepTime(2000);
+        /*Using Action Class TO drag the slider
+        Horizontal Slider Validation
+        Actions move = new Actions(driver);
+        Action action = move.dragAndDropBy(slider, 20, 0).build();
+        action.perform();
+        sleepTime(2000);
 
-//        //Slider Value Validation
-//        String value =driver.findElement(By.xpath("/html//span[@id='range']")).getText();
-//        System.out.println( "Dragged Value " +value);
-//        String val ="3.5";
-//        Assert.assertEquals(value ,val );
+        //Slider Value Validation
+        String value =driver.findElement(By.xpath("/html//span[@id='range']")).getText();
+        System.out.println( "Dragged Value " +value);
+        String val ="3.5";
+        Assert.assertEquals(value ,val );*/
 
 
 

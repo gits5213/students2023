@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 public class ABTestingValidation extends BaseClass {
 
     @Test
-    public void ABTestingValidation() {
+    public void aBTestingValidation() {
 
         LandingPage lp = new LandingPage(driver);
         AbTesting at = new AbTesting(driver);
